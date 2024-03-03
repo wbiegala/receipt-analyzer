@@ -3,21 +3,23 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34525.116
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReceiptAnalyzer.Supervisor", "src\ReceiptAnalyzer.Supervisor\ReceiptAnalyzer.Supervisor.csproj", "{629DE604-B8E4-45FE-B290-C24B5E391F71}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ReceiptAnalyzer.Supervisor", "src\ReceiptAnalyzer.Supervisor\ReceiptAnalyzer.Supervisor.csproj", "{629DE604-B8E4-45FE-B290-C24B5E391F71}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReceiptAnalyzer.Domain", "src\ReceiptAnalyzer.Domain\ReceiptAnalyzer.Domain.csproj", "{C370D98D-FE91-43A4-B11F-5D500C335B76}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ReceiptAnalyzer.Domain", "src\ReceiptAnalyzer.Domain\ReceiptAnalyzer.Domain.csproj", "{C370D98D-FE91-43A4-B11F-5D500C335B76}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReceiptAnalyzer.Core", "src\ReceiptAnalyzer.Core\ReceiptAnalyzer.Core.csproj", "{F93E366A-9688-4F0F-B084-209FDF90D30A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ReceiptAnalyzer.Core", "src\ReceiptAnalyzer.Core\ReceiptAnalyzer.Core.csproj", "{F93E366A-9688-4F0F-B084-209FDF90D30A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReceiptAnalyzer.Data", "src\ReceiptAnalyzer.Data\ReceiptAnalyzer.Data.csproj", "{4413BE32-7F9C-4C3A-AD5C-23A869F33D95}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ReceiptAnalyzer.Data", "src\ReceiptAnalyzer.Data\ReceiptAnalyzer.Data.csproj", "{4413BE32-7F9C-4C3A-AD5C-23A869F33D95}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReceiptAnalyzer.Supervisor.Contract", "src\ReceiptAnalyzer.Supervisor.Contract\ReceiptAnalyzer.Supervisor.Contract.csproj", "{96905CE6-E910-4AA9-AF6A-DADF8D85C8D1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ReceiptAnalyzer.Supervisor.Contract", "src\ReceiptAnalyzer.Supervisor.Contract\ReceiptAnalyzer.Supervisor.Contract.csproj", "{96905CE6-E910-4AA9-AF6A-DADF8D85C8D1}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Supervisor", "Supervisor", "{315C76BD-85DA-41CE-A1A7-11A02E5B529A}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_TEST", "_TEST", "{099AA814-4C34-40F7-9197-937C6A5707C3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReceiptAnalyzer.Contract", "src\ReceiptAnalyzer.Contract\ReceiptAnalyzer.Contract.csproj", "{FE7D6E0A-D154-4F34-A5F5-A693E1E432FE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ReceiptAnalyzer.Contract", "src\ReceiptAnalyzer.Contract\ReceiptAnalyzer.Contract.csproj", "{FE7D6E0A-D154-4F34-A5F5-A693E1E432FE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReceiptAnalyzer.Domain.Tests", "tests\ReceiptAnalyzer.Domain.Tests\ReceiptAnalyzer.Domain.Tests.csproj", "{6DD1F7E3-9D89-4750-87F1-BD1C2EC5D586}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -49,6 +51,10 @@ Global
 		{FE7D6E0A-D154-4F34-A5F5-A693E1E432FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FE7D6E0A-D154-4F34-A5F5-A693E1E432FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FE7D6E0A-D154-4F34-A5F5-A693E1E432FE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6DD1F7E3-9D89-4750-87F1-BD1C2EC5D586}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6DD1F7E3-9D89-4750-87F1-BD1C2EC5D586}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6DD1F7E3-9D89-4750-87F1-BD1C2EC5D586}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6DD1F7E3-9D89-4750-87F1-BD1C2EC5D586}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -56,6 +62,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{629DE604-B8E4-45FE-B290-C24B5E391F71} = {315C76BD-85DA-41CE-A1A7-11A02E5B529A}
 		{96905CE6-E910-4AA9-AF6A-DADF8D85C8D1} = {315C76BD-85DA-41CE-A1A7-11A02E5B529A}
+		{6DD1F7E3-9D89-4750-87F1-BD1C2EC5D586} = {099AA814-4C34-40F7-9197-937C6A5707C3}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {E3C1F4EA-BBBF-4BBB-A4E1-6DBC42305647}

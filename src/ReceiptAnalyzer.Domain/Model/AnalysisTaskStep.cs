@@ -12,7 +12,7 @@ namespace BS.ReceiptAnalyzer.Domain.Model
 
         private AnalysisTaskStep() { }
 
-        internal static AnalysisTaskStep Create(AnalysisTaskProgression type,
+        public static AnalysisTaskStep Create(AnalysisTaskProgression type,
             bool success,
             DateTimeOffset notificationTime,
             DateTimeOffset startTime,

@@ -1,5 +1,6 @@
 ﻿using BS.ReceiptAnalyzer.Domain.Basic;
 using BS.ReceiptAnalyzer.Domain.Events;
+using BS.ReceiptAnalyzer.Domain.Exceptions;
 using BS.ReceiptAnalyzer.Domain.Model.ReceiptAnalyzed;
 
 namespace BS.ReceiptAnalyzer.Domain.Model
@@ -8,11 +9,11 @@ namespace BS.ReceiptAnalyzer.Domain.Model
     {
         private AnalysisTask() { }
 
-        public static AnalysisTask Create(Func<DateTimeOffset> getTimestampFunc)
+        public static AnalysisTask Create()
         {
             var task = new AnalysisTask
             {
-                CreationTime = getTimestampFunc(),
+                CreationTime = DateTimeOffset.Now,
                 Status = AnalysisTaskStatus.Pending,
                 Progression = AnalysisTaskProgression.NotStarted,
             };
@@ -24,6 +25,7 @@ namespace BS.ReceiptAnalyzer.Domain.Model
 
         #region Properties
 
+        public string ImageHash { get; private set; }
         public DateTimeOffset CreationTime { get; private set; }
         public DateTimeOffset? StartTime { get; private set; }
         public DateTimeOffset? EndTime { get; private set; }
@@ -40,12 +42,16 @@ namespace BS.ReceiptAnalyzer.Domain.Model
         /// <summary>
         /// Starts processing of task (sets statuses and publish event)
         /// </summary>
-        public void Start(Func<DateTimeOffset> getTimestampFunc)
+        public void Start(string imageHash)
         {
             if (Status != AnalysisTaskStatus.Pending)
-                return;
+                throw new InvalidStateException("Can't start task that is started already.");
 
-            StartTime = getTimestampFunc();
+            if (string.IsNullOrEmpty(imageHash))
+                throw new ArgumentException($"'{nameof(imageHash)}' can't be null or empty");
+
+            ImageHash = imageHash;
+            StartTime = DateTimeOffset.Now;
             Status = AnalysisTaskStatus.OnProcessing;
             Progression = AnalysisTaskProgression.Scheduled;
 
@@ -55,12 +61,12 @@ namespace BS.ReceiptAnalyzer.Domain.Model
         /// <summary>
         /// Cancels processing of task. Current step will be finished.
         /// </summary>
-        public void Cancel(Func<DateTimeOffset> getTimestampFunc)
+        public void Cancel()
         {
-            if (Status != AnalysisTaskStatus.OnProcessing || Status != AnalysisTaskStatus.Pending)
-                return;
+            if (Status != AnalysisTaskStatus.OnProcessing && Status != AnalysisTaskStatus.Pending)
+                throw new InvalidStateException("Can't cancel task that is canceled, failed or finished.");
 
-            EndTime = getTimestampFunc();
+            EndTime = DateTimeOffset.Now;
             Status = AnalysisTaskStatus.Canceled;
 
             AddEvent(new AnalysisTaskCanceled(Id));
@@ -80,13 +86,19 @@ namespace BS.ReceiptAnalyzer.Domain.Model
         /// <summary>
         /// Finishes task with success status and sets results
         /// </summary>
-        public void FinishTask(Func<DateTimeOffset> getTimestampFunc, IEnumerable<Receipt> receipts)
+        public void Success(IEnumerable<Receipt> receipts)
         {
+            if (Status != AnalysisTaskStatus.OnProcessing)
+                throw new InvalidStateException("Can't finish task that is already finished or not started yet.");
+
+            if (receipts == null || !receipts.Any())
+                throw new ArgumentException($"'{nameof(receipts)}' can't be null or empty");
+
             SetResults(receipts);
 
             Status = AnalysisTaskStatus.Finished;
             Progression = AnalysisTaskProgression.Finished;
-            EndTime = getTimestampFunc();
+            EndTime = DateTimeOffset.Now;
 
             AddEvent(new AnalysisTaskFinished(Id));
         }
@@ -94,11 +106,17 @@ namespace BS.ReceiptAnalyzer.Domain.Model
         /// <summary>
         /// Finishes task with failed status and sets reason
         /// </summary>
-        public void FailTask(Func<DateTimeOffset> getTimestampFunc, string reason)
+        public void Fail(string reason)
         {
+            if (Status != AnalysisTaskStatus.OnProcessing)
+                throw new InvalidStateException("Can't finish task that is already finished or not started yet.");
+
+            if (string.IsNullOrWhiteSpace(reason))
+                throw new ArgumentException($"'{nameof(reason)}' can't be null or empty");
+
             FailReason = reason;
             Status = AnalysisTaskStatus.Failed;
-            EndTime = getTimestampFunc();
+            EndTime = DateTimeOffset.Now;
 
             AddEvent(new AnalysisTaskFailed(Id));
         }
