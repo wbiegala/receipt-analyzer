@@ -32,7 +32,7 @@ namespace BS.ReceiptAnalyzer.Domain.Model
         public AnalysisTaskStatus Status { get; private set; }
         public AnalysisTaskProgression Progression { get; private set; }
         public IReadOnlyCollection<AnalysisTaskStep> ProgressionDetails => _progressionDetails.ToList();
-        public IReadOnlyCollection<Receipt>? AnalysisResult => _result.Any() ? _result : null;
+        public AnalysisTaskResult? Results { get; private set; }
         public string? FailReason { get; private set; }
 
         #endregion
@@ -94,7 +94,7 @@ namespace BS.ReceiptAnalyzer.Domain.Model
             if (receipts == null || !receipts.Any())
                 throw new ArgumentException($"'{nameof(receipts)}' can't be null or empty");
 
-            SetResults(receipts);
+            Results = new AnalysisTaskResult { Receipts = receipts };
 
             Status = AnalysisTaskStatus.Finished;
             Progression = AnalysisTaskProgression.Finished;
@@ -121,18 +121,8 @@ namespace BS.ReceiptAnalyzer.Domain.Model
             AddEvent(new AnalysisTaskFailed(Id));
         }
 
-
-        private void SetResults(IEnumerable<Receipt> receipts)
-        {
-            foreach (var receipt in receipts)
-            {
-                _result.Add(receipt);
-            }
-        }
-
         #endregion
 
-        private HashSet<AnalysisTaskStep> _progressionDetails = new HashSet<AnalysisTaskStep>();
-        private HashSet<Receipt> _result = new HashSet<Receipt>();
+        private HashSet<AnalysisTaskStep> _progressionDetails = new();
     }
 }

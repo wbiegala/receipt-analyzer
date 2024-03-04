@@ -344,3 +344,4 @@ healthchecksdb
 
 # Machine learning data
 machine-learning-data/
+src/ReceiptAnalyzer.Supervisor/appsettings.Development.json
