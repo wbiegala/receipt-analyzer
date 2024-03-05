@@ -19,7 +19,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_TEST", "_TEST", "{099AA814
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ReceiptAnalyzer.Contract", "src\ReceiptAnalyzer.Contract\ReceiptAnalyzer.Contract.csproj", "{FE7D6E0A-D154-4F34-A5F5-A693E1E432FE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReceiptAnalyzer.Domain.Tests", "tests\ReceiptAnalyzer.Domain.Tests\ReceiptAnalyzer.Domain.Tests.csproj", "{6DD1F7E3-9D89-4750-87F1-BD1C2EC5D586}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ReceiptAnalyzer.Domain.Tests", "tests\ReceiptAnalyzer.Domain.Tests\ReceiptAnalyzer.Domain.Tests.csproj", "{6DD1F7E3-9D89-4750-87F1-BD1C2EC5D586}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReceiptAnalyzer.Shared", "src\ReceiptAnalyzer.Shared\ReceiptAnalyzer.Shared.csproj", "{658EF89C-D7C7-48D9-A2D1-81E5202C35C0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -55,6 +57,10 @@ Global
 		{6DD1F7E3-9D89-4750-87F1-BD1C2EC5D586}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6DD1F7E3-9D89-4750-87F1-BD1C2EC5D586}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6DD1F7E3-9D89-4750-87F1-BD1C2EC5D586}.Release|Any CPU.Build.0 = Release|Any CPU
+		{658EF89C-D7C7-48D9-A2D1-81E5202C35C0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{658EF89C-D7C7-48D9-A2D1-81E5202C35C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{658EF89C-D7C7-48D9-A2D1-81E5202C35C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{658EF89C-D7C7-48D9-A2D1-81E5202C35C0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
