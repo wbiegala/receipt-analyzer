@@ -1,4 +1,8 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using BS.ReceiptAnalyzer.Core.Commands.CreateAnalysisTask;
+using BS.ReceiptAnalyzer.Supervisor.Contract;
+using BS.ReceiptAnalyzer.Supervisor.Mappings;
+using BS.ReceiptAnalyzer.Supervisor.Validation;
+using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BS.ReceiptAnalyzer.Supervisor.Controllers
@@ -7,5 +11,40 @@ namespace BS.ReceiptAnalyzer.Supervisor.Controllers
     [ApiController]
     public class TaskController : ControllerBase
     {
+        private readonly IMediator _mediator;
+
+        public TaskController(IMediator mediator)
+        {
+            _mediator = mediator ?? throw new ArgumentNullException(nameof(mediator));
+        }
+
+        [HttpPost("start")]
+        public async Task<IActionResult> CreateTaskAsync([FromQuery] CreateAnalysisTask.CreateAnalysisTaskQuery? query, IFormFile file)
+        {
+            var validationResult = AnalysisTaskValidator.ValidateCreateAnalysisTaskRequest(file.ContentType, file.Length);
+            if (!validationResult.IsValid)
+                return UnprocessableEntity(validationResult.ToResponse());
+
+            try
+            {
+                var command = new CreateAnalysisTaskCommand 
+                { 
+                    CommandId = Guid.NewGuid(),
+                    Force = query?.Force ?? false,
+                    File = file.OpenReadStream(),
+                    MIME = file.ContentType
+                };
+
+                var result = await _mediator.Send(command);
+
+                var response = CreateAnalysisTaskMapper.MapToResponse(result);
+
+                return Ok(response);
+            }
+            catch (Exception ex) 
+            {
+                return BadRequest(ExceptionMapper.MapToResponse(ex));
+            }
+        }
     }
 }

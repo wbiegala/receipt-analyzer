@@ -1,8 +1,11 @@
+using BS.ReceiptAnalyzer.Core;
 using BS.ReceiptAnalyzer.Data;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
+
+builder.Services.AddCore(builder.Configuration);
 builder.Services.AddDbContext<ReceiptAnalyzerDbContext>(opts =>
 {
     opts.UseSqlServer(builder.Configuration.GetConnectionString("Database"));
@@ -21,7 +24,7 @@ if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
-
+    
     using (var scope = app.Services.CreateScope())
     {
         var dbContext = scope.ServiceProvider.GetRequiredService<ReceiptAnalyzerDbContext>();

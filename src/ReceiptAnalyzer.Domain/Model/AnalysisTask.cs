@@ -9,13 +9,17 @@ namespace BS.ReceiptAnalyzer.Domain.Model
     {
         private AnalysisTask() { }
 
-        public static AnalysisTask Create()
+        public static AnalysisTask Create(string sourceImageHash)
         {
+            if (string.IsNullOrEmpty(sourceImageHash))
+                throw new ArgumentException($"'{nameof(sourceImageHash)}' can't be null or empty");
+
             var task = new AnalysisTask
             {
                 CreationTime = DateTimeOffset.Now,
                 Status = AnalysisTaskStatus.Pending,
                 Progression = AnalysisTaskProgression.NotStarted,
+                ImageHash = sourceImageHash
             };
 
             task.AddEvent(new AnalysisTaskCreated(task.Id));
@@ -42,15 +46,11 @@ namespace BS.ReceiptAnalyzer.Domain.Model
         /// <summary>
         /// Starts processing of task (sets statuses and publish event)
         /// </summary>
-        public void Start(string imageHash)
+        public void Start()
         {
             if (Status != AnalysisTaskStatus.Pending)
                 throw new InvalidStateException("Can't start task that is started already.");
 
-            if (string.IsNullOrEmpty(imageHash))
-                throw new ArgumentException($"'{nameof(imageHash)}' can't be null or empty");
-
-            ImageHash = imageHash;
             StartTime = DateTimeOffset.Now;
             Status = AnalysisTaskStatus.OnProcessing;
             Progression = AnalysisTaskProgression.Scheduled;
@@ -108,7 +108,7 @@ namespace BS.ReceiptAnalyzer.Domain.Model
         /// </summary>
         public void Fail(string reason)
         {
-            if (Status != AnalysisTaskStatus.OnProcessing)
+            if (Status != AnalysisTaskStatus.Pending && Status != AnalysisTaskStatus.OnProcessing)
                 throw new InvalidStateException("Can't finish task that is already finished or not started yet.");
 
             if (string.IsNullOrWhiteSpace(reason))

@@ -13,7 +13,12 @@ namespace BS.ReceiptAnalyzer.Shared.Storage
             _containerName = configuration.ContainerName;
         }
 
-        public async Task<bool> SaveFileAsync(Stream file, string path, bool overwrite = false)
+        public Task<StorageServiceContract.SaveFileResult> SaveFileAsync(byte[] file, string path, bool overwrite = false)
+        {
+            return SaveFileAsync(new MemoryStream(file), path, overwrite);
+        }
+
+        public async Task<StorageServiceContract.SaveFileResult> SaveFileAsync(Stream file, string path, bool overwrite = false)
         {
             try
             {
@@ -24,11 +29,11 @@ namespace BS.ReceiptAnalyzer.Shared.Storage
 
                 var response = await blobClient.UploadAsync(file, overwrite);
 
-                return true;
+                return new StorageServiceContract.SaveFileResult(true);
             }
             catch (Exception ex)
             {
-                return false;
+                return new StorageServiceContract.SaveFileResult(false, $"{ex.GetType().Name} - {ex.Message}");
             }
         }
 

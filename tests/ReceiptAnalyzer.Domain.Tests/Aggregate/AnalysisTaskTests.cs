@@ -11,7 +11,7 @@ namespace BS.ReceiptAnalyzer.Domain.Tests.Aggregate
         [Fact]
         public void Create_NoArgs_DomainEventOccured() 
         {
-            var task = AnalysisTask.Create();
+            var task = AnalysisTask.Create(TEMP_SHA);
 
             task.Should().NotBeNull();
             task.Should().BeAssignableTo<AnalysisTask>();
@@ -26,7 +26,7 @@ namespace BS.ReceiptAnalyzer.Domain.Tests.Aggregate
         {
             var task = GetNewTask();
 
-            task.Start("testsha");
+            task.Start();
 
             task.Status.Should().Be(AnalysisTaskStatus.OnProcessing);
             task.Progression.Should().Be(AnalysisTaskProgression.Scheduled);
@@ -40,7 +40,7 @@ namespace BS.ReceiptAnalyzer.Domain.Tests.Aggregate
 
             Thread.Sleep(3);
 
-            Assert.Throws<InvalidStateException>(() => task.Start("testsha"));
+            Assert.Throws<InvalidStateException>(task.Start);
         }
 
         [Fact]
@@ -109,7 +109,7 @@ namespace BS.ReceiptAnalyzer.Domain.Tests.Aggregate
 
         private AnalysisTask GetNewTask()
         {
-            var task = AnalysisTask.Create();
+            var task = AnalysisTask.Create(TEMP_SHA);
             task.ClearEvents();
 
             return task;
@@ -117,11 +117,13 @@ namespace BS.ReceiptAnalyzer.Domain.Tests.Aggregate
 
         private AnalysisTask GetStartedTask()
         {
-            var task = AnalysisTask.Create();
-            task.Start("testsha");
+            var task = AnalysisTask.Create(TEMP_SHA);
+            task.Start();
             task.ClearEvents();
 
             return task;
         }
+
+        private const string TEMP_SHA = "6d16e989de5314f3eff5e0c4a24c2bf0fd7f8fe395e713ac839b325a10c4ed1191d1c972c49471efcaa197275b652464fc19007ea5f3542b798c6295b38a2b31";
     }
 }
