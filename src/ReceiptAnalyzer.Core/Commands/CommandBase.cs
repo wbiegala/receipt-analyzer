@@ -2,6 +2,6 @@
 {
     public abstract record CommandBase
     {
-        public virtual Guid CommandId { get; init; }
+        public virtual Guid CommandId { get; init; } = Guid.NewGuid();
     }
 }
