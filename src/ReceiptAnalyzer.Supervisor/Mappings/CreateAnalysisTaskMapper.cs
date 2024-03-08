@@ -5,9 +5,9 @@ namespace BS.ReceiptAnalyzer.Supervisor.Mappings
 {
     public static class CreateAnalysisTaskMapper
     {
-        public static CreateAnalysisTask.CreateAnalysisTaskResponse MapToResponse(CreateAnalysisTaskCommandResult result)
+        public static CreateAnalysisTask.Response MapToResponse(CreateAnalysisTaskCommandResult result)
         {
-            return new CreateAnalysisTask.CreateAnalysisTaskResponse
+            return new CreateAnalysisTask.Response
             {
                 TaskId = result.TaskId,
                 Status = result.Status,

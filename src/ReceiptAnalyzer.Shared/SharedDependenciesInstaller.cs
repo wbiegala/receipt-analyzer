@@ -1,7 +1,11 @@
-﻿using BS.ReceiptAnalyzer.Shared.Hashing;
+﻿using Azure.Messaging.ServiceBus;
+using BS.ReceiptAnalyzer.Shared.Hashing;
+using BS.ReceiptAnalyzer.Shared.ServiceBus;
 using BS.ReceiptAnalyzer.Shared.Storage;
 using BS.ReceiptAnalyzer.Shared.Storage.FileSystem;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using System.Runtime.Serialization;
 
 namespace BS.ReceiptAnalyzer.Shared
 {
@@ -33,6 +37,18 @@ namespace BS.ReceiptAnalyzer.Shared
         public static IServiceCollection AddHashing(this IServiceCollection services)
         {
             services.AddSingleton<IHashService, Sha512HashService>();
+
+            return services;
+        }
+
+        public static IServiceCollection AddServiceBus(this IServiceCollection services, string? connectionString)
+        {
+            if (connectionString == null)
+                throw new ArgumentNullException(nameof(connectionString));
+
+            services.AddSingleton(_ => new ServiceBusConfiguration { ConnectionString = connectionString });
+            services.AddSingleton(_ => new ServiceBusClient(connectionString));
+            services.AddHostedService<ConsumingService>();
 
             return services;
         }

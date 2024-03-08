@@ -2,7 +2,7 @@
 using MediatR;
 using Microsoft.Extensions.Logging;
 
-namespace BS.ReceiptAnalyzer.Core.EventHandlers.Domain
+namespace BS.ReceiptAnalyzer.Core.DomainEventHandlers
 {
     internal class AnalysisTaskFailedEventHandler : INotificationHandler<AnalysisTaskFailed>
     {
@@ -13,7 +13,7 @@ namespace BS.ReceiptAnalyzer.Core.EventHandlers.Domain
             _logger = logger ?? throw new ArgumentNullException(nameof(logger));
         }
 
-        public async Task Handle(AnalysisTaskFailed notification, CancellationToken cancellationToken)
+        public async Task Handle(AnalysisTaskFailed @event, CancellationToken cancellationToken)
         {
             //TODO
             _logger.LogInformation("task failed");

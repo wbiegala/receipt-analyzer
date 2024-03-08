@@ -9,13 +9,19 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Azure.Messaging.ServiceBus" Version="7.17.4" />
     <PackageReference Include="MediatR" Version="12.2.0" />
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\ReceiptAnalyzer.Contract\ReceiptAnalyzer.Contract.csproj" />
     <ProjectReference Include="..\ReceiptAnalyzer.Data\ReceiptAnalyzer.Data.csproj" />
     <ProjectReference Include="..\ReceiptAnalyzer.Domain\ReceiptAnalyzer.Domain.csproj" />
     <ProjectReference Include="..\ReceiptAnalyzer.Shared\ReceiptAnalyzer.Shared.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="ResultsConsumers\" />
   </ItemGroup>
 
 </Project>

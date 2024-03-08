@@ -2,12 +2,12 @@
 {
     public static class CreateAnalysisTask
     {
-        public class CreateAnalysisTaskQuery
+        public class Query
         {
             public bool Force { get; set; } = false;
         }
 
-        public class CreateAnalysisTaskResponse
+        public class Response
         {
             public Guid TaskId { get; set; }
             public string Status { get; set; }

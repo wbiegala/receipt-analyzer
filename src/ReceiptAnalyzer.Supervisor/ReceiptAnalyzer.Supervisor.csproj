@@ -21,6 +21,7 @@
   <ItemGroup>
     <ProjectReference Include="..\ReceiptAnalyzer.Core\ReceiptAnalyzer.Core.csproj" />
     <ProjectReference Include="..\ReceiptAnalyzer.Data\ReceiptAnalyzer.Data.csproj" />
+    <ProjectReference Include="..\ReceiptAnalyzer.Shared\ReceiptAnalyzer.Shared.csproj" />
     <ProjectReference Include="..\ReceiptAnalyzer.Supervisor.Contract\ReceiptAnalyzer.Supervisor.Contract.csproj" />
   </ItemGroup>
 

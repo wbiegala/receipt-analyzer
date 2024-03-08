@@ -9,6 +9,7 @@ namespace BS.ReceiptAnalyzer.Core
         public static IServiceCollection AddCore(this IServiceCollection services, IConfiguration configuration)
         {
             services.AddStorage(configuration.GetConnectionString("Storage"));
+            services.AddServiceBus(configuration.GetConnectionString("ServiceBus"));
             services.AddHashing();
 
             services.AddMediatR(cfg =>

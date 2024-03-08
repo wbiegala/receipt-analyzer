@@ -21,7 +21,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ReceiptAnalyzer.Contract", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ReceiptAnalyzer.Domain.Tests", "tests\ReceiptAnalyzer.Domain.Tests\ReceiptAnalyzer.Domain.Tests.csproj", "{6DD1F7E3-9D89-4750-87F1-BD1C2EC5D586}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReceiptAnalyzer.Shared", "src\ReceiptAnalyzer.Shared\ReceiptAnalyzer.Shared.csproj", "{658EF89C-D7C7-48D9-A2D1-81E5202C35C0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ReceiptAnalyzer.Shared", "src\ReceiptAnalyzer.Shared\ReceiptAnalyzer.Shared.csproj", "{658EF89C-D7C7-48D9-A2D1-81E5202C35C0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

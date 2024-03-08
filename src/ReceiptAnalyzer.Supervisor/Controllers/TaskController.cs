@@ -19,7 +19,7 @@ namespace BS.ReceiptAnalyzer.Supervisor.Controllers
         }
 
         [HttpPost("start")]
-        public async Task<IActionResult> CreateTaskAsync([FromQuery] CreateAnalysisTask.CreateAnalysisTaskQuery? query, IFormFile file)
+        public async Task<IActionResult> CreateTaskAsync([FromQuery] CreateAnalysisTask.Query? query, IFormFile file)
         {
             var validationResult = AnalysisTaskValidator.ValidateCreateAnalysisTaskRequest(file.ContentType, file.Length);
             if (!validationResult.IsValid)
@@ -27,13 +27,10 @@ namespace BS.ReceiptAnalyzer.Supervisor.Controllers
 
             try
             {
-                var command = new CreateAnalysisTaskCommand 
-                { 
-                    CommandId = Guid.NewGuid(),
-                    Force = query?.Force ?? false,
-                    File = file.OpenReadStream(),
-                    MIME = file.ContentType
-                };
+                var command = new CreateAnalysisTaskCommand(
+                    query?.Force ?? false,
+                    file.OpenReadStream(),
+                    file.ContentType);
 
                 var result = await _mediator.Send(command);
 
