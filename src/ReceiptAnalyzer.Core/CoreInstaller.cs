@@ -1,4 +1,5 @@
-﻿using BS.ReceiptAnalyzer.Shared;
+﻿using BS.ReceiptAnalyzer.Data;
+using BS.ReceiptAnalyzer.Shared;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -8,6 +9,7 @@ namespace BS.ReceiptAnalyzer.Core
     {
         public static IServiceCollection AddCore(this IServiceCollection services, IConfiguration configuration)
         {
+            services.AddRepositories();
             services.AddStorage(configuration.GetConnectionString("Storage"));
             services.AddServiceBus(configuration.GetConnectionString("ServiceBus"));
             services.AddHashing();

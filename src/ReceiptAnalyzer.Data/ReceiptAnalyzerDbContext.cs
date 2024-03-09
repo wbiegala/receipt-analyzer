@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace BS.ReceiptAnalyzer.Data
 {
-    public class ReceiptAnalyzerDbContext : DbContext
+    public class ReceiptAnalyzerDbContext : DbContext, IUnitOfWork
     {
         private readonly IMediator _mediator;
 
@@ -26,7 +26,7 @@ namespace BS.ReceiptAnalyzer.Data
             modelBuilder.ApplyConfigurationsFromAssembly(typeof(ReceiptAnalyzerDbContext).Assembly);
         }
 
-        public async Task SaveChangesAndPublishDomainEvents(CancellationToken cancellationToken = default)
+        public async Task CommitChangesAsync(CancellationToken cancellationToken = default)
         {
             var aggregateType = typeof(AggregateRoot);
             foreach (var entry in ChangeTracker.Entries())

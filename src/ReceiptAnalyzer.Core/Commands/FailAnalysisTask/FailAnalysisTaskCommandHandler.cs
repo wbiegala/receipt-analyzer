@@ -26,7 +26,7 @@ namespace BS.ReceiptAnalyzer.Core.Commands.FailAnalysisTask
 
             analysisTask.Fail(command.Reason);
 
-            await _dbContext.SaveChangesAndPublishDomainEvents();
+            await _dbContext.CommitChangesAsync();
         }
     }
 }

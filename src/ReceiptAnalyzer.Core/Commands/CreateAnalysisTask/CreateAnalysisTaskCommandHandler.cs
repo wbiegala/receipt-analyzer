@@ -49,7 +49,7 @@ namespace BS.ReceiptAnalyzer.Core.Commands.CreateAnalysisTask
 
                 var analysisTask = AnalysisTask.Create(hash);
                 await _dbContext.AddAsync(analysisTask);
-                await _dbContext.SaveChangesAndPublishDomainEvents();
+                await _dbContext.CommitChangesAsync();
 
                 var saveResult = await _mediator.Send(new UploadSourceImageCommand(analysisTask.Id, command.MIME, bytes));
 

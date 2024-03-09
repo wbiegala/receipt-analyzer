@@ -23,6 +23,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ReceiptAnalyzer.Domain.Test
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ReceiptAnalyzer.Shared", "src\ReceiptAnalyzer.Shared\ReceiptAnalyzer.Shared.csproj", "{658EF89C-D7C7-48D9-A2D1-81E5202C35C0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReceiptAnalyzer.Core.Tests", "tests\ReceiptAnalyzer.Core.Tests\ReceiptAnalyzer.Core.Tests.csproj", "{87AE8230-DDD2-4FF0-9A9A-CF3520EEE870}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -61,6 +63,10 @@ Global
 		{658EF89C-D7C7-48D9-A2D1-81E5202C35C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{658EF89C-D7C7-48D9-A2D1-81E5202C35C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{658EF89C-D7C7-48D9-A2D1-81E5202C35C0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{87AE8230-DDD2-4FF0-9A9A-CF3520EEE870}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{87AE8230-DDD2-4FF0-9A9A-CF3520EEE870}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{87AE8230-DDD2-4FF0-9A9A-CF3520EEE870}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{87AE8230-DDD2-4FF0-9A9A-CF3520EEE870}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -69,6 +75,7 @@ Global
 		{629DE604-B8E4-45FE-B290-C24B5E391F71} = {315C76BD-85DA-41CE-A1A7-11A02E5B529A}
 		{96905CE6-E910-4AA9-AF6A-DADF8D85C8D1} = {315C76BD-85DA-41CE-A1A7-11A02E5B529A}
 		{6DD1F7E3-9D89-4750-87F1-BD1C2EC5D586} = {099AA814-4C34-40F7-9197-937C6A5707C3}
+		{87AE8230-DDD2-4FF0-9A9A-CF3520EEE870} = {099AA814-4C34-40F7-9197-937C6A5707C3}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {E3C1F4EA-BBBF-4BBB-A4E1-6DBC42305647}

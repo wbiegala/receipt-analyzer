@@ -26,7 +26,7 @@ namespace BS.ReceiptAnalyzer.Core.Commands.StartAnalysisTask
 
             analysisTask.Start();
 
-            await _dbContext.SaveChangesAndPublishDomainEvents();
+            await _dbContext.CommitChangesAsync();
         }
     }
 }
