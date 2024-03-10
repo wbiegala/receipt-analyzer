@@ -13,18 +13,18 @@ namespace BS.ReceiptAnalyzer.Core.Commands.CreateAnalysisTask
 {
     internal class CreateAnalysisTaskCommandHandler : IRequestHandler<CreateAnalysisTaskCommand, CreateAnalysisTaskCommandResult>
     {
-        private readonly ReceiptAnalyzerDbContext _dbContext;
+        private readonly IAnalysisTaskRepository _repository;
         private readonly IHashService _hashService;
         private readonly IMediator _mediator;
         private readonly ILogger<CreateAnalysisTaskCommandHandler> _logger;
 
         public CreateAnalysisTaskCommandHandler(
-            ReceiptAnalyzerDbContext dbContext,
+            IAnalysisTaskRepository repository,
             IHashService hashService,
             IMediator mediator,
             ILogger<CreateAnalysisTaskCommandHandler> logger)
         {
-            _dbContext = dbContext ?? throw new ArgumentNullException(nameof(dbContext));
+            _repository = repository ?? throw new ArgumentNullException(nameof(repository));
             _hashService = hashService ?? throw new ArgumentNullException(nameof(hashService));
             _mediator = mediator ?? throw new ArgumentNullException(nameof(mediator));
             _logger = logger ?? throw new ArgumentNullException(nameof(logger));
@@ -48,8 +48,8 @@ namespace BS.ReceiptAnalyzer.Core.Commands.CreateAnalysisTask
                 }
 
                 var analysisTask = AnalysisTask.Create(hash);
-                await _dbContext.AddAsync(analysisTask);
-                await _dbContext.CommitChangesAsync();
+                await _repository.Add(analysisTask);
+                await _repository.UnitOfWork.CommitChangesAsync(cancellationToken);
 
                 var saveResult = await _mediator.Send(new UploadSourceImageCommand(analysisTask.Id, command.MIME, bytes));
 

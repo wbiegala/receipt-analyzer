@@ -24,4 +24,9 @@
     <Folder Include="ResultsConsumers\" />
   </ItemGroup>
 
+	<ItemGroup>
+		<InternalsVisibleTo Include="BS.ReceiptAnalyzer.Core.Tests" />
+	</ItemGroup>
+
+
 </Project>

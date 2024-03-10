@@ -6,12 +6,12 @@ namespace BS.ReceiptAnalyzer.Core.Commands.FailAnalysisTask
 {
     internal class FailAnalysisTaskCommandHandler : IRequestHandler<FailAnalysisTaskCommand>
     {
-        private readonly ReceiptAnalyzerDbContext _dbContext;
+        private readonly IAnalysisTaskRepository _repository;
         private readonly ILogger<FailAnalysisTaskCommandHandler> _logger;
 
-        public FailAnalysisTaskCommandHandler(ReceiptAnalyzerDbContext dbContext, ILogger<FailAnalysisTaskCommandHandler> logger)
+        public FailAnalysisTaskCommandHandler(IAnalysisTaskRepository repository, ILogger<FailAnalysisTaskCommandHandler> logger)
         {
-            _dbContext = dbContext ?? throw new ArgumentNullException(nameof(dbContext));
+            _repository = repository ?? throw new ArgumentNullException(nameof(repository));
             _logger = logger ?? throw new ArgumentNullException(nameof(logger));
         }
 
@@ -19,14 +19,14 @@ namespace BS.ReceiptAnalyzer.Core.Commands.FailAnalysisTask
         {
             _logger.LogDebug($"{nameof(FailAnalysisTaskCommandHandler)} - processing commad with id={command.CommandId}.");
 
-            var analysisTask = await _dbContext.Tasks.FindAsync(command.TaskId, cancellationToken);
+            var analysisTask = await _repository.GetById(command.TaskId);
 
             if (analysisTask == null)
                 return;
 
             analysisTask.Fail(command.Reason);
 
-            await _dbContext.CommitChangesAsync();
+            await _repository.UnitOfWork.CommitChangesAsync(cancellationToken);
         }
     }
 }
