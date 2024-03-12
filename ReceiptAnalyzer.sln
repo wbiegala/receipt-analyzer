@@ -23,7 +23,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ReceiptAnalyzer.Domain.Test
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ReceiptAnalyzer.Shared", "src\ReceiptAnalyzer.Shared\ReceiptAnalyzer.Shared.csproj", "{658EF89C-D7C7-48D9-A2D1-81E5202C35C0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReceiptAnalyzer.Core.Tests", "tests\ReceiptAnalyzer.Core.Tests\ReceiptAnalyzer.Core.Tests.csproj", "{87AE8230-DDD2-4FF0-9A9A-CF3520EEE870}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ReceiptAnalyzer.Core.Tests", "tests\ReceiptAnalyzer.Core.Tests\ReceiptAnalyzer.Core.Tests.csproj", "{87AE8230-DDD2-4FF0-9A9A-CF3520EEE870}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ReceiptRecognition", "ReceiptRecognition", "{397FF667-7BEE-4EFD-B242-D77A963FA64F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReceiptAnalyzer.ReceiptRecognizer.Func", "src\ReceiptAnalyzer.ReceiptRecognizer.Func\ReceiptAnalyzer.ReceiptRecognizer.Func.csproj", "{9C1B227F-D408-497B-8D26-E33BBB2C22AB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReceiptAnalyzer.ReceiptRecognizer.Core", "src\ReceiptAnalyzer.ReceiptRecognizer.Core\ReceiptAnalyzer.ReceiptRecognizer.Core.csproj", "{FD3CA395-A618-426C-95EA-FBFDB403FE0C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -67,6 +73,14 @@ Global
 		{87AE8230-DDD2-4FF0-9A9A-CF3520EEE870}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{87AE8230-DDD2-4FF0-9A9A-CF3520EEE870}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{87AE8230-DDD2-4FF0-9A9A-CF3520EEE870}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9C1B227F-D408-497B-8D26-E33BBB2C22AB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9C1B227F-D408-497B-8D26-E33BBB2C22AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9C1B227F-D408-497B-8D26-E33BBB2C22AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9C1B227F-D408-497B-8D26-E33BBB2C22AB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FD3CA395-A618-426C-95EA-FBFDB403FE0C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FD3CA395-A618-426C-95EA-FBFDB403FE0C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FD3CA395-A618-426C-95EA-FBFDB403FE0C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FD3CA395-A618-426C-95EA-FBFDB403FE0C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -76,6 +90,8 @@ Global
 		{96905CE6-E910-4AA9-AF6A-DADF8D85C8D1} = {315C76BD-85DA-41CE-A1A7-11A02E5B529A}
 		{6DD1F7E3-9D89-4750-87F1-BD1C2EC5D586} = {099AA814-4C34-40F7-9197-937C6A5707C3}
 		{87AE8230-DDD2-4FF0-9A9A-CF3520EEE870} = {099AA814-4C34-40F7-9197-937C6A5707C3}
+		{9C1B227F-D408-497B-8D26-E33BBB2C22AB} = {397FF667-7BEE-4EFD-B242-D77A963FA64F}
+		{FD3CA395-A618-426C-95EA-FBFDB403FE0C} = {397FF667-7BEE-4EFD-B242-D77A963FA64F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {E3C1F4EA-BBBF-4BBB-A4E1-6DBC42305647}

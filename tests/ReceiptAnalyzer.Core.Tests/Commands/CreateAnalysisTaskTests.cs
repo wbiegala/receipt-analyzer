@@ -8,7 +8,6 @@ using BS.ReceiptAnalyzer.Core.Internal.Queries;
 using BS.ReceiptAnalyzer.Domain.Model;
 using BS.ReceiptAnalyzer.Core.Commands.UploadSourceImage;
 using FluentAssertions;
-using System.Security.Permissions;
 using BS.ReceiptAnalyzer.Domain.Basic;
 
 namespace BS.ReceiptAnalyzer.Core.Tests.Commands
