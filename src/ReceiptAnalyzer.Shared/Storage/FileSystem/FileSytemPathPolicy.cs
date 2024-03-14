@@ -75,6 +75,6 @@ namespace BS.ReceiptAnalyzer.Shared.Storage.FileSystem
             };
         }
         private static string TransformGuid(Guid guid) => guid.ToString("N");
-        private const string IMAGE_FILE_FORMAT = "jpg";
+        private const string IMAGE_FILE_FORMAT = "png";
     }
 }

@@ -22,10 +22,7 @@ namespace BS.ReceiptAnalyzer.Shared.Storage
         {
             try
             {
-                var serviceClient = new BlobServiceClient(_connectionString);
-                var containerClient = serviceClient.GetBlobContainerClient(_containerName);
-                await containerClient.CreateIfNotExistsAsync();
-                var blobClient = containerClient.GetBlobClient(path);
+                var blobClient = await GetClientAsync(path);
 
                 var response = await blobClient.UploadAsync(file, overwrite);
 
@@ -42,9 +39,31 @@ namespace BS.ReceiptAnalyzer.Shared.Storage
             throw new NotImplementedException();
         }
 
-        public Task<Stream?> GetFileAsync(string path)
+        public async Task<StorageServiceContract.GetFileResult> GetFileAsync(string path)
         {
-            throw new NotImplementedException();
+            try
+            {
+                var blobClient = await GetClientAsync(path);
+                var result = new MemoryStream();
+                var response = await blobClient.DownloadToAsync(result);
+
+                result.Position = 0;
+                return new StorageServiceContract.GetFileResult(true, result);
+            }
+            catch (Exception ex)
+            {
+                return new StorageServiceContract.GetFileResult(false, null, ex.Message);
+            }
+        }
+
+
+        private async Task<BlobClient> GetClientAsync(string path)
+        {
+            var serviceClient = new BlobServiceClient(_connectionString);
+            var containerClient = serviceClient.GetBlobContainerClient(_containerName);
+            await containerClient.CreateIfNotExistsAsync();
+
+            return containerClient.GetBlobClient(path);
         }
     }
 }

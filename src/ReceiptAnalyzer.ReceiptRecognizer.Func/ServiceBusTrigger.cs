@@ -1,10 +1,9 @@
 using System.Text.Json;
 using Azure.Messaging.ServiceBus;
 using BS.ReceiptAnalyzer.Contract.Config;
-using BS.ReceiptAnalyzer.Contract.Models;
 using BS.ReceiptAnalyzer.Contract.Requests;
 using BS.ReceiptAnalyzer.Contract.Results;
-using BS.ReceiptAnalyzer.ReceiptRecognizer.Core;
+using BS.ReceiptAnalyzer.ReceiptRecognizer.Func.Extensions;
 using Microsoft.Azure.Functions.Worker;
 using Microsoft.Extensions.Logging;
 using ReceiptAnalyzer.ReceiptRecognizer.Core;
@@ -30,29 +29,36 @@ namespace ReceiptAnalyzer.ReceiptRecognizer.Func
             ServiceBusMessageActions messageActions)
         {
             var request = DeserializeMessage(message.Body);
+            _logger.LogInformation($"Start processing receipt recognition id={request.TaskId}");
 
-            var result = await _receiptRecognizerService.RecognizeReceiptsAsync(request!.TaskId);
+            var resultBuilder = StepResultBuilder.Create(request.TaskId);
+            try
+            {
+                var recognitionResult = await _receiptRecognizerService.RecognizeReceiptsAsync(request!.TaskId);
+                resultBuilder.AddRecognitionResult(recognitionResult);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, ex.Message);
+                resultBuilder.AddException(ex);
+            }
+            finally
+            {
+                await messageActions.CompleteMessageAsync(message);
+            }
 
-
-            await messageActions.CompleteMessageAsync(message);
-            return MapResult(result);
+            return resultBuilder.Build();
         }
 
-        private static StartAnalysisTaskStepProcessing? DeserializeMessage(BinaryData messageBody)
+        private static StartAnalysisTaskStepProcessing DeserializeMessage(BinaryData messageBody)
         {
             var messageJson = messageBody.ToString();
-            return JsonSerializer.Deserialize<StartAnalysisTaskStepProcessing>(messageJson);
-        }
+            var message = JsonSerializer.Deserialize<StartAnalysisTaskStepProcessing>(messageJson);
 
-        private static AnalysisTaskStepProcessingResult MapResult(ReceiptRecognizerServiceContract.Result result) =>
-            new AnalysisTaskStepProcessingResult
-            {
-                TaskId = result.TaskId,
-                StartTime = result.StartTime,
-                EndTime = result.EndTime,
-                IsSuccess = result.IsSuccess,
-                FailReason = result.FailReason,
-                AnalysisTaskStep = AnalysisTaskSteps.ReceiptsRecognition
-            };
+            if (message == null)
+                throw new InvalidOperationException("Message is null");
+
+            return message;
+        }
     }
 }

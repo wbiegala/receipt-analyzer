@@ -4,7 +4,7 @@
     {
         Task<StorageServiceContract.SaveFileResult> SaveFileAsync(Stream file, string path, bool overwrite = false);
         Task<StorageServiceContract.SaveFileResult> SaveFileAsync(byte[] file, string path, bool overwrite = false);
-        Task<Stream?> GetFileAsync(string path);
+        Task<StorageServiceContract.GetFileResult> GetFileAsync(string path);
         Task<bool> DeleteFileAsync(string path);
     }
 }

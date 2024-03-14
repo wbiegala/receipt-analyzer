@@ -1,19 +1,26 @@
 ﻿using BS.ReceiptAnalyzer.ReceiptRecognizer.Core;
+using BS.ReceiptAnalyzer.ReceiptRecognizer.Core.IO;
 
 namespace ReceiptAnalyzer.ReceiptRecognizer.Core
 {
     internal class ReceiptRecognizerService : IReceiptRecognizerService
     {
-        public Task<ReceiptRecognizerServiceContract.Result> RecognizeReceiptsAsync(Guid taskId)
+        private readonly ISourceImageReceiver _sourceImageReceiver;
+
+        public ReceiptRecognizerService(ISourceImageReceiver sourceImageReceiver)
         {
-            return Task.FromResult(new ReceiptRecognizerServiceContract.Result
+            _sourceImageReceiver = sourceImageReceiver ?? throw new ArgumentNullException(nameof(sourceImageReceiver));
+        }
+
+        public async Task<ReceiptRecognizerServiceContract.Result> RecognizeReceiptsAsync(Guid taskId)
+        {
+            var source = await _sourceImageReceiver.GetSourceImageAsync(taskId);
+
+            return new ReceiptRecognizerServiceContract.Result
             {
-                TaskId = taskId,
-                StartTime = DateTimeOffset.Now,
-                EndTime = DateTimeOffset.Now,
-                IsSuccess = true,
-                FailReason = null,
-            });
+                FinishedAt = DateTimeOffset.Now,
+                IsSuccess = true
+            };
         }
     }
 }

@@ -2,6 +2,6 @@
 { 
     public interface ISourceImagePathStrategy
     {
-        string GetSourceImagePath(Guid taskId, string extension);
+        string GetSourceImagePath(Guid taskId, string extension = "png");
     }
 }

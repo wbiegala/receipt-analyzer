@@ -3,9 +3,7 @@ using BS.ReceiptAnalyzer.Shared.Hashing;
 using BS.ReceiptAnalyzer.Shared.ServiceBus;
 using BS.ReceiptAnalyzer.Shared.Storage;
 using BS.ReceiptAnalyzer.Shared.Storage.FileSystem;
-using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using System.Runtime.Serialization;
 
 namespace BS.ReceiptAnalyzer.Shared
 {
