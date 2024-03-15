@@ -1,0 +1,60 @@
+{
+    "asset": {
+        "format": "jpg",
+        "id": "4f1ce37e4d7d26f3e12453a76988f2a7",
+        "name": "5b3a101f8d2b4c8aa9885e2d28a6a21c.jpg",
+        "path": "file:C:/Repositories/BS.ReceiptAnalyzer/machine-learning-data/receipt-recognize/images/5b3a101f8d2b4c8aa9885e2d28a6a21c.jpg",
+        "size": {
+            "width": 750,
+            "height": 1000
+        },
+        "state": 2,
+        "type": 1
+    },
+    "regions": [
+        {
+            "id": "RWeKfyUTm",
+            "type": "POLYGON",
+            "tags": [
+                "receipt"
+            ],
+            "boundingBox": {
+                "height": 1000,
+                "width": 601.7316017316017,
+                "left": 66.01731601731602,
+                "top": 0
+            },
+            "points": [
+                {
+                    "x": 87.66233766233766,
+                    "y": 0
+                },
+                {
+                    "x": 66.01731601731602,
+                    "y": 972.943722943723
+                },
+                {
+                    "x": 104.97835497835497,
+                    "y": 998.9177489177489
+                },
+                {
+                    "x": 667.7489177489177,
+                    "y": 1000
+                },
+                {
+                    "x": 654.7619047619047,
+                    "y": 672.077922077922
+                },
+                {
+                    "x": 641.7748917748918,
+                    "y": 345.23809523809524
+                },
+                {
+                    "x": 624.4588744588744,
+                    "y": 0
+                }
+            ]
+        }
+    ],
+    "version": "2.2.0"
+}

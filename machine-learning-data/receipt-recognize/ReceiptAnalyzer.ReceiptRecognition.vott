@@ -1,0 +1,1629 @@
+{
+    "name": "ReceiptAnalyzer.ReceiptRecognition",
+    "securityToken": "ReceiptAnalyzer.ReceiptRecognition Token",
+    "sourceConnection": {
+        "name": "receipt-analyzer.receipt-recognition.source",
+        "providerType": "localFileSystemProxy",
+        "providerOptions": {
+            "encrypted": "eyJjaXBoZXJ0ZXh0IjoiYmE3NDUxMjgwYzM0MzY1YzZjOTVlNWU2YTFjYTZmOWRiNTcyMTgxZGVjZTlkZDFmYmFjMDE2OTM1Y2Q0NGJmYjcxYzY5NzhhOGMwNGIxMDgwODhkMTc2ZGIwNzJkNDk4OTM2NTU0YWFkNWNkNGYxMjhkM2YwNDRlOGQ4OTVkNmJiYTlmZjlkMGZhMzhlMDVhMjg0Y2E4MDAwY2IwYjJjOGRlNjlmODg3NTQ1MDMzZDBhNWM5OTk5ODRkNmM0MzJjOTA0Mzg0NjkwYzMwZmM5MTY5MDMwNDgyMjVlYTY0YzEiLCJpdiI6IjJmYjc3MmM1MmU3YjQyZjU0OTQxZmMxMTVhNTlmMjhmNDhjMTYxNTdjMThhZTU1ZCJ9"
+        },
+        "id": "UX2iltHWJ"
+    },
+    "targetConnection": {
+        "name": "receipt-analyzer.receipt-recognition.target",
+        "providerType": "localFileSystemProxy",
+        "providerOptions": {
+            "encrypted": "eyJjaXBoZXJ0ZXh0IjoiYzBlY2ViMjAyNWQ4YTdmNmJiNDY1ZDdiMTkwOGI3M2I4MjFkYTA4NGU5NmRiOTllMDc1NTkxZmE4NTQyYTJiODExYjUxN2I0YjE2YTYzMDgyYTFkMTY0ZTU0ZWI4MzBkZDgyZTQyYmE5ZWFiY2NlODMzYzY1MTZhMGYwZTRjYWQ3NTUxOThkNTA1ZmZhNjZiZGU5ZTE4YWZjNGI4NmE4Y2Q3ZmM2NmMyMWFiZTU2NmQ2ZTEzZDQzNzc3ODQxYjk3IiwiaXYiOiI5NzU3ZTZiNzNlMjYxNzA1MzM5MTAwM2FjNWY5M2U1Mzk3M2M1ZjE4NTQxMjA5NDEifQ=="
+        },
+        "id": "yl8q65b8A"
+    },
+    "videoSettings": {
+        "frameExtractionRate": 15
+    },
+    "tags": [
+        {
+            "name": "receipt",
+            "color": "#5db300"
+        }
+    ],
+    "id": "lX6tVcJdR",
+    "activeLearningSettings": {
+        "autoDetect": false,
+        "predictTag": true,
+        "modelPathType": "coco"
+    },
+    "exportFormat": {
+        "providerType": "vottJson",
+        "providerOptions": {
+            "encrypted": "eyJjaXBoZXJ0ZXh0IjoiYzU1Zjg5OWE0NjkzZTYwM2ExM2Y0NDk0ODc0MDMyMTAwNWY4ODE1NDgwNDcwOWQyOWRmZjkwNDEyYTUzNzJiYzUxZmE3MmU5YThhNjRmZWQ0MWVmOTA2NDZlYWI0ZGQwIiwiaXYiOiI2OWU1NmIzMWExZTIxYTFjM2U1MDFmZGI1NzU0NzQwMGQ0NDFkMjE4Y2Y2ZWIyZTcifQ=="
+        }
+    },
+    "version": "2.2.0",
+    "lastVisitedAssetId": "c8863c91e5bca190b9d6bc18477f6694",
+    "assets": {
+        "1da355601677d522e04dbd1733b1286d": {
+            "format": "jpg",
+            "id": "1da355601677d522e04dbd1733b1286d",
+            "name": "06bea3de381c411e9ac876760bb9882e.jpg",
+            "path": "file:C:/Repositories/BS.ReceiptAnalyzer/machine-learning-data/receipt-recognize/images/06bea3de381c411e9ac876760bb9882e.jpg",
+            "size": {
+                "width": 750,
+                "height": 1000
+            },
+            "state": 2,
+            "type": 1
+        },
+        "a6756632afdebc377b2a8aee364d0a92": {
+            "format": "jpg",
+            "id": "a6756632afdebc377b2a8aee364d0a92",
+            "name": "0735920d404f4264a489296b3c249732.jpg",
+            "path": "file:C:/Repositories/BS.ReceiptAnalyzer/machine-learning-data/receipt-recognize/images/0735920d404f4264a489296b3c249732.jpg",
+            "size": {
+                "width": 750,
+                "height": 1000
+            },
+            "state": 2,
+            "type": 1
+        },
+        "e8fb7509a8263951b318b2bc9ac41085": {
+            "format": "jpg",
+            "id": "e8fb7509a8263951b318b2bc9ac41085",
+            "name": "091adecc866143f8a94923ff23d02e5e.jpg",
+            "path": "file:C:/Repositories/BS.ReceiptAnalyzer/machine-learning-data/receipt-recognize/images/091adecc866143f8a94923ff23d02e5e.jpg",
+            "size": {
+                "width": 750,
+                "height": 1000
+            },
+            "state": 2,
+            "type": 1
+        },
+        "4a0243a2e0f6619d84a0b6c398704c81": {
+            "format": "jpg",
+            "id": "4a0243a2e0f6619d84a0b6c398704c81",
+            "name": "0b2dbb55eee34ef08bf02e45a69be577.jpg",
+            "path": "file:C:/Repositories/BS.ReceiptAnalyzer/machine-learning-data/receipt-recognize/images/0b2dbb55eee34ef08bf02e45a69be577.jpg",
+            "size": {
+                "width": 750,
+                "height": 1000
+            },
+            "state": 2,
+            "type": 1
+        },
+        "93b95a7fbe18e16296a15a74db92693a": {
+            "format": "jpg",
+            "id": "93b95a7fbe18e16296a15a74db92693a",
+            "name": "0bc94e3eee4a45a1971f8a343fc53b9a.jpg",
+            "path": "file:C:/Repositories/BS.ReceiptAnalyzer/machine-learning-data/receipt-recognize/images/0bc94e3eee4a45a1971f8a343fc53b9a.jpg",
+            "size": {
+                "width": 750,
+                "height": 1000
+            },
+            "state": 2,
+            "type": 1
+        },
+        "97bd64bcb1a2e287839a0c4f486fc570": {
+            "format": "jpg",
+            "id": "97bd64bcb1a2e287839a0c4f486fc570",
+            "name": "0daf73012f2f4e448ca5cde20f6a64b5.jpg",
+            "path": "file:C:/Repositories/BS.ReceiptAnalyzer/machine-learning-data/receipt-recognize/images/0daf73012f2f4e448ca5cde20f6a64b5.jpg",
+            "size": {
+                "width": 750,
+                "height": 1000
+            },
+            "state": 2,
+            "type": 1
+        },
+        "439d2cd36335cd6c584efdd4269d4749": {
+            "format": "jpg",
+            "id": "439d2cd36335cd6c584efdd4269d4749",
+            "name": "0fe5e850f21e4f0b9cbb071be8bedba1.jpg",
+            "path": "file:C:/Repositories/BS.ReceiptAnalyzer/machine-learning-data/receipt-recognize/images/0fe5e850f21e4f0b9cbb071be8bedba1.jpg",
+            "size": {
+                "width": 750,
+                "height": 1000
+            },
+            "state": 2,
+            "type": 1
+        },
+        "310abf29da0c19f7ef3a77a636cd5030": {
+            "format": "jpg",
+            "id": "310abf29da0c19f7ef3a77a636cd5030",
+            "name": "10c6da5a8d8c423d920637fb2186af4e.jpg",
+            "path": "file:C:/Repositories/BS.ReceiptAnalyzer/machine-learning-data/receipt-recognize/images/10c6da5a8d8c423d920637fb2186af4e.jpg",
+            "size": {
+                "width": 750,
+                "height": 1000
+            },
+            "state": 2,
+            "type": 1
+        },
+        "23794cf47a9b32ac61a67728456d81d1": {
+            "format": "jpg",
+            "id": "23794cf47a9b32ac61a67728456d81d1",
+            "name": "12aaa04b02074085943176f5dcab38d5.jpg",
+            "path": "file:C:/Repositories/BS.ReceiptAnalyzer/machine-learning-data/receipt-recognize/images/12aaa04b02074085943176f5dcab38d5.jpg",
+            "size": {
+                "width": 750,
+                "height": 1000
+            },
+            "state": 2,
+            "type": 1
+        },
+        "e918f86a51be9753cbbb86e651ed9d39": {
+            "format": "jpg",
+            "id": "e918f86a51be9753cbbb86e651ed9d39",
+            "name": "134a2a1da4a743e39ac32c24da941a51.jpg",
+            "path": "file:C:/Repositories/BS.ReceiptAnalyzer/machine-learning-data/receipt-recognize/images/134a2a1da4a743e39ac32c24da941a51.jpg",
+            "size": {
+                "width": 750,
+                "height": 1000
+            },
+            "state": 2,
+            "type": 1
+        },
+        "0a2b379df1b815de71d3c86c94473d38": {
+            "format": "jpg",
+            "id": "0a2b379df1b815de71d3c86c94473d38",
+            "name": "14c3b21e254046a794b7a7e069b77cf5.jpg",
+            "path": "file:C:/Repositories/BS.ReceiptAnalyzer/machine-learning-data/receipt-recognize/images/14c3b21e254046a794b7a7e069b77cf5.jpg",
+            "size": {
+                "width": 750,
+                "height": 1000
+            },
+            "state": 2,
+            "type": 1
+        },
+        "b077ee56b691478055b3514fa067e5b2": {
+            "format": "jpg",
+            "id": "b077ee56b691478055b3514fa067e5b2",
+            "name": "16e8809129044cddbb0a4d656dfbc8d3.jpg",
+            "path": "file:C:/Repositories/BS.ReceiptAnalyzer/machine-learning-data/receipt-recognize/images/16e8809129044cddbb0a4d656dfbc8d3.jpg",
+            "size": {
+                "width": 750,
+                "height": 1000
+            },
+            "state": 2,
+            "type": 1
+        },
+        "5e4564b714a31541923b2342a05a303b": {
+            "format": "jpg",
+            "id": "5e4564b714a31541923b2342a05a303b",
+            "name": "1a79f29785794eb19baf73a8d931afae.jpg",
+            "path": "file:C:/Repositories/BS.ReceiptAnalyzer/machine-learning-data/receipt-recognize/images/1a79f29785794eb19baf73a8d931afae.jpg",
+            "size": {
+                "width": 750,
+                "height": 1000
+            },
+            "state": 2,
+            "type": 1
+        },
+        "6530414ff8cc848b3f81f4e5f2597a54": {
+            "format": "jpg",
+            "id": "6530414ff8cc848b3f81f4e5f2597a54",
+            "name": "1b2a2929768e47a691b42326cc7be5dd.jpg",
+            "path": "file:C:/Repositories/BS.ReceiptAnalyzer/machine-learning-data/receipt-recognize/images/1b2a2929768e47a691b42326cc7be5dd.jpg",
+            "size": {
+                "width": 750,
+                "height": 1000
+            },
+            "state": 2,
+            "type": 1
+        },
+        "e89389aa0b498abe0b5daa9ad8705a21": {
+            "format": "jpg",
+            "id": "e89389aa0b498abe0b5daa9ad8705a21",
+            "name": "20205f0a63b34465b26a231f8252c578.jpg",
+            "path": "file:C:/Repositories/BS.ReceiptAnalyzer/machine-learning-data/receipt-recognize/images/20205f0a63b34465b26a231f8252c578.jpg",
+            "size": {
+                "width": 750,
+                "height": 1000
+            },
+            "state": 2,
+            "type": 1
+        },
+        "646dc613e088448245c174ffe2eb8d72": {
+            "format": "jpg",
+            "id": "646dc613e088448245c174ffe2eb8d72",
+            "name": "2216cf7d008e4befadba1fcdd80d3e89.jpg",
+            "path": "file:C:/Repositories/BS.ReceiptAnalyzer/machine-learning-data/receipt-recognize/images/2216cf7d008e4befadba1fcdd80d3e89.jpg",
+            "size": {
+                "width": 750,
+                "height": 1000
+            },
+            "state": 2,
+            "type": 1
+        },
+        "06abbbb0efb93e83a0686a63fdbbdae7": {
+            "format": "jpg",
+            "id": "06abbbb0efb93e83a0686a63fdbbdae7",
+            "name": "2218e2bdc4d945ffbcdf9f50f768535a.jpg",
+            "path": "file:C:/Repositories/BS.ReceiptAnalyzer/machine-learning-data/receipt-recognize/images/2218e2bdc4d945ffbcdf9f50f768535a.jpg",
+            "size": {
+                "width": 750,
+                "height": 1000
+            },
+            "state": 2,
+            "type": 1
+        },
+        "c40db65f5be0c5790a02ea4537909ced": {
+            "format": "jpg",
+            "id": "c40db65f5be0c5790a02ea4537909ced",
+            "name": "2a98a297cb84413b8b104c8316b48c91.jpg",
+            "path": "file:C:/Repositories/BS.ReceiptAnalyzer/machine-learning-data/receipt-recognize/images/2a98a297cb84413b8b104c8316b48c91.jpg",
+            "size": {
+                "width": 750,
+                "height": 1000
+            },
+            "state": 2,
+            "type": 1
+        },
+        "4b9cd69b35c8cfb31fc9f00def9ba038": {
+            "format": "jpg",
+            "id": "4b9cd69b35c8cfb31fc9f00def9ba038",
+            "name": "2a9d4b0a5e514da79a08a52c8a9a3bc5.jpg",
+            "path": "file:C:/Repositories/BS.ReceiptAnalyzer/machine-learning-data/receipt-recognize/images/2a9d4b0a5e514da79a08a52c8a9a3bc5.jpg",
+            "size": {
+                "width": 750,
+                "height": 1000
+            },
+            "state": 2,
+            "type": 1
+        },
+        "7220c932afd894405015e537a44635ed": {
+            "format": "jpg",
+            "id": "7220c932afd894405015e537a44635ed",
+            "name": "2bea7042cc2a4a40a9f93bf0c4b2393e.jpg",
+            "path": "file:C:/Repositories/BS.ReceiptAnalyzer/machine-learning-data/receipt-recognize/images/2bea7042cc2a4a40a9f93bf0c4b2393e.jpg",
+            "size": {
+                "width": 750,
+                "height": 1000
+            },
+            "state": 2,
+            "type": 1
+        },
+        "2a54365cfe866bced4c4b5e3249d9890": {
+            "format": "jpg",
+            "id": "2a54365cfe866bced4c4b5e3249d9890",
+            "name": "2c22b0ac0ca44240a435763c4712b2d7.jpg",
+            "path": "file:C:/Repositories/BS.ReceiptAnalyzer/machine-learning-data/receipt-recognize/images/2c22b0ac0ca44240a435763c4712b2d7.jpg",
+            "size": {
+                "width": 750,
+                "height": 1000
+            },
+            "state": 2,
+            "type": 1
+        },
+        "29265d7c82b68c55ebe3621702867b2f": {
+            "format": "jpg",
+            "id": "29265d7c82b68c55ebe3621702867b2f",
+            "name": "2c9a26880a6849c38f2f3f7ae1f87a48.jpg",
+            "path": "file:C:/Repositories/BS.ReceiptAnalyzer/machine-learning-data/receipt-recognize/images/2c9a26880a6849c38f2f3f7ae1f87a48.jpg",
+            "size": {
+                "width": 750,
+                "height": 1000
+            },
+            "state": 2,
+            "type": 1
+        },
+        "218ff1f29dc8525759c02ed2de777a7a": {
+            "format": "jpg",
+            "id": "218ff1f29dc8525759c02ed2de777a7a",
+            "name": "2ca7f85259cc4d6a9e5dc494ef193c71.jpg",
+            "path": "file:C:/Repositories/BS.ReceiptAnalyzer/machine-learning-data/receipt-recognize/images/2ca7f85259cc4d6a9e5dc494ef193c71.jpg",
+            "size": {
+                "width": 750,
+                "height": 1000
+            },
+            "state": 2,
+            "type": 1
+        },
+        "63d00e8f281fcaa573a23c1507cb33cd": {
+            "format": "jpg",
+            "id": "63d00e8f281fcaa573a23c1507cb33cd",
+            "name": "2df6d10391e74e6e9d48e491d0096fdf.jpg",
+            "path": "file:C:/Repositories/BS.ReceiptAnalyzer/machine-learning-data/receipt-recognize/images/2df6d10391e74e6e9d48e491d0096fdf.jpg",
+            "size": {
+                "width": 750,
+                "height": 1000
+            },
+            "state": 2,
+            "type": 1
+        },
+        "83ee522e6804c187f2cb0f8900b06eaa": {
+            "format": "jpg",
+            "id": "83ee522e6804c187f2cb0f8900b06eaa",
+            "name": "2ec00e45371c495ead5c1579d166514b.jpg",
+            "path": "file:C:/Repositories/BS.ReceiptAnalyzer/machine-learning-data/receipt-recognize/images/2ec00e45371c495ead5c1579d166514b.jpg",
+            "size": {
+                "width": 750,
+                "height": 1000
+            },
+            "state": 2,
+            "type": 1
+        },
+        "a2b5182748ad13e5cdcfb4f4a7bfe41a": {
+            "format": "jpg",
+            "id": "a2b5182748ad13e5cdcfb4f4a7bfe41a",
+            "name": "3e16d30b322c4b73b24e6008b6b0f979.jpg",
+            "path": "file:C:/Repositories/BS.ReceiptAnalyzer/machine-learning-data/receipt-recognize/images/3e16d30b322c4b73b24e6008b6b0f979.jpg",
+            "size": {
+                "width": 750,
+                "height": 1000
+            },
+            "state": 2,
+            "type": 1
+        },
+        "731b114541631c96572a73a37257e292": {
+            "format": "jpg",
+            "id": "731b114541631c96572a73a37257e292",
+            "name": "40027c22d3cc4b7ebc800bb99d344a0f.jpg",
+            "path": "file:C:/Repositories/BS.ReceiptAnalyzer/machine-learning-data/receipt-recognize/images/40027c22d3cc4b7ebc800bb99d344a0f.jpg",
+            "size": {
+                "width": 750,
+                "height": 1000
+            },
+            "state": 2,
+            "type": 1
+        },
+        "3f9bd0455d016054710e0b625ccaeadb": {
+            "format": "jpg",
+            "id": "3f9bd0455d016054710e0b625ccaeadb",
+            "name": "424cfce68ffb41af908bd3909844ba1d.jpg",
+            "path": "file:C:/Repositories/BS.ReceiptAnalyzer/machine-learning-data/receipt-recognize/images/424cfce68ffb41af908bd3909844ba1d.jpg",
+            "size": {
+                "width": 750,
+                "height": 1000
+            },
+            "state": 2,
+            "type": 1
+        },
+        "9e2b321aaf9d008f4d3fdb335c2290e7": {
+            "format": "jpg",
+            "id": "9e2b321aaf9d008f4d3fdb335c2290e7",
+            "name": "43059f39a0884d1098b2cdfe29151764.jpg",
+            "path": "file:C:/Repositories/BS.ReceiptAnalyzer/machine-learning-data/receipt-recognize/images/43059f39a0884d1098b2cdfe29151764.jpg",
+            "size": {
+                "width": 750,
+                "height": 1000
+            },
+            "state": 2,
+            "type": 1
+        },
+        "510d7bf1f4e8b0b9774e6d6c988a92b1": {
+            "format": "jpg",
+            "id": "510d7bf1f4e8b0b9774e6d6c988a92b1",
+            "name": "43f3b3588d04490c81c81e1d120244ce.jpg",
+            "path": "file:C:/Repositories/BS.ReceiptAnalyzer/machine-learning-data/receipt-recognize/images/43f3b3588d04490c81c81e1d120244ce.jpg",
+            "size": {
+                "width": 750,
+                "height": 1000
+            },
+            "state": 2,
+            "type": 1
+        },
+        "af8db2c97118af016c0dc79c83996e77": {
+            "format": "jpg",
+            "id": "af8db2c97118af016c0dc79c83996e77",
+            "name": "46e4b36b091e49bf80f874ba3c4837af.jpg",
+            "path": "file:C:/Repositories/BS.ReceiptAnalyzer/machine-learning-data/receipt-recognize/images/46e4b36b091e49bf80f874ba3c4837af.jpg",
+            "size": {
+                "width": 750,
+                "height": 1000
+            },
+            "state": 2,
+            "type": 1
+        },
+        "ce1eb8507c9b43afc586fe86374880cf": {
+            "format": "jpg",
+            "id": "ce1eb8507c9b43afc586fe86374880cf",
+            "name": "4eaf50cde06e427e8de29d103c7aa680.jpg",
+            "path": "file:C:/Repositories/BS.ReceiptAnalyzer/machine-learning-data/receipt-recognize/images/4eaf50cde06e427e8de29d103c7aa680.jpg",
+            "size": {
+                "width": 750,
+                "height": 1000
+            },
+            "state": 2,
+            "type": 1
+        },
+        "2f19dcfa99608fe086be4a7c707e0d0a": {
+            "format": "jpg",
+            "id": "2f19dcfa99608fe086be4a7c707e0d0a",
+            "name": "4f5595253429400ca33a2511e5ceb634.jpg",
+            "path": "file:C:/Repositories/BS.ReceiptAnalyzer/machine-learning-data/receipt-recognize/images/4f5595253429400ca33a2511e5ceb634.jpg",
+            "size": {
+                "width": 750,
+                "height": 1000
+            },
+            "state": 2,
+            "type": 1
+        },
+        "861f81b2d2c889f63e3923fa00ea5046": {
+            "format": "jpg",
+            "id": "861f81b2d2c889f63e3923fa00ea5046",
+            "name": "520bc3c1f7414ab48ead5a600d306391.jpg",
+            "path": "file:C:/Repositories/BS.ReceiptAnalyzer/machine-learning-data/receipt-recognize/images/520bc3c1f7414ab48ead5a600d306391.jpg",
+            "size": {
+                "width": 750,
+                "height": 1000
+            },
+            "state": 2,
+            "type": 1
+        },
+        "50c7233ffb1a23cc335460f323812f5c": {
+            "format": "jpg",
+            "id": "50c7233ffb1a23cc335460f323812f5c",
+            "name": "5426b693d2494b5a95657ec78b19b429.jpg",
+            "path": "file:C:/Repositories/BS.ReceiptAnalyzer/machine-learning-data/receipt-recognize/images/5426b693d2494b5a95657ec78b19b429.jpg",
+            "size": {
+                "width": 750,
+                "height": 1000
+            },
+            "state": 2,
+            "type": 1
+        },
+        "1d41fbb093ae136c1eb701315d269cd1": {
+            "format": "jpg",
+            "id": "1d41fbb093ae136c1eb701315d269cd1",
+            "name": "542e6085f70c47ad90f2f7fb73ad7b04.jpg",
+            "path": "file:C:/Repositories/BS.ReceiptAnalyzer/machine-learning-data/receipt-recognize/images/542e6085f70c47ad90f2f7fb73ad7b04.jpg",
+            "size": {
+                "width": 750,
+                "height": 1000
+            },
+            "state": 2,
+            "type": 1
+        },
+        "f80baeb81a4f2649394a17c15224b43c": {
+            "format": "jpg",
+            "id": "f80baeb81a4f2649394a17c15224b43c",
+            "name": "58392db513f84d66bf3c13f3bea93248.jpg",
+            "path": "file:C:/Repositories/BS.ReceiptAnalyzer/machine-learning-data/receipt-recognize/images/58392db513f84d66bf3c13f3bea93248.jpg",
+            "size": {
+                "width": 750,
+                "height": 1000
+            },
+            "state": 2,
+            "type": 1
+        },
+        "4f1ce37e4d7d26f3e12453a76988f2a7": {
+            "format": "jpg",
+            "id": "4f1ce37e4d7d26f3e12453a76988f2a7",
+            "name": "5b3a101f8d2b4c8aa9885e2d28a6a21c.jpg",
+            "path": "file:C:/Repositories/BS.ReceiptAnalyzer/machine-learning-data/receipt-recognize/images/5b3a101f8d2b4c8aa9885e2d28a6a21c.jpg",
+            "size": {
+                "width": 750,
+                "height": 1000
+            },
+            "state": 2,
+            "type": 1
+        },
+        "23b2433a716f9f3b07f8fbd1cfc17064": {
+            "format": "jpg",
+            "id": "23b2433a716f9f3b07f8fbd1cfc17064",
+            "name": "5c4979b8019641d6974a71b35608f58e.jpg",
+            "path": "file:C:/Repositories/BS.ReceiptAnalyzer/machine-learning-data/receipt-recognize/images/5c4979b8019641d6974a71b35608f58e.jpg",
+            "size": {
+                "width": 750,
+                "height": 1000
+            },
+            "state": 2,
+            "type": 1
+        },
+        "ea52f8e66ab3e0faa6b9958935233ace": {
+            "format": "jpg",
+            "id": "ea52f8e66ab3e0faa6b9958935233ace",
+            "name": "5f37ef7ff6874090b7a39aed315d475f.jpg",
+            "path": "file:C:/Repositories/BS.ReceiptAnalyzer/machine-learning-data/receipt-recognize/images/5f37ef7ff6874090b7a39aed315d475f.jpg",
+            "size": {
+                "width": 750,
+                "height": 1000
+            },
+            "state": 2,
+            "type": 1
+        },
+        "047c5dc7b7475ab2cbe02bb9800bebc7": {
+            "format": "jpg",
+            "id": "047c5dc7b7475ab2cbe02bb9800bebc7",
+            "name": "624960f7f8fd49e38826293299512d1f.jpg",
+            "path": "file:C:/Repositories/BS.ReceiptAnalyzer/machine-learning-data/receipt-recognize/images/624960f7f8fd49e38826293299512d1f.jpg",
+            "size": {
+                "width": 750,
+                "height": 1000
+            },
+            "state": 2,
+            "type": 1
+        },
+        "d3b71003d9509a729aff5dec05868d12": {
+            "format": "jpg",
+            "id": "d3b71003d9509a729aff5dec05868d12",
+            "name": "627d1e0cf51749c58c2c57644bfc14bd.jpg",
+            "path": "file:C:/Repositories/BS.ReceiptAnalyzer/machine-learning-data/receipt-recognize/images/627d1e0cf51749c58c2c57644bfc14bd.jpg",
+            "size": {
+                "width": 750,
+                "height": 1000
+            },
+            "state": 2,
+            "type": 1
+        },
+        "25319040a1c04e4f24265f5f2ac9995b": {
+            "format": "jpg",
+            "id": "25319040a1c04e4f24265f5f2ac9995b",
+            "name": "62a0255eab054807a3d1b219f969cf68.jpg",
+            "path": "file:C:/Repositories/BS.ReceiptAnalyzer/machine-learning-data/receipt-recognize/images/62a0255eab054807a3d1b219f969cf68.jpg",
+            "size": {
+                "width": 750,
+                "height": 1000
+            },
+            "state": 2,
+            "type": 1
+        },
+        "c51eeadd042335bbcfd46ead83e8e613": {
+            "format": "jpg",
+            "id": "c51eeadd042335bbcfd46ead83e8e613",
+            "name": "6352886b25ab46eebd87278cedf72b0c.jpg",
+            "path": "file:C:/Repositories/BS.ReceiptAnalyzer/machine-learning-data/receipt-recognize/images/6352886b25ab46eebd87278cedf72b0c.jpg",
+            "size": {
+                "width": 750,
+                "height": 1000
+            },
+            "state": 2,
+            "type": 1
+        },
+        "3896a0841e9ffe554982d1a10f72a6a1": {
+            "format": "jpg",
+            "id": "3896a0841e9ffe554982d1a10f72a6a1",
+            "name": "6447c9a5ec14486d95bb065ac531e510.jpg",
+            "path": "file:C:/Repositories/BS.ReceiptAnalyzer/machine-learning-data/receipt-recognize/images/6447c9a5ec14486d95bb065ac531e510.jpg",
+            "size": {
+                "width": 750,
+                "height": 1000
+            },
+            "state": 2,
+            "type": 1
+        },
+        "79133a8ae91bd9cb47ef1a62a15fe4fa": {
+            "format": "jpg",
+            "id": "79133a8ae91bd9cb47ef1a62a15fe4fa",
+            "name": "67433a554abf478789b4567be31edd5c.jpg",
+            "path": "file:C:/Repositories/BS.ReceiptAnalyzer/machine-learning-data/receipt-recognize/images/67433a554abf478789b4567be31edd5c.jpg",
+            "size": {
+                "width": 750,
+                "height": 1000
+            },
+            "state": 2,
+            "type": 1
+        },
+        "a3a9c12650da3a3dea17901afe2abaa4": {
+            "format": "jpg",
+            "id": "a3a9c12650da3a3dea17901afe2abaa4",
+            "name": "67c681c75ca2456482bbb5c455a61c7d.jpg",
+            "path": "file:C:/Repositories/BS.ReceiptAnalyzer/machine-learning-data/receipt-recognize/images/67c681c75ca2456482bbb5c455a61c7d.jpg",
+            "size": {
+                "width": 750,
+                "height": 1000
+            },
+            "state": 2,
+            "type": 1
+        },
+        "7badcabd22f15c552039e17596e383c1": {
+            "format": "jpg",
+            "id": "7badcabd22f15c552039e17596e383c1",
+            "name": "67ec7d4b397f4cffb2ef5e508e2d5eb9.jpg",
+            "path": "file:C:/Repositories/BS.ReceiptAnalyzer/machine-learning-data/receipt-recognize/images/67ec7d4b397f4cffb2ef5e508e2d5eb9.jpg",
+            "size": {
+                "width": 750,
+                "height": 1000
+            },
+            "state": 2,
+            "type": 1
+        },
+        "ba4b5e79071b21b71fa97f5d5367a626": {
+            "format": "jpg",
+            "id": "ba4b5e79071b21b71fa97f5d5367a626",
+            "name": "697f8712b6ac49daaf41375a11ed0922.jpg",
+            "path": "file:C:/Repositories/BS.ReceiptAnalyzer/machine-learning-data/receipt-recognize/images/697f8712b6ac49daaf41375a11ed0922.jpg",
+            "size": {
+                "width": 750,
+                "height": 1000
+            },
+            "state": 2,
+            "type": 1
+        },
+        "474577a6b5252acbe81c9e9bebaec8e8": {
+            "format": "jpg",
+            "id": "474577a6b5252acbe81c9e9bebaec8e8",
+            "name": "6b31d650142d4728ab2bd997e9c6a228.jpg",
+            "path": "file:C:/Repositories/BS.ReceiptAnalyzer/machine-learning-data/receipt-recognize/images/6b31d650142d4728ab2bd997e9c6a228.jpg",
+            "size": {
+                "width": 750,
+                "height": 1000
+            },
+            "state": 2,
+            "type": 1
+        },
+        "4f956d1afe55b179854c32f88c348351": {
+            "format": "jpg",
+            "id": "4f956d1afe55b179854c32f88c348351",
+            "name": "6dc3a5eb3ce64abbb4bc5cae977e9952.jpg",
+            "path": "file:C:/Repositories/BS.ReceiptAnalyzer/machine-learning-data/receipt-recognize/images/6dc3a5eb3ce64abbb4bc5cae977e9952.jpg",
+            "size": {
+                "width": 750,
+                "height": 1000
+            },
+            "state": 2,
+            "type": 1
+        },
+        "565bee3dc3e45a2266298d8ea9535228": {
+            "format": "jpg",
+            "id": "565bee3dc3e45a2266298d8ea9535228",
+            "name": "701a91477e5d4b8d8d9f004f87e5eda8.jpg",
+            "path": "file:C:/Repositories/BS.ReceiptAnalyzer/machine-learning-data/receipt-recognize/images/701a91477e5d4b8d8d9f004f87e5eda8.jpg",
+            "size": {
+                "width": 750,
+                "height": 1000
+            },
+            "state": 2,
+            "type": 1
+        },
+        "d0546664adcd3250a829c56fea9129e1": {
+            "format": "jpg",
+            "id": "d0546664adcd3250a829c56fea9129e1",
+            "name": "7779bee4a0574b41b04dc3c3db5e455c.jpg",
+            "path": "file:C:/Repositories/BS.ReceiptAnalyzer/machine-learning-data/receipt-recognize/images/7779bee4a0574b41b04dc3c3db5e455c.jpg",
+            "size": {
+                "width": 750,
+                "height": 1000
+            },
+            "state": 2,
+            "type": 1
+        },
+        "38953dc4c5681fcf206331e01427bbc3": {
+            "format": "jpg",
+            "id": "38953dc4c5681fcf206331e01427bbc3",
+            "name": "798c1c6b18a742678f5908b079eea289.jpg",
+            "path": "file:C:/Repositories/BS.ReceiptAnalyzer/machine-learning-data/receipt-recognize/images/798c1c6b18a742678f5908b079eea289.jpg",
+            "size": {
+                "width": 750,
+                "height": 1000
+            },
+            "state": 2,
+            "type": 1
+        },
+        "31af75bc7ddf8981739e46c7218fe509": {
+            "format": "jpg",
+            "id": "31af75bc7ddf8981739e46c7218fe509",
+            "name": "7ab35183daf94159a6e838577c890ad9.jpg",
+            "path": "file:C:/Repositories/BS.ReceiptAnalyzer/machine-learning-data/receipt-recognize/images/7ab35183daf94159a6e838577c890ad9.jpg",
+            "size": {
+                "width": 750,
+                "height": 1000
+            },
+            "state": 2,
+            "type": 1
+        },
+        "dc79c2968064fe5e9cb3a689cfa2eb4f": {
+            "format": "jpg",
+            "id": "dc79c2968064fe5e9cb3a689cfa2eb4f",
+            "name": "7c496940df8145698f73a01f03002b8c.jpg",
+            "path": "file:C:/Repositories/BS.ReceiptAnalyzer/machine-learning-data/receipt-recognize/images/7c496940df8145698f73a01f03002b8c.jpg",
+            "size": {
+                "width": 750,
+                "height": 1000
+            },
+            "state": 2,
+            "type": 1
+        },
+        "5215f00e0408303c385698780dc6ab6c": {
+            "format": "jpg",
+            "id": "5215f00e0408303c385698780dc6ab6c",
+            "name": "7f749ce886f74be59ac56d52e7f56468.jpg",
+            "path": "file:C:/Repositories/BS.ReceiptAnalyzer/machine-learning-data/receipt-recognize/images/7f749ce886f74be59ac56d52e7f56468.jpg",
+            "size": {
+                "width": 750,
+                "height": 1000
+            },
+            "state": 2,
+            "type": 1
+        },
+        "9187b6ed6f23e5b165a131b6df75ce07": {
+            "format": "jpg",
+            "id": "9187b6ed6f23e5b165a131b6df75ce07",
+            "name": "7fe5a62bdfd046be9662d1f68c194869.jpg",
+            "path": "file:C:/Repositories/BS.ReceiptAnalyzer/machine-learning-data/receipt-recognize/images/7fe5a62bdfd046be9662d1f68c194869.jpg",
+            "size": {
+                "width": 750,
+                "height": 1000
+            },
+            "state": 2,
+            "type": 1
+        },
+        "8a16c10eea3ae9db2381fec9dbb89d1d": {
+            "format": "jpg",
+            "id": "8a16c10eea3ae9db2381fec9dbb89d1d",
+            "name": "803e90a89faf44ccbd8d25942c52d8ea.jpg",
+            "path": "file:C:/Repositories/BS.ReceiptAnalyzer/machine-learning-data/receipt-recognize/images/803e90a89faf44ccbd8d25942c52d8ea.jpg",
+            "size": {
+                "width": 750,
+                "height": 1000
+            },
+            "state": 2,
+            "type": 1
+        },
+        "5bdaa16b78698a2ac9736a866a85a3b1": {
+            "format": "jpg",
+            "id": "5bdaa16b78698a2ac9736a866a85a3b1",
+            "name": "80e66f92019f42aa8a551a793f3d00ed.jpg",
+            "path": "file:C:/Repositories/BS.ReceiptAnalyzer/machine-learning-data/receipt-recognize/images/80e66f92019f42aa8a551a793f3d00ed.jpg",
+            "size": {
+                "width": 750,
+                "height": 1000
+            },
+            "state": 2,
+            "type": 1
+        },
+        "deba47482c965c7bb8f75c8860e73afe": {
+            "format": "jpg",
+            "id": "deba47482c965c7bb8f75c8860e73afe",
+            "name": "820271c9f47847efb6baaad89db3ee38.jpg",
+            "path": "file:C:/Repositories/BS.ReceiptAnalyzer/machine-learning-data/receipt-recognize/images/820271c9f47847efb6baaad89db3ee38.jpg",
+            "size": {
+                "width": 750,
+                "height": 1000
+            },
+            "state": 2,
+            "type": 1
+        },
+        "ed02bc878ce25c9d85e975e461a64b4d": {
+            "format": "jpg",
+            "id": "ed02bc878ce25c9d85e975e461a64b4d",
+            "name": "82d4bd2cbab94ddf90cc8968bf9e6dcc.jpg",
+            "path": "file:C:/Repositories/BS.ReceiptAnalyzer/machine-learning-data/receipt-recognize/images/82d4bd2cbab94ddf90cc8968bf9e6dcc.jpg",
+            "size": {
+                "width": 750,
+                "height": 1000
+            },
+            "state": 2,
+            "type": 1
+        },
+        "03c0d8bf508a3d382708c571d4f58718": {
+            "format": "jpg",
+            "id": "03c0d8bf508a3d382708c571d4f58718",
+            "name": "84e2eea0789244e38ace630aa2a25261.jpg",
+            "path": "file:C:/Repositories/BS.ReceiptAnalyzer/machine-learning-data/receipt-recognize/images/84e2eea0789244e38ace630aa2a25261.jpg",
+            "size": {
+                "width": 750,
+                "height": 1000
+            },
+            "state": 2,
+            "type": 1
+        },
+        "d0466c00ab7c0d9732477eac284da759": {
+            "format": "jpg",
+            "id": "d0466c00ab7c0d9732477eac284da759",
+            "name": "85f76e42d6074f6990cd11dbe4e406be.jpg",
+            "path": "file:C:/Repositories/BS.ReceiptAnalyzer/machine-learning-data/receipt-recognize/images/85f76e42d6074f6990cd11dbe4e406be.jpg",
+            "size": {
+                "width": 1000,
+                "height": 750
+            },
+            "state": 2,
+            "type": 1
+        },
+        "5a05d0257da8890dab49534044e51137": {
+            "format": "jpg",
+            "id": "5a05d0257da8890dab49534044e51137",
+            "name": "87b49d09d1e94ed0904184515213a826.jpg",
+            "path": "file:C:/Repositories/BS.ReceiptAnalyzer/machine-learning-data/receipt-recognize/images/87b49d09d1e94ed0904184515213a826.jpg",
+            "size": {
+                "width": 750,
+                "height": 1000
+            },
+            "state": 2,
+            "type": 1
+        },
+        "889fde551813e3e22ca7721b9fa60582": {
+            "format": "jpg",
+            "id": "889fde551813e3e22ca7721b9fa60582",
+            "name": "88258136afb6414e940ae8348eb6faaa.jpg",
+            "path": "file:C:/Repositories/BS.ReceiptAnalyzer/machine-learning-data/receipt-recognize/images/88258136afb6414e940ae8348eb6faaa.jpg",
+            "size": {
+                "width": 750,
+                "height": 1000
+            },
+            "state": 2,
+            "type": 1
+        },
+        "9a97b828ae355f9d2e1408a1ac44012b": {
+            "format": "jpg",
+            "id": "9a97b828ae355f9d2e1408a1ac44012b",
+            "name": "891813ed786148ddbb6770acce4133ea.jpg",
+            "path": "file:C:/Repositories/BS.ReceiptAnalyzer/machine-learning-data/receipt-recognize/images/891813ed786148ddbb6770acce4133ea.jpg",
+            "size": {
+                "width": 750,
+                "height": 1000
+            },
+            "state": 2,
+            "type": 1
+        },
+        "9df79402ab0df43b52f22b69da9ac781": {
+            "format": "jpg",
+            "id": "9df79402ab0df43b52f22b69da9ac781",
+            "name": "8924d0fd61d54ab89478009522b604e8.jpg",
+            "path": "file:C:/Repositories/BS.ReceiptAnalyzer/machine-learning-data/receipt-recognize/images/8924d0fd61d54ab89478009522b604e8.jpg",
+            "size": {
+                "width": 750,
+                "height": 1000
+            },
+            "state": 2,
+            "type": 1
+        },
+        "0624fa99df492c16a4ea508511d487bf": {
+            "format": "jpg",
+            "id": "0624fa99df492c16a4ea508511d487bf",
+            "name": "899b0147754043548e1eb9104188e93b.jpg",
+            "path": "file:C:/Repositories/BS.ReceiptAnalyzer/machine-learning-data/receipt-recognize/images/899b0147754043548e1eb9104188e93b.jpg",
+            "size": {
+                "width": 750,
+                "height": 1000
+            },
+            "state": 2,
+            "type": 1
+        },
+        "1a3c957fcc24eb0fee537b31299fe95e": {
+            "format": "jpg",
+            "id": "1a3c957fcc24eb0fee537b31299fe95e",
+            "name": "89d608bd18c44cb598cf05eca4f85f72.jpg",
+            "path": "file:C:/Repositories/BS.ReceiptAnalyzer/machine-learning-data/receipt-recognize/images/89d608bd18c44cb598cf05eca4f85f72.jpg",
+            "size": {
+                "width": 750,
+                "height": 1000
+            },
+            "state": 2,
+            "type": 1
+        },
+        "4d50bebc0d6ca864e7451a0c786c7483": {
+            "format": "jpg",
+            "id": "4d50bebc0d6ca864e7451a0c786c7483",
+            "name": "8e818fe1a26043358c51a90d28669a5c.jpg",
+            "path": "file:C:/Repositories/BS.ReceiptAnalyzer/machine-learning-data/receipt-recognize/images/8e818fe1a26043358c51a90d28669a5c.jpg",
+            "size": {
+                "width": 750,
+                "height": 1000
+            },
+            "state": 2,
+            "type": 1
+        },
+        "20df74e39d397f1edf9b3d5def2f16fb": {
+            "format": "jpg",
+            "id": "20df74e39d397f1edf9b3d5def2f16fb",
+            "name": "8f1de60078714a40a75be8ec96d63ca8.jpg",
+            "path": "file:C:/Repositories/BS.ReceiptAnalyzer/machine-learning-data/receipt-recognize/images/8f1de60078714a40a75be8ec96d63ca8.jpg",
+            "size": {
+                "width": 750,
+                "height": 1000
+            },
+            "state": 2,
+            "type": 1
+        },
+        "2a7e5d88754ba06e19e93a57cec30596": {
+            "format": "jpg",
+            "id": "2a7e5d88754ba06e19e93a57cec30596",
+            "name": "92b6abcb5aec48dfb82b9a6771001ed0.jpg",
+            "path": "file:C:/Repositories/BS.ReceiptAnalyzer/machine-learning-data/receipt-recognize/images/92b6abcb5aec48dfb82b9a6771001ed0.jpg",
+            "size": {
+                "width": 750,
+                "height": 1000
+            },
+            "state": 2,
+            "type": 1
+        },
+        "3c852638536207c3ba1f61da409eb76c": {
+            "format": "jpg",
+            "id": "3c852638536207c3ba1f61da409eb76c",
+            "name": "93d1a133ff594a388ff4956713146426.jpg",
+            "path": "file:C:/Repositories/BS.ReceiptAnalyzer/machine-learning-data/receipt-recognize/images/93d1a133ff594a388ff4956713146426.jpg",
+            "size": {
+                "width": 750,
+                "height": 1000
+            },
+            "state": 2,
+            "type": 1
+        },
+        "14cb638def0a6b7a3d2fa26880282436": {
+            "format": "jpg",
+            "id": "14cb638def0a6b7a3d2fa26880282436",
+            "name": "961d89578ba7494f98302394df455b70.jpg",
+            "path": "file:C:/Repositories/BS.ReceiptAnalyzer/machine-learning-data/receipt-recognize/images/961d89578ba7494f98302394df455b70.jpg",
+            "size": {
+                "width": 750,
+                "height": 1000
+            },
+            "state": 2,
+            "type": 1
+        },
+        "ac9b4acb2906cd745ae389bdcdae8efe": {
+            "format": "jpg",
+            "id": "ac9b4acb2906cd745ae389bdcdae8efe",
+            "name": "962c8d33ee9c4d5990ec2701757adc8d.jpg",
+            "path": "file:C:/Repositories/BS.ReceiptAnalyzer/machine-learning-data/receipt-recognize/images/962c8d33ee9c4d5990ec2701757adc8d.jpg",
+            "size": {
+                "width": 750,
+                "height": 1000
+            },
+            "state": 2,
+            "type": 1
+        },
+        "6cf6da1255a01276ee4b337b97e72bfe": {
+            "format": "jpg",
+            "id": "6cf6da1255a01276ee4b337b97e72bfe",
+            "name": "9d34d3dda1374899be5e0d4cd4b652f9.jpg",
+            "path": "file:C:/Repositories/BS.ReceiptAnalyzer/machine-learning-data/receipt-recognize/images/9d34d3dda1374899be5e0d4cd4b652f9.jpg",
+            "size": {
+                "width": 750,
+                "height": 1000
+            },
+            "state": 2,
+            "type": 1
+        },
+        "4d76cfda29037fd09305000a529c20a7": {
+            "format": "jpg",
+            "id": "4d76cfda29037fd09305000a529c20a7",
+            "name": "9f0752ba50794b3db851b37642dfb8f1.jpg",
+            "path": "file:C:/Repositories/BS.ReceiptAnalyzer/machine-learning-data/receipt-recognize/images/9f0752ba50794b3db851b37642dfb8f1.jpg",
+            "size": {
+                "width": 750,
+                "height": 1000
+            },
+            "state": 2,
+            "type": 1
+        },
+        "c83e527100621e7dd7b0aa8a475d4110": {
+            "format": "jpg",
+            "id": "c83e527100621e7dd7b0aa8a475d4110",
+            "name": "a111642ed1be4d7384384946cc66ad27.jpg",
+            "path": "file:C:/Repositories/BS.ReceiptAnalyzer/machine-learning-data/receipt-recognize/images/a111642ed1be4d7384384946cc66ad27.jpg",
+            "size": {
+                "width": 750,
+                "height": 1000
+            },
+            "state": 2,
+            "type": 1
+        },
+        "0252f0f94ab6972aa2745c552b3cd9c3": {
+            "format": "jpg",
+            "id": "0252f0f94ab6972aa2745c552b3cd9c3",
+            "name": "a69d1a5f39984000891d68fa505421c4.jpg",
+            "path": "file:C:/Repositories/BS.ReceiptAnalyzer/machine-learning-data/receipt-recognize/images/a69d1a5f39984000891d68fa505421c4.jpg",
+            "size": {
+                "width": 750,
+                "height": 1000
+            },
+            "state": 2,
+            "type": 1
+        },
+        "97f1616b9cb82cabc2b877cfcd3e0cc0": {
+            "format": "jpg",
+            "id": "97f1616b9cb82cabc2b877cfcd3e0cc0",
+            "name": "a73ab7ecd9374dd0a72bdb76502d1cfd.jpg",
+            "path": "file:C:/Repositories/BS.ReceiptAnalyzer/machine-learning-data/receipt-recognize/images/a73ab7ecd9374dd0a72bdb76502d1cfd.jpg",
+            "size": {
+                "width": 750,
+                "height": 1000
+            },
+            "state": 2,
+            "type": 1
+        },
+        "6f3c4fa8103a65673d2a232ff9fc479c": {
+            "format": "jpg",
+            "id": "6f3c4fa8103a65673d2a232ff9fc479c",
+            "name": "a847febd5e664bfeba1838c25f27bfad.jpg",
+            "path": "file:C:/Repositories/BS.ReceiptAnalyzer/machine-learning-data/receipt-recognize/images/a847febd5e664bfeba1838c25f27bfad.jpg",
+            "size": {
+                "width": 750,
+                "height": 1000
+            },
+            "state": 2,
+            "type": 1
+        },
+        "70faaf04e9454215bfcbee9d43895068": {
+            "format": "jpg",
+            "id": "70faaf04e9454215bfcbee9d43895068",
+            "name": "a9c1ab5368a44741866c11dad20d2d6b.jpg",
+            "path": "file:C:/Repositories/BS.ReceiptAnalyzer/machine-learning-data/receipt-recognize/images/a9c1ab5368a44741866c11dad20d2d6b.jpg",
+            "size": {
+                "width": 750,
+                "height": 1000
+            },
+            "state": 2,
+            "type": 1
+        },
+        "e8dda48dc9d9d2806f6d4ce9d31751be": {
+            "format": "jpg",
+            "id": "e8dda48dc9d9d2806f6d4ce9d31751be",
+            "name": "ab23cb2812dc4993903591e3be89980a.jpg",
+            "path": "file:C:/Repositories/BS.ReceiptAnalyzer/machine-learning-data/receipt-recognize/images/ab23cb2812dc4993903591e3be89980a.jpg",
+            "size": {
+                "width": 750,
+                "height": 1000
+            },
+            "state": 2,
+            "type": 1
+        },
+        "9bc0bd392889233c639dde9197e59b76": {
+            "format": "jpg",
+            "id": "9bc0bd392889233c639dde9197e59b76",
+            "name": "ad918cfd190a4291aa4249e13ac862dc.jpg",
+            "path": "file:C:/Repositories/BS.ReceiptAnalyzer/machine-learning-data/receipt-recognize/images/ad918cfd190a4291aa4249e13ac862dc.jpg",
+            "size": {
+                "width": 750,
+                "height": 1000
+            },
+            "state": 2,
+            "type": 1
+        },
+        "b8a1331f8170f2a71b4db0198638f210": {
+            "format": "jpg",
+            "id": "b8a1331f8170f2a71b4db0198638f210",
+            "name": "b222e57f01674c46a38b82eb587c3d7a.jpg",
+            "path": "file:C:/Repositories/BS.ReceiptAnalyzer/machine-learning-data/receipt-recognize/images/b222e57f01674c46a38b82eb587c3d7a.jpg",
+            "size": {
+                "width": 750,
+                "height": 1000
+            },
+            "state": 2,
+            "type": 1
+        },
+        "e2e58608dde4323acf77dedd82fdac46": {
+            "format": "jpg",
+            "id": "e2e58608dde4323acf77dedd82fdac46",
+            "name": "b2ae268991234f6aadb0ee4a1ea1dde2.jpg",
+            "path": "file:C:/Repositories/BS.ReceiptAnalyzer/machine-learning-data/receipt-recognize/images/b2ae268991234f6aadb0ee4a1ea1dde2.jpg",
+            "size": {
+                "width": 750,
+                "height": 1000
+            },
+            "state": 2,
+            "type": 1
+        },
+        "1c751c7122187be6c68b08759e70fd44": {
+            "format": "jpg",
+            "id": "1c751c7122187be6c68b08759e70fd44",
+            "name": "b2ecf9351d3e49448fe6cca0c047f127.jpg",
+            "path": "file:C:/Repositories/BS.ReceiptAnalyzer/machine-learning-data/receipt-recognize/images/b2ecf9351d3e49448fe6cca0c047f127.jpg",
+            "size": {
+                "width": 750,
+                "height": 1000
+            },
+            "state": 2,
+            "type": 1
+        },
+        "0ab567fa289cc550b9de02a13f50fba9": {
+            "format": "jpg",
+            "id": "0ab567fa289cc550b9de02a13f50fba9",
+            "name": "b334df64170347038b024f3e0543256d.jpg",
+            "path": "file:C:/Repositories/BS.ReceiptAnalyzer/machine-learning-data/receipt-recognize/images/b334df64170347038b024f3e0543256d.jpg",
+            "size": {
+                "width": 750,
+                "height": 1000
+            },
+            "state": 2,
+            "type": 1
+        },
+        "fe99f1d859b251b8a4575258a3fcc44d": {
+            "format": "jpg",
+            "id": "fe99f1d859b251b8a4575258a3fcc44d",
+            "name": "b56d26228b72465986d484450d39f487.jpg",
+            "path": "file:C:/Repositories/BS.ReceiptAnalyzer/machine-learning-data/receipt-recognize/images/b56d26228b72465986d484450d39f487.jpg",
+            "size": {
+                "width": 750,
+                "height": 1000
+            },
+            "state": 2,
+            "type": 1
+        },
+        "a129a436f19195241cfcbed87e3c8021": {
+            "format": "jpg",
+            "id": "a129a436f19195241cfcbed87e3c8021",
+            "name": "b6eceb9f013a40cbb319a09d68963259.jpg",
+            "path": "file:C:/Repositories/BS.ReceiptAnalyzer/machine-learning-data/receipt-recognize/images/b6eceb9f013a40cbb319a09d68963259.jpg",
+            "size": {
+                "width": 750,
+                "height": 1000
+            },
+            "state": 2,
+            "type": 1
+        },
+        "9517e3d0a8529457761f61a275558572": {
+            "format": "jpg",
+            "id": "9517e3d0a8529457761f61a275558572",
+            "name": "b80d21dddf0a4b44ad9e29e2b100c57b.jpg",
+            "path": "file:C:/Repositories/BS.ReceiptAnalyzer/machine-learning-data/receipt-recognize/images/b80d21dddf0a4b44ad9e29e2b100c57b.jpg",
+            "size": {
+                "width": 750,
+                "height": 1000
+            },
+            "state": 2,
+            "type": 1
+        },
+        "1067eab9d9db1303644189aaa93d1039": {
+            "format": "jpg",
+            "id": "1067eab9d9db1303644189aaa93d1039",
+            "name": "bc0fe2da6a02461caf7354aab7c0d7fc.jpg",
+            "path": "file:C:/Repositories/BS.ReceiptAnalyzer/machine-learning-data/receipt-recognize/images/bc0fe2da6a02461caf7354aab7c0d7fc.jpg",
+            "size": {
+                "width": 750,
+                "height": 1000
+            },
+            "state": 2,
+            "type": 1
+        },
+        "cf6ed84a5de81e4cb8b675b44c7e07be": {
+            "format": "jpg",
+            "id": "cf6ed84a5de81e4cb8b675b44c7e07be",
+            "name": "bc4d61c7ec0843cf956c910684e68b6f.jpg",
+            "path": "file:C:/Repositories/BS.ReceiptAnalyzer/machine-learning-data/receipt-recognize/images/bc4d61c7ec0843cf956c910684e68b6f.jpg",
+            "size": {
+                "width": 750,
+                "height": 1000
+            },
+            "state": 2,
+            "type": 1
+        },
+        "dfd34cf3401adbc79188ac6eb583e745": {
+            "format": "jpg",
+            "id": "dfd34cf3401adbc79188ac6eb583e745",
+            "name": "bf103f2dbaa846ba86255d08329e3548.jpg",
+            "path": "file:C:/Repositories/BS.ReceiptAnalyzer/machine-learning-data/receipt-recognize/images/bf103f2dbaa846ba86255d08329e3548.jpg",
+            "size": {
+                "width": 1000,
+                "height": 750
+            },
+            "state": 2,
+            "type": 1
+        },
+        "b1ed66c104c0894b4fe35e9cd00502f4": {
+            "format": "jpg",
+            "id": "b1ed66c104c0894b4fe35e9cd00502f4",
+            "name": "c0138a751fda4f06a7ac1c59f4f81da6.jpg",
+            "path": "file:C:/Repositories/BS.ReceiptAnalyzer/machine-learning-data/receipt-recognize/images/c0138a751fda4f06a7ac1c59f4f81da6.jpg",
+            "size": {
+                "width": 750,
+                "height": 1000
+            },
+            "state": 2,
+            "type": 1
+        },
+        "949fa85d4f9aa79b9aa66070365495aa": {
+            "format": "jpg",
+            "id": "949fa85d4f9aa79b9aa66070365495aa",
+            "name": "c1e7b86f011f4cc0b4b416c3e453b6d0.jpg",
+            "path": "file:C:/Repositories/BS.ReceiptAnalyzer/machine-learning-data/receipt-recognize/images/c1e7b86f011f4cc0b4b416c3e453b6d0.jpg",
+            "size": {
+                "width": 750,
+                "height": 1000
+            },
+            "state": 2,
+            "type": 1
+        },
+        "29f5c8c22921a121b80557a5075d367a": {
+            "format": "jpg",
+            "id": "29f5c8c22921a121b80557a5075d367a",
+            "name": "c260228ba16647e28394a2d284b9b71f.jpg",
+            "path": "file:C:/Repositories/BS.ReceiptAnalyzer/machine-learning-data/receipt-recognize/images/c260228ba16647e28394a2d284b9b71f.jpg",
+            "size": {
+                "width": 750,
+                "height": 1000
+            },
+            "state": 2,
+            "type": 1
+        },
+        "da1a286a02c224ad047aeee3a07330de": {
+            "format": "jpg",
+            "id": "da1a286a02c224ad047aeee3a07330de",
+            "name": "c6204ed08f92494d89601d022b090fa8.jpg",
+            "path": "file:C:/Repositories/BS.ReceiptAnalyzer/machine-learning-data/receipt-recognize/images/c6204ed08f92494d89601d022b090fa8.jpg",
+            "size": {
+                "width": 750,
+                "height": 1000
+            },
+            "state": 2,
+            "type": 1
+        },
+        "024bc9a8b32fca4d30c82c4f43447c1f": {
+            "format": "jpg",
+            "id": "024bc9a8b32fca4d30c82c4f43447c1f",
+            "name": "c83f51318d1a4197bf929703d8e60f7c.jpg",
+            "path": "file:C:/Repositories/BS.ReceiptAnalyzer/machine-learning-data/receipt-recognize/images/c83f51318d1a4197bf929703d8e60f7c.jpg",
+            "size": {
+                "width": 750,
+                "height": 1000
+            },
+            "state": 2,
+            "type": 1
+        },
+        "d50f6dab536b92a43361f8cd0eda0651": {
+            "format": "jpg",
+            "id": "d50f6dab536b92a43361f8cd0eda0651",
+            "name": "ca48c8891fb44535ba8af4c8fea80aa8.jpg",
+            "path": "file:C:/Repositories/BS.ReceiptAnalyzer/machine-learning-data/receipt-recognize/images/ca48c8891fb44535ba8af4c8fea80aa8.jpg",
+            "size": {
+                "width": 750,
+                "height": 1000
+            },
+            "state": 2,
+            "type": 1
+        },
+        "600b1a6bec9983759f0ab8384b3f527f": {
+            "format": "jpg",
+            "id": "600b1a6bec9983759f0ab8384b3f527f",
+            "name": "ce5fad29dae141108231269d97e0bdec.jpg",
+            "path": "file:C:/Repositories/BS.ReceiptAnalyzer/machine-learning-data/receipt-recognize/images/ce5fad29dae141108231269d97e0bdec.jpg",
+            "size": {
+                "width": 750,
+                "height": 1000
+            },
+            "state": 2,
+            "type": 1
+        },
+        "4b8e8d949083dde63dc94219117fbdef": {
+            "format": "jpg",
+            "id": "4b8e8d949083dde63dc94219117fbdef",
+            "name": "ce936bc6488f4446be1bb749632b5618.jpg",
+            "path": "file:C:/Repositories/BS.ReceiptAnalyzer/machine-learning-data/receipt-recognize/images/ce936bc6488f4446be1bb749632b5618.jpg",
+            "size": {
+                "width": 750,
+                "height": 1000
+            },
+            "state": 2,
+            "type": 1
+        },
+        "ac0feb880e4df0846fb5fedbb20de65c": {
+            "format": "jpg",
+            "id": "ac0feb880e4df0846fb5fedbb20de65c",
+            "name": "cfbfde931070421e8bc374cf8ea3a8e5.jpg",
+            "path": "file:C:/Repositories/BS.ReceiptAnalyzer/machine-learning-data/receipt-recognize/images/cfbfde931070421e8bc374cf8ea3a8e5.jpg",
+            "size": {
+                "width": 750,
+                "height": 1000
+            },
+            "state": 2,
+            "type": 1
+        },
+        "da7c23fdf9448733190fd92d1c52bcda": {
+            "format": "jpg",
+            "id": "da7c23fdf9448733190fd92d1c52bcda",
+            "name": "d1763d8b43264cd5b3f6725d62e9ef64.jpg",
+            "path": "file:C:/Repositories/BS.ReceiptAnalyzer/machine-learning-data/receipt-recognize/images/d1763d8b43264cd5b3f6725d62e9ef64.jpg",
+            "size": {
+                "width": 750,
+                "height": 1000
+            },
+            "state": 2,
+            "type": 1
+        },
+        "0965d3c24a2ce4530d2dca68dbcb6677": {
+            "format": "jpg",
+            "id": "0965d3c24a2ce4530d2dca68dbcb6677",
+            "name": "d6b9c1d6c9204acdb22f2615efc6a668.jpg",
+            "path": "file:C:/Repositories/BS.ReceiptAnalyzer/machine-learning-data/receipt-recognize/images/d6b9c1d6c9204acdb22f2615efc6a668.jpg",
+            "size": {
+                "width": 750,
+                "height": 1000
+            },
+            "state": 2,
+            "type": 1
+        },
+        "ca22e154f1c1ffa0ca35a61187afd82d": {
+            "format": "jpg",
+            "id": "ca22e154f1c1ffa0ca35a61187afd82d",
+            "name": "dc349d125e6c4703a5d265d1016b20a1.jpg",
+            "path": "file:C:/Repositories/BS.ReceiptAnalyzer/machine-learning-data/receipt-recognize/images/dc349d125e6c4703a5d265d1016b20a1.jpg",
+            "size": {
+                "width": 750,
+                "height": 1000
+            },
+            "state": 2,
+            "type": 1
+        },
+        "7191ad0d867a2da2d8b88d6199ab550a": {
+            "format": "jpg",
+            "id": "7191ad0d867a2da2d8b88d6199ab550a",
+            "name": "dcce8cee6e7642da91879f921acee47d.jpg",
+            "path": "file:C:/Repositories/BS.ReceiptAnalyzer/machine-learning-data/receipt-recognize/images/dcce8cee6e7642da91879f921acee47d.jpg",
+            "size": {
+                "width": 750,
+                "height": 1000
+            },
+            "state": 2,
+            "type": 1
+        },
+        "b2fb06ce685e8d9373043c626faa3d7d": {
+            "format": "jpg",
+            "id": "b2fb06ce685e8d9373043c626faa3d7d",
+            "name": "dd4990b318994ee8803162d4b2dacb34.jpg",
+            "path": "file:C:/Repositories/BS.ReceiptAnalyzer/machine-learning-data/receipt-recognize/images/dd4990b318994ee8803162d4b2dacb34.jpg",
+            "size": {
+                "width": 750,
+                "height": 1000
+            },
+            "state": 2,
+            "type": 1
+        },
+        "2590dcdf0b029faa4e29e7453539e843": {
+            "format": "jpg",
+            "id": "2590dcdf0b029faa4e29e7453539e843",
+            "name": "df8bf683f35c424ea42b233bea6c7a42.jpg",
+            "path": "file:C:/Repositories/BS.ReceiptAnalyzer/machine-learning-data/receipt-recognize/images/df8bf683f35c424ea42b233bea6c7a42.jpg",
+            "size": {
+                "width": 750,
+                "height": 1000
+            },
+            "state": 2,
+            "type": 1
+        },
+        "0bf6732d5efdfa57928e4625d50cb473": {
+            "format": "jpg",
+            "id": "0bf6732d5efdfa57928e4625d50cb473",
+            "name": "e239c93ac1f44b01bd38d633ab007f21.jpg",
+            "path": "file:C:/Repositories/BS.ReceiptAnalyzer/machine-learning-data/receipt-recognize/images/e239c93ac1f44b01bd38d633ab007f21.jpg",
+            "size": {
+                "width": 750,
+                "height": 1000
+            },
+            "state": 2,
+            "type": 1
+        },
+        "28f9251178b8ee065d8ef8fde55a84c9": {
+            "format": "jpg",
+            "id": "28f9251178b8ee065d8ef8fde55a84c9",
+            "name": "e50a7a0ab5244689a6a568125455f037.jpg",
+            "path": "file:C:/Repositories/BS.ReceiptAnalyzer/machine-learning-data/receipt-recognize/images/e50a7a0ab5244689a6a568125455f037.jpg",
+            "size": {
+                "width": 864,
+                "height": 1152
+            },
+            "state": 2,
+            "type": 1
+        },
+        "e0f605d506fcb253bcd5dc460788a09e": {
+            "format": "jpg",
+            "id": "e0f605d506fcb253bcd5dc460788a09e",
+            "name": "e6dafc0b75184c0f97cf2c0d9ffcb5d3.jpg",
+            "path": "file:C:/Repositories/BS.ReceiptAnalyzer/machine-learning-data/receipt-recognize/images/e6dafc0b75184c0f97cf2c0d9ffcb5d3.jpg",
+            "size": {
+                "width": 750,
+                "height": 1000
+            },
+            "state": 2,
+            "type": 1
+        },
+        "48b70359ece2e2b3a23edcc3fdd7d735": {
+            "format": "jpg",
+            "id": "48b70359ece2e2b3a23edcc3fdd7d735",
+            "name": "e76f770f65b7474babfa597ff6f05402.jpg",
+            "path": "file:C:/Repositories/BS.ReceiptAnalyzer/machine-learning-data/receipt-recognize/images/e76f770f65b7474babfa597ff6f05402.jpg",
+            "size": {
+                "width": 750,
+                "height": 1000
+            },
+            "state": 2,
+            "type": 1
+        },
+        "6b6c89de9128bdcca1d73784bdd222bc": {
+            "format": "jpg",
+            "id": "6b6c89de9128bdcca1d73784bdd222bc",
+            "name": "e92b66c6fa194e4a94aaeed415ef5bb4.jpg",
+            "path": "file:C:/Repositories/BS.ReceiptAnalyzer/machine-learning-data/receipt-recognize/images/e92b66c6fa194e4a94aaeed415ef5bb4.jpg",
+            "size": {
+                "width": 750,
+                "height": 1000
+            },
+            "state": 2,
+            "type": 1
+        },
+        "4e86ba5ccb9bc034583a01b00f122567": {
+            "format": "jpg",
+            "id": "4e86ba5ccb9bc034583a01b00f122567",
+            "name": "e9b3c09b83d64807a30bd7b7c3cc310f.jpg",
+            "path": "file:C:/Repositories/BS.ReceiptAnalyzer/machine-learning-data/receipt-recognize/images/e9b3c09b83d64807a30bd7b7c3cc310f.jpg",
+            "size": {
+                "width": 750,
+                "height": 1000
+            },
+            "state": 2,
+            "type": 1
+        },
+        "8f8650f4641e1d4cf242b6e945b23f76": {
+            "format": "jpg",
+            "id": "8f8650f4641e1d4cf242b6e945b23f76",
+            "name": "ea8bbadc0d274da38875d350639f312d.jpg",
+            "path": "file:C:/Repositories/BS.ReceiptAnalyzer/machine-learning-data/receipt-recognize/images/ea8bbadc0d274da38875d350639f312d.jpg",
+            "size": {
+                "width": 750,
+                "height": 1000
+            },
+            "state": 2,
+            "type": 1
+        },
+        "b02f0f54a90adb3fac8e350ac76d1458": {
+            "format": "jpg",
+            "id": "b02f0f54a90adb3fac8e350ac76d1458",
+            "name": "ebf91f85cc39441fbc73676c975b7bdc.jpg",
+            "path": "file:C:/Repositories/BS.ReceiptAnalyzer/machine-learning-data/receipt-recognize/images/ebf91f85cc39441fbc73676c975b7bdc.jpg",
+            "size": {
+                "width": 750,
+                "height": 1000
+            },
+            "state": 2,
+            "type": 1
+        },
+        "eefd2673b8a51769151b8784ba005611": {
+            "format": "jpg",
+            "id": "eefd2673b8a51769151b8784ba005611",
+            "name": "ec35362694ab420582b9763cb9ff1704.jpg",
+            "path": "file:C:/Repositories/BS.ReceiptAnalyzer/machine-learning-data/receipt-recognize/images/ec35362694ab420582b9763cb9ff1704.jpg",
+            "size": {
+                "width": 750,
+                "height": 1000
+            },
+            "state": 2,
+            "type": 1
+        },
+        "79f681a95dbaf484cc020f8fd4c6f363": {
+            "format": "jpg",
+            "id": "79f681a95dbaf484cc020f8fd4c6f363",
+            "name": "ed16604cd5904675a1e4f0d9ac92210e.jpg",
+            "path": "file:C:/Repositories/BS.ReceiptAnalyzer/machine-learning-data/receipt-recognize/images/ed16604cd5904675a1e4f0d9ac92210e.jpg",
+            "size": {
+                "width": 750,
+                "height": 1000
+            },
+            "state": 2,
+            "type": 1
+        },
+        "f4472d6ed04b1ac078ae428766f7039a": {
+            "format": "jpg",
+            "id": "f4472d6ed04b1ac078ae428766f7039a",
+            "name": "eee83f3bc4b74bdf80b152f13242dfd3.jpg",
+            "path": "file:C:/Repositories/BS.ReceiptAnalyzer/machine-learning-data/receipt-recognize/images/eee83f3bc4b74bdf80b152f13242dfd3.jpg",
+            "size": {
+                "width": 750,
+                "height": 1000
+            },
+            "state": 2,
+            "type": 1
+        },
+        "c0d63e172dea69369126db9f0348cbe2": {
+            "format": "jpg",
+            "id": "c0d63e172dea69369126db9f0348cbe2",
+            "name": "f1cbf39d5fb744cea0ff6050a81af501.jpg",
+            "path": "file:C:/Repositories/BS.ReceiptAnalyzer/machine-learning-data/receipt-recognize/images/f1cbf39d5fb744cea0ff6050a81af501.jpg",
+            "size": {
+                "width": 750,
+                "height": 1000
+            },
+            "state": 2,
+            "type": 1
+        },
+        "6eff5c3caceb73ef86b8026291d468e6": {
+            "format": "jpg",
+            "id": "6eff5c3caceb73ef86b8026291d468e6",
+            "name": "f2890ed9d8b54f9a93f27d4c1790b21b.jpg",
+            "path": "file:C:/Repositories/BS.ReceiptAnalyzer/machine-learning-data/receipt-recognize/images/f2890ed9d8b54f9a93f27d4c1790b21b.jpg",
+            "size": {
+                "width": 750,
+                "height": 1000
+            },
+            "state": 2,
+            "type": 1
+        },
+        "39bb45e3575fd0e9e305b6efe97c283f": {
+            "format": "jpg",
+            "id": "39bb45e3575fd0e9e305b6efe97c283f",
+            "name": "f319e145f5554a1b97178db7ff9ca81c.jpg",
+            "path": "file:C:/Repositories/BS.ReceiptAnalyzer/machine-learning-data/receipt-recognize/images/f319e145f5554a1b97178db7ff9ca81c.jpg",
+            "size": {
+                "width": 750,
+                "height": 1000
+            },
+            "state": 2,
+            "type": 1
+        },
+        "de922ded6b744f9c19299c7a3a045a81": {
+            "format": "jpg",
+            "id": "de922ded6b744f9c19299c7a3a045a81",
+            "name": "f46d9e06c1ec4cbb982e022c0bb46267.jpg",
+            "path": "file:C:/Repositories/BS.ReceiptAnalyzer/machine-learning-data/receipt-recognize/images/f46d9e06c1ec4cbb982e022c0bb46267.jpg",
+            "size": {
+                "width": 750,
+                "height": 1000
+            },
+            "state": 2,
+            "type": 1
+        },
+        "367eb235fffe7c4c8604b92d814c61e9": {
+            "format": "jpg",
+            "id": "367eb235fffe7c4c8604b92d814c61e9",
+            "name": "f5e8c5d116f6450599219894f1424ed8.jpg",
+            "path": "file:C:/Repositories/BS.ReceiptAnalyzer/machine-learning-data/receipt-recognize/images/f5e8c5d116f6450599219894f1424ed8.jpg",
+            "size": {
+                "width": 750,
+                "height": 1000
+            },
+            "state": 2,
+            "type": 1
+        },
+        "9f247b71ad41a778b9ed0524c58ee131": {
+            "format": "jpg",
+            "id": "9f247b71ad41a778b9ed0524c58ee131",
+            "name": "f7cdf11d430b488785c2e23b243cbe1b.jpg",
+            "path": "file:C:/Repositories/BS.ReceiptAnalyzer/machine-learning-data/receipt-recognize/images/f7cdf11d430b488785c2e23b243cbe1b.jpg",
+            "size": {
+                "width": 750,
+                "height": 1000
+            },
+            "state": 2,
+            "type": 1
+        },
+        "402f518261dc6a73ee402c8775028c03": {
+            "format": "jpg",
+            "id": "402f518261dc6a73ee402c8775028c03",
+            "name": "f830c56ac6584670ba644302178bca42.jpg",
+            "path": "file:C:/Repositories/BS.ReceiptAnalyzer/machine-learning-data/receipt-recognize/images/f830c56ac6584670ba644302178bca42.jpg",
+            "size": {
+                "width": 750,
+                "height": 1000
+            },
+            "state": 2,
+            "type": 1
+        },
+        "1d1b8c3f0ded6edb9fd773d1fd03a0ba": {
+            "format": "jpg",
+            "id": "1d1b8c3f0ded6edb9fd773d1fd03a0ba",
+            "name": "f8f87eb9923846ce84bea9b20a126240.jpg",
+            "path": "file:C:/Repositories/BS.ReceiptAnalyzer/machine-learning-data/receipt-recognize/images/f8f87eb9923846ce84bea9b20a126240.jpg",
+            "size": {
+                "width": 750,
+                "height": 1000
+            },
+            "state": 2,
+            "type": 1
+        },
+        "c0546e37d76111ebe764b4f00a77e39f": {
+            "format": "jpg",
+            "id": "c0546e37d76111ebe764b4f00a77e39f",
+            "name": "fac437cce9324461a2f1f38ca9bc3e34.jpg",
+            "path": "file:C:/Repositories/BS.ReceiptAnalyzer/machine-learning-data/receipt-recognize/images/fac437cce9324461a2f1f38ca9bc3e34.jpg",
+            "size": {
+                "width": 750,
+                "height": 1000
+            },
+            "state": 2,
+            "type": 1
+        },
+        "3c8dadb0f15e517d8dcb36166aeb0dbd": {
+            "format": "jpg",
+            "id": "3c8dadb0f15e517d8dcb36166aeb0dbd",
+            "name": "fe54fdcf30b74b1c92ec5d07cefbbb32.jpg",
+            "path": "file:C:/Repositories/BS.ReceiptAnalyzer/machine-learning-data/receipt-recognize/images/fe54fdcf30b74b1c92ec5d07cefbbb32.jpg",
+            "size": {
+                "width": 750,
+                "height": 1000
+            },
+            "state": 2,
+            "type": 1
+        },
+        "c8863c91e5bca190b9d6bc18477f6694": {
+            "format": "jpg",
+            "id": "c8863c91e5bca190b9d6bc18477f6694",
+            "name": "fef6bfc917a74659aec1f75375bfd879.jpg",
+            "path": "file:C:/Repositories/BS.ReceiptAnalyzer/machine-learning-data/receipt-recognize/images/fef6bfc917a74659aec1f75375bfd879.jpg",
+            "size": {
+                "width": 750,
+                "height": 1000
+            },
+            "state": 2,
+            "type": 1
+        }
+    }
+}

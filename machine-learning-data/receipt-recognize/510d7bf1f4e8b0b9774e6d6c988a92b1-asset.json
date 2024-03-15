@@ -1,0 +1,56 @@
+{
+    "asset": {
+        "format": "jpg",
+        "id": "510d7bf1f4e8b0b9774e6d6c988a92b1",
+        "name": "43f3b3588d04490c81c81e1d120244ce.jpg",
+        "path": "file:C:/Repositories/BS.ReceiptAnalyzer/machine-learning-data/receipt-recognize/images/43f3b3588d04490c81c81e1d120244ce.jpg",
+        "size": {
+            "width": 750,
+            "height": 1000
+        },
+        "state": 2,
+        "type": 1
+    },
+    "regions": [
+        {
+            "id": "vIJ2SkUhS",
+            "type": "POLYGON",
+            "tags": [
+                "receipt"
+            ],
+            "boundingBox": {
+                "height": 1000,
+                "width": 567.0995670995671,
+                "left": 104.97835497835497,
+                "top": 0
+            },
+            "points": [
+                {
+                    "x": 120.12987012987013,
+                    "y": 0
+                },
+                {
+                    "x": 104.97835497835497,
+                    "y": 956.7099567099567
+                },
+                {
+                    "x": 124.45887445887448,
+                    "y": 1000
+                },
+                {
+                    "x": 672.077922077922,
+                    "y": 1000
+                },
+                {
+                    "x": 667.7489177489177,
+                    "y": 432.90043290043303
+                },
+                {
+                    "x": 656.9264069264069,
+                    "y": 0
+                }
+            ]
+        }
+    ],
+    "version": "2.2.0"
+}
