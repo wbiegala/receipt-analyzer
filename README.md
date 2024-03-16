@@ -54,6 +54,8 @@ ReceiptAnalyzer to usługa web umożliwiająca analizę polskiego paragonu fiska
 9. Wdrożenie
 
 # Jak to działa?
+### [Warsztat event storming](https://miro.com/app/board/uXjVNlpnhk4=/?share_link_id=300171823287)
+
 ## Uruchomienie
 TODO
 
