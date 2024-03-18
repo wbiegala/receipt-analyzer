@@ -56,7 +56,7 @@ namespace ReceiptAnalyzer.ReceiptRecognizer.Func
             var message = JsonSerializer.Deserialize<StartAnalysisTaskStepProcessing>(messageJson);
 
             if (message == null)
-                throw new InvalidOperationException("Message is null");
+                throw new InvalidOperationException("Unreadable message body");
 
             return message;
         }
