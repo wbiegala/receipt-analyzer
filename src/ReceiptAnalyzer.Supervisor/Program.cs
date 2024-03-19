@@ -1,9 +1,11 @@
 using BS.ReceiptAnalyzer.Core;
 using BS.ReceiptAnalyzer.Data;
+using BS.ReceiptAnalyzer.Supervisor.Authorization;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
+builder.Services.AddApiKeyAuth(builder.Configuration);
 
 builder.Services.AddCore(builder.Configuration);
 builder.Services.AddDbContext<ReceiptAnalyzerDbContext>(opts =>
@@ -35,6 +37,7 @@ if (app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 
 app.UseAuthorization();
+app.UseApiKeyAuth();
 
 app.MapControllers();
 
