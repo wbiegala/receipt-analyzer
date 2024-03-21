@@ -1,0 +1,68 @@
+﻿{
+  "Scenario": "ObjectDetection",
+  "DataSource": {
+    "Type": "Vott",
+    "Version": 1,
+    "FilePath": "C:\\Repositories\\BS.ReceiptAnalyzer\\machine-learning-data\\receipt-recognize\\vott-json-export\\ReceiptAnalyzer.ReceiptRecognition-export.json"
+  },
+  "Environment": {
+    "Type": "Azure",
+    "Version": 1,
+    "SubscriptionID": "585896ae-2e01-418c-9dcc-7889cf8760e2",
+    "ResourceGroupName": "wb-receiptanalyzer-lab",
+    "WorkspaceName": "receiptanalyzer-ml",
+    "ComputeName": "ReceiptRecognition01",
+    "Location": "francecentral",
+    "ExperimentName": "receiptrecognitionml"
+  },
+  "RunHistory": {
+    "Version": 3,
+    "Type": "Result",
+    "Trials": [
+      {
+        "Version": 1,
+        "Type": "Trial",
+        "TrainerName": "fasterrcnn-resnet50-fpn",
+        "Score": 1.0,
+        "RuntimeInSeconds": 832.6301778,
+        "Parameter": {
+          "_SCHEMA_": "e0 * e1 * e2",
+          "e0": {
+            "OutputColumnName": "input1",
+            "InputColumnName": "input1",
+            "ImageHeight": 600,
+            "ImageWidth": 800,
+            "CropAnchor": "Center",
+            "Resizing": "Fill"
+          },
+          "e1": {
+            "OutputColumnName": "input1",
+            "InputColumnName": "input1",
+            "ColorsToExtract": "Rgb",
+            "OrderOfExtraction": "ARGB",
+            "OutputAsFloatArray": true
+          },
+          "e2": {
+            "ModelFile": "C:\\Repositories\\BS.ReceiptAnalyzer\\src\\ReceiptAnalyzer.ReceiptRecognizer.Core\\ReceiptRecognitionML.onnx",
+            "FallbackToCpu": true
+          }
+        }
+      }
+    ],
+    "Estimators": {
+      "e0": "ResizeImages",
+      "e1": "ExtractPixels",
+      "e2": "ApplyOnnxModel"
+    },
+    "Schema": "e0 * e1 * e2",
+    "MetricName": "mean_average_precision",
+    "ModelFilePath": "C:\\Repositories\\BS.ReceiptAnalyzer\\src\\ReceiptAnalyzer.ReceiptRecognizer.Core\\ReceiptRecognitionML.mlnet"
+  },
+  "Type": "TrainingConfig",
+  "Version": 4,
+  "TrainingOption": {
+    "Version": 1,
+    "Type": "DefaultTrainingOption",
+    "TrainingTime": 2147483647
+  }
+}
