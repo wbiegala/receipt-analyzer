@@ -2,7 +2,7 @@
 using BS.ReceiptAnalyzer.Shared;
 using BS.ReceiptAnalyzer.ReceiptRecognizer.Core.IO;
 
-namespace ReceiptAnalyzer.ReceiptRecognizer.Core
+namespace BS.ReceiptAnalyzer.ReceiptRecognizer.Core
 {
     public static class CoreInstaller
     {
@@ -10,7 +10,7 @@ namespace ReceiptAnalyzer.ReceiptRecognizer.Core
         {
             services.AddStorage(storageConnectionString);
 
-            services.AddScoped<ISourceImageReceiver, SourceImageReceiver>();
+            services.AddScoped<ISourceImageReceiver, AzureSourceImageReceiver>();
             services.AddScoped<IReceiptRecognizerService, ReceiptRecognizerService>();
 
             return services;

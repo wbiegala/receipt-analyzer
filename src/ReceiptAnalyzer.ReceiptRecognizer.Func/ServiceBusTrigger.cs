@@ -6,9 +6,9 @@ using BS.ReceiptAnalyzer.Contract.Results;
 using BS.ReceiptAnalyzer.ReceiptRecognizer.Func.Extensions;
 using Microsoft.Azure.Functions.Worker;
 using Microsoft.Extensions.Logging;
-using ReceiptAnalyzer.ReceiptRecognizer.Core;
+using BS.ReceiptAnalyzer.ReceiptRecognizer.Core;
 
-namespace ReceiptAnalyzer.ReceiptRecognizer.Func
+namespace BS.ReceiptAnalyzer.ReceiptRecognizer.Func
 {
     public class ServiceBusTrigger
     {

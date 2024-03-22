@@ -1,7 +1,7 @@
 ﻿using BS.ReceiptAnalyzer.ReceiptRecognizer.Core;
 using BS.ReceiptAnalyzer.ReceiptRecognizer.Core.IO;
 
-namespace ReceiptAnalyzer.ReceiptRecognizer.Core
+namespace BS.ReceiptAnalyzer.ReceiptRecognizer.Core
 {
     internal class ReceiptRecognizerService : IReceiptRecognizerService
     {
