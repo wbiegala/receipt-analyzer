@@ -10,7 +10,7 @@ namespace BS.ReceiptAnalyzer.Core
         public static IServiceCollection AddCore(this IServiceCollection services, IConfiguration configuration)
         {
             services.AddRepositories();
-            services.AddStorage(configuration.GetConnectionString("Storage"));
+            services.AddAzureStorage(configuration.GetConnectionString("Storage"));
             services.AddServiceBus(configuration.GetConnectionString("ServiceBus"));
             services.AddHashing();
 

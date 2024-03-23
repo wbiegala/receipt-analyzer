@@ -8,7 +8,7 @@ namespace BS.ReceiptAnalyzer.ReceiptRecognizer.Core
     {
         public static IServiceCollection AddCore(this IServiceCollection services, string? storageConnectionString)
         {
-            services.AddStorage(storageConnectionString);
+            services.AddAzureStorage(storageConnectionString);
 
             services.AddScoped<ISourceImageReceiver, AzureSourceImageReceiver>();
             services.AddScoped<IReceiptRecognizerService, ReceiptRecognizerService>();

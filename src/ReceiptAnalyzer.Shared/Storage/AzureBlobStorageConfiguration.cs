@@ -1,6 +1,6 @@
 ﻿namespace BS.ReceiptAnalyzer.Shared.Storage
 {
-    public sealed record StorageConfiguration
+    public sealed record AzureBlobStorageConfiguration
     {
         public const string DefaultContainerName = "receiptanalyzer";
 

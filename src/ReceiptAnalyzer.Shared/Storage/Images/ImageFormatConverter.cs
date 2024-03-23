@@ -20,6 +20,17 @@ namespace BS.ReceiptAnalyzer.Shared.Storage.Images
             };
         }
 
+        public static string GetMimeFileFormant(string path)
+        {
+            var extension = Path.GetExtension(path);
+            if (ExtensionToMIME.TryGetValue(extension, out var formant))
+            {
+                return formant;
+            }
+
+            return string.Empty;
+        }
+
         /// <summary>
         /// Converts image file to PNG format
         /// </summary>
@@ -40,5 +51,14 @@ namespace BS.ReceiptAnalyzer.Shared.Storage.Images
 
         private const string jpegMIME = "image/jpeg";
         private const string pngMIME = "image/png";
+
+        private static IDictionary<string, string> ExtensionToMIME = new Dictionary<string, string>
+        {
+            { ".jpe", jpegMIME },
+            { ".jpeg", jpegMIME },
+            { ".jpg", jpegMIME },
+            { ".png", pngMIME },
+            { ".pnz", pngMIME },
+        };
     }
 }

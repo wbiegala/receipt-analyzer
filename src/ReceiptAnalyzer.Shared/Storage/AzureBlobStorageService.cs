@@ -7,7 +7,7 @@ namespace BS.ReceiptAnalyzer.Shared.Storage
         private readonly string _connectionString;
         private readonly string _containerName;
 
-        public AzureBlobStorageService(StorageConfiguration configuration)
+        public AzureBlobStorageService(AzureBlobStorageConfiguration configuration)
         {
             _connectionString = configuration.ConnectionString;
             _containerName = configuration.ContainerName;
