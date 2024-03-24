@@ -6,12 +6,20 @@ namespace BS.ReceiptAnalyzer.ReceiptRecognizer.Core
 {
     public static class CoreInstaller
     {
-        public static IServiceCollection AddCore(this IServiceCollection services, string? storageConnectionString)
+        public static IServiceCollection AddAzureReceiptRecognizerCore(this IServiceCollection services, string? storageConnectionString)
         {
             services.AddAzureStorage(storageConnectionString);
 
             services.AddScoped<ISourceImageReceiver, AzureSourceImageReceiver>();
             services.AddScoped<IReceiptRecognizerService, ReceiptRecognizerService>();
+
+            return services;
+        }
+
+        public static IServiceCollection AddLocalReceiptRecognizerCore(this IServiceCollection services)
+        {
+            services.AddSingleton<ISourceImageReceiver, AzureSourceImageReceiver>();
+            services.AddSingleton<IReceiptRecognizerService, ReceiptRecognizerService>();
 
             return services;
         }

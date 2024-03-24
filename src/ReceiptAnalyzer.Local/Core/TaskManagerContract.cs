@@ -1,29 +1,38 @@
-﻿using BS.ReceiptAnalyzer.Domain.Model;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace BS.ReceiptAnalyzer.Local.Core
+﻿namespace BS.ReceiptAnalyzer.Local.Core
 {
     public static class TaskManagerContract
     {
-        public sealed record CreateTaskRequest
+        public static class CreateTask
         {
-            public string FilePath { get; init; }
+            public sealed record Request
+            {
+                public string FilePath { get; init; }
+            }
+
+            public sealed record Result
+            {
+                public bool Success { get; init; }
+                public string? Error { get; init; }
+                public Guid TaskId { get; init; }
+            }
         }
 
-        public sealed record CreateTaskResult
+        public static class ExecuteNextStep
         {
-            public bool Success { get; init; }
-            public string? Error { get; init; }
-            public Guid TaskId { get; init; }
-        }
+            public sealed record Request
+            {
+                public Guid TaskId { get; init; }
+            }
 
-        public sealed record GetTaskStateResult
-        {
-
+            public sealed record Result
+            {
+                public Guid TaskId { get; init; }
+                public bool Success { get; init; }
+                public bool CanContinue { get; init; }
+                public string? Error { get; init; }
+                public int CompletionPercentage { get; init; }
+                public string StepName { get; init; }
+            }
         }
     }
 }

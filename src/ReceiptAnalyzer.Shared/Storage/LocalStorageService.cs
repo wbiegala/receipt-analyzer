@@ -18,7 +18,20 @@ namespace BS.ReceiptAnalyzer.Shared.Storage
 
         public Task<StorageServiceContract.GetFileResult> GetFileAsync(string path)
         {
-            throw new NotImplementedException();
+            try
+            {
+                var fullPath = Path.Combine(_rootPath, path);
+                if (!File.Exists(fullPath))
+                    throw new FileNotFoundException($"File not found in {fullPath}");
+
+                var result = new StorageServiceContract.GetFileResult(true, File.OpenRead(fullPath));
+
+                return Task.FromResult(result);
+            }
+            catch (Exception ex)
+            {
+                return Task.FromResult(new StorageServiceContract.GetFileResult(false, null, ex.Message));
+            }
         }
 
         public async Task<StorageServiceContract.SaveFileResult> SaveFileAsync(Stream file, string path, bool overwrite = false)

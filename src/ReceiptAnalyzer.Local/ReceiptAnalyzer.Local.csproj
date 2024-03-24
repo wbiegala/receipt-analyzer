@@ -16,6 +16,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\ReceiptAnalyzer.Domain\ReceiptAnalyzer.Domain.csproj" />
+    <ProjectReference Include="..\ReceiptAnalyzer.ReceiptRecognizer.Core\ReceiptAnalyzer.ReceiptRecognizer.Core.csproj" />
     <ProjectReference Include="..\ReceiptAnalyzer.Shared\ReceiptAnalyzer.Shared.csproj" />
   </ItemGroup>
 

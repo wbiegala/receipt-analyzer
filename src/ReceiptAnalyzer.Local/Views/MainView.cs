@@ -7,12 +7,26 @@ namespace BS.ReceiptAnalyzer.Local.Views
     {
         private readonly IAnalysisTaskManager _taskManager;
         private Guid? _taskId;
+        private bool _canExecuteNextStep;
 
         public MainView(IAnalysisTaskManager taskManager)
         {
             InitializeComponent();
+            ExecuteNextStepButton.Enabled = false;
             _taskManager = taskManager;
         }
+
+        private async Task ExecuteNextStep()
+        {
+            HandleStartProcessingStarted();
+            var request = new TaskManagerContract.ExecuteNextStep.Request { TaskId = _taskId!.Value };
+            var nextStepResult = await _taskManager.ExecuteNextStep(request);
+            
+            HandleNextStepFinished(nextStepResult);
+        }
+
+
+        #region Control Event Handlers
 
         private async void StartTaskButton_Click(object sender, EventArgs e)
         {
@@ -23,13 +37,19 @@ namespace BS.ReceiptAnalyzer.Local.Views
 
             if (dialog.ShowDialog() == DialogResult.OK)
             {
-                var request = new TaskManagerContract.CreateTaskRequest { FilePath = dialog.FileName };
+                var request = new TaskManagerContract.CreateTask.Request { FilePath = dialog.FileName };
                 var startTask = await _taskManager.CreateTask(request);
                 HandleTaskStarted(startTask);
+                await ExecuteNextStep();
             }
         }
 
-        private void HandleTaskStarted(TaskManagerContract.CreateTaskResult result)
+        #endregion
+
+
+        #region Analysis Task Results Handlers
+
+        private void HandleTaskStarted(TaskManagerContract.CreateTask.Result result)
         {
             if (!result.Success)
             {
@@ -45,5 +65,26 @@ namespace BS.ReceiptAnalyzer.Local.Views
             SourceImagePixtureBox.ImageLocation = _taskManager.GetSourceImagePath(_taskId.Value);
             SourceImagePixtureBox.Load();
         }
+
+        private void HandleNextStepFinished(TaskManagerContract.ExecuteNextStep.Result result)
+        {
+            HandleStepProcessingFinished();
+            ProcessingProgressBar.Value = result.CompletionPercentage;
+            //TODO: obsługa wyniku
+        }
+
+        private void HandleStartProcessingStarted()
+        {
+
+        }
+
+        private void HandleStepProcessingFinished()
+        {
+
+        }
+
+        #endregion
+
+
     }
 }

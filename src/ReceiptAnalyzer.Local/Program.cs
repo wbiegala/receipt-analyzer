@@ -5,6 +5,7 @@ using BS.ReceiptAnalyzer.Local.Views;
 using BS.ReceiptAnalyzer.Shared;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using BS.ReceiptAnalyzer.ReceiptRecognizer.Core;
 
 namespace ReceiptAnalyzer.Local
 {
@@ -47,6 +48,7 @@ namespace ReceiptAnalyzer.Local
                 services.AddViews();
                 services.AddSingleton<IAnalysisTaskManager, SingleAnalysisTaskManager>();
                 services.AddSingleton<IStorageFacade, StorageFacade>();
+                services.AddLocalReceiptRecognizerCore();
                 services.AddLocalStorage(LocalAppConfig.StoragePath);
                 services.AddHashing();
             });

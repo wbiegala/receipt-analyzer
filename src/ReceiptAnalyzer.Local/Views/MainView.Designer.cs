@@ -37,8 +37,10 @@
             ProgressGroupBox = new GroupBox();
             ProcessingLogsTextBox = new RichTextBox();
             ProcessingProgressBar = new ProgressBar();
+            ExecuteNextStepButton = new Button();
             StartTaskGroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)SourceImagePixtureBox).BeginInit();
+            PartialResultGroupBox.SuspendLayout();
             ProgressGroupBox.SuspendLayout();
             SuspendLayout();
             // 
@@ -97,6 +99,7 @@
             // PartialResultGroupBox
             // 
             PartialResultGroupBox.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            PartialResultGroupBox.Controls.Add(ExecuteNextStepButton);
             PartialResultGroupBox.Location = new Point(444, 12);
             PartialResultGroupBox.Name = "PartialResultGroupBox";
             PartialResultGroupBox.Size = new Size(526, 370);
@@ -134,6 +137,16 @@
             ProcessingProgressBar.Size = new Size(946, 23);
             ProcessingProgressBar.TabIndex = 0;
             // 
+            // ExecuteNextStepButton
+            // 
+            ExecuteNextStepButton.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            ExecuteNextStepButton.Location = new Point(6, 22);
+            ExecuteNextStepButton.Name = "ExecuteNextStepButton";
+            ExecuteNextStepButton.Size = new Size(241, 42);
+            ExecuteNextStepButton.TabIndex = 0;
+            ExecuteNextStepButton.Text = "Wykonaj następny krok";
+            ExecuteNextStepButton.UseVisualStyleBackColor = true;
+            // 
             // MainView
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -147,6 +160,7 @@
             StartTaskGroupBox.ResumeLayout(false);
             StartTaskGroupBox.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)SourceImagePixtureBox).EndInit();
+            PartialResultGroupBox.ResumeLayout(false);
             ProgressGroupBox.ResumeLayout(false);
             ResumeLayout(false);
         }
@@ -162,5 +176,6 @@
         private ProgressBar ProcessingProgressBar;
         private Label TaskIdLabel;
         private TextBox TaskIdTextBox;
+        private Button ExecuteNextStepButton;
     }
 }

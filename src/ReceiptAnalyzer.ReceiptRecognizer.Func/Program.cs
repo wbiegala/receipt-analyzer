@@ -10,7 +10,7 @@ var host = new HostBuilder()
     {
         services.AddApplicationInsightsTelemetryWorkerService();
         services.ConfigureFunctionsApplicationInsights();
-        services.AddCore(ctx.Configuration.GetConnectionString("Storage"));
+        services.AddAzureReceiptRecognizerCore(ctx.Configuration.GetConnectionString("Storage"));
     })
     .Build();
 
