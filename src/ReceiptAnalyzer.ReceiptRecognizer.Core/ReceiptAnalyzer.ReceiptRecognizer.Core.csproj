@@ -12,11 +12,21 @@
     <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="8.0.0" />
     <PackageReference Include="Microsoft.ML" Version="3.0.1" />
     <PackageReference Include="Microsoft.ML.ImageAnalytics" Version="3.0.1" />
+    <PackageReference Include="Microsoft.ML.OnnxRuntime" Version="1.17.1" />
     <PackageReference Include="Microsoft.ML.OnnxTransformer" Version="3.0.1" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\ReceiptAnalyzer.Shared\ReceiptAnalyzer.Shared.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="ML\ReceiptRecognitionML.mlnet">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ML\ReceiptRecognitionML.onnx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
 </Project>

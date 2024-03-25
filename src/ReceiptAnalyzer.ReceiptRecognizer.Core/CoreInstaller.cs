@@ -1,6 +1,7 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using BS.ReceiptAnalyzer.Shared;
 using BS.ReceiptAnalyzer.ReceiptRecognizer.Core.IO;
+using BS.ReceiptAnalyzer.ReceiptRecognizer.Core.ML;
 
 namespace BS.ReceiptAnalyzer.ReceiptRecognizer.Core
 {
@@ -10,6 +11,7 @@ namespace BS.ReceiptAnalyzer.ReceiptRecognizer.Core
         {
             services.AddAzureStorage(storageConnectionString);
 
+            services.AddSingleton<IReceiptRecognitionService, ReceiptRecognitionService>();
             services.AddScoped<ISourceImageReceiver, AzureSourceImageReceiver>();
             services.AddScoped<IReceiptRecognizerService, ReceiptRecognizerService>();
 
@@ -18,10 +20,12 @@ namespace BS.ReceiptAnalyzer.ReceiptRecognizer.Core
 
         public static IServiceCollection AddLocalReceiptRecognizerCore(this IServiceCollection services)
         {
+            services.AddSingleton<IReceiptRecognitionService, ReceiptRecognitionService>();
             services.AddSingleton<ISourceImageReceiver, AzureSourceImageReceiver>();
             services.AddSingleton<IReceiptRecognizerService, ReceiptRecognizerService>();
 
             return services;
         }
+
     }
 }

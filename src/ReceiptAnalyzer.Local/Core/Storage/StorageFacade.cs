@@ -1,6 +1,6 @@
 ﻿using BS.ReceiptAnalyzer.Shared.Storage;
 using BS.ReceiptAnalyzer.Shared.Storage.FileSystem;
-using ImageFormatConverter = BS.ReceiptAnalyzer.Shared.Storage.Images.ImageFormatConverter;
+using ImageFormatHelper = BS.ReceiptAnalyzer.Shared.Storage.Images.ImageFormatHelper;
 
 namespace BS.ReceiptAnalyzer.Local.Core.Storage
 {
@@ -19,9 +19,9 @@ namespace BS.ReceiptAnalyzer.Local.Core.Storage
         public async Task<Tuple<bool, string?>> SaveSourceImage(string sourcePath, Guid taskId)
         {
             var info = new FileInfo(sourcePath);
-            var mime = ImageFormatConverter.GetMimeFileFormant(info.FullName);
+            var mime = ImageFormatHelper.GetMimeFileFormant(info.FullName);
             var orginal = File.ReadAllBytes(info.FullName);
-            var content = ImageFormatConverter.ConvertToPng(mime, orginal);
+            var content = ImageFormatHelper.ConvertToPng(mime, orginal);
 
             var path = _sourceImagePathStrategy.GetSourceImagePath(taskId);
             var saveResult = await _storageService.SaveFileAsync(content, path, true);

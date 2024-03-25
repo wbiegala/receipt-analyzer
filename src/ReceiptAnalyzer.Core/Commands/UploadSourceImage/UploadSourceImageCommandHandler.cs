@@ -25,7 +25,7 @@ namespace BS.ReceiptAnalyzer.Core.Commands.UploadSourceImage
 
         public async Task<UploadSourceImageCommandResult> Handle(UploadSourceImageCommand command, CancellationToken cancellationToken)
         {
-            var converted = ImageFormatConverter.ConvertToPng(command.MIME, command.Image);
+            var converted = ImageFormatHelper.ConvertToPng(command.MIME, command.Image);
             var path = _sourceImagePathStrategy.GetSourceImagePath(command.TaskId, DefaultImageSourceFileExtension);
             var result = await _storageService.SaveFileAsync(converted, path, true);
 

@@ -96,7 +96,7 @@ namespace BS.ReceiptAnalyzer.ReceiptRecognizer.Core.ML
 
         #endregion
 
-        private static string MLNetModelPath = Path.GetFullPath("ReceiptRecognitionML.mlnet");
+        private static string MLNetModelPath = Path.GetFullPath("ML\\ReceiptRecognitionML.mlnet");
 
         public static readonly Lazy<PredictionEngine<ModelInput, ModelOutput>> PredictEngine = new Lazy<PredictionEngine<ModelInput, ModelOutput>>(() => CreatePredictEngine(), true);
 

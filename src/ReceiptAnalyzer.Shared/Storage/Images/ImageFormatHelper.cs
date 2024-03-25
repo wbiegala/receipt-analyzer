@@ -3,7 +3,7 @@ using System.Drawing.Imaging;
 
 namespace BS.ReceiptAnalyzer.Shared.Storage.Images
 {
-    public static class ImageFormatConverter
+    public static class ImageFormatHelper
     {
         /// <summary>
         /// Normalizes MIME content type to file extension
