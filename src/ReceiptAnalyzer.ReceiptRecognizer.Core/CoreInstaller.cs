@@ -12,7 +12,8 @@ namespace BS.ReceiptAnalyzer.ReceiptRecognizer.Core
             services.AddAzureStorage(storageConnectionString);
 
             services.AddSingleton<IReceiptRecognitionService, ReceiptRecognitionService>();
-            services.AddScoped<ISourceImageReceiver, AzureSourceImageReceiver>();
+            services.AddScoped<ISourceImageReceiver, SourceImageReceiver>();
+            services.AddScoped<IReceiptImageUploader, ReceiptImageUploader>();
             services.AddScoped<IReceiptRecognizerService, ReceiptRecognizerService>();
 
             return services;
@@ -21,7 +22,8 @@ namespace BS.ReceiptAnalyzer.ReceiptRecognizer.Core
         public static IServiceCollection AddLocalReceiptRecognizerCore(this IServiceCollection services)
         {
             services.AddSingleton<IReceiptRecognitionService, ReceiptRecognitionService>();
-            services.AddSingleton<ISourceImageReceiver, AzureSourceImageReceiver>();
+            services.AddSingleton<ISourceImageReceiver, SourceImageReceiver>();
+            services.AddSingleton<IReceiptImageUploader, ReceiptImageUploader>();
             services.AddSingleton<IReceiptRecognizerService, ReceiptRecognizerService>();
 
             return services;

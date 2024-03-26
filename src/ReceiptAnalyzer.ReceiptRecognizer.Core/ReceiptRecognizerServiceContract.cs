@@ -1,6 +1,4 @@
-﻿using BS.ReceiptAnalyzer.ReceiptRecognizer.Core.Model;
-
-namespace BS.ReceiptAnalyzer.ReceiptRecognizer.Core
+﻿namespace BS.ReceiptAnalyzer.ReceiptRecognizer.Core
 {
     public class ReceiptRecognizerServiceContract
     {
@@ -10,7 +8,7 @@ namespace BS.ReceiptAnalyzer.ReceiptRecognizer.Core
             public bool IsSuccess { get; init; }
             public string? FailReason { get; init; }
             public int ReceiptsFound { get; init; }
-            IEnumerable<ReceiptRecognized> Receipts { get; init; } = Enumerable.Empty<ReceiptRecognized>();
+            public IEnumerable<Guid> Receipts { get; init; } = Enumerable.Empty<Guid>();
         }
     }
 }

@@ -3,20 +3,20 @@ using BS.ReceiptAnalyzer.Shared.Storage;
 
 namespace BS.ReceiptAnalyzer.ReceiptRecognizer.Core.IO
 {
-    internal class AzureSourceImageReceiver : ISourceImageReceiver
+    internal class SourceImageReceiver : ISourceImageReceiver
     {
         private readonly IStorageService _storageService;
-        private readonly ISourceImagePathStrategy _sourceImagePath;
+        private readonly ISourceImagePathStrategy _pathStrategy;
 
-        public AzureSourceImageReceiver(IStorageService storageService, ISourceImagePathStrategy sourceImagePath)
+        public SourceImageReceiver(IStorageService storageService, ISourceImagePathStrategy pathStrategy)
         {
             _storageService = storageService ?? throw new ArgumentNullException(nameof(storageService));
-            _sourceImagePath = sourceImagePath ?? throw new ArgumentNullException(nameof(sourceImagePath));
+            _pathStrategy = pathStrategy ?? throw new ArgumentNullException(nameof(pathStrategy));
         }
 
         public async Task<Stream> GetSourceImageAsync(Guid taskId)
         {
-            var path = _sourceImagePath.GetSourceImagePath(taskId);
+            var path = _pathStrategy.GetSourceImagePath(taskId);
             var result = await _storageService.GetFileAsync(path);
 
             if (!result.Success || result.File == null)

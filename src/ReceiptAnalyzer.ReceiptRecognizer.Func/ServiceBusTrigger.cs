@@ -7,17 +7,23 @@ using BS.ReceiptAnalyzer.ReceiptRecognizer.Func.Extensions;
 using Microsoft.Azure.Functions.Worker;
 using Microsoft.Extensions.Logging;
 using BS.ReceiptAnalyzer.ReceiptRecognizer.Core;
+using BS.ReceiptAnalyzer.Contract.Models.ReceiptsRecognition;
+using BS.ReceiptAnalyzer.ReceiptRecognizer.Func.Services;
 
 namespace BS.ReceiptAnalyzer.ReceiptRecognizer.Func
 {
     public class ServiceBusTrigger
     {
         private readonly IReceiptRecognizerService _receiptRecognizerService;
+        private readonly IResultUploader _resultUploader;
         private readonly ILogger<ServiceBusTrigger> _logger;
 
-        public ServiceBusTrigger(IReceiptRecognizerService receiptRecognizerService, ILogger<ServiceBusTrigger> logger)
+        public ServiceBusTrigger(IReceiptRecognizerService receiptRecognizerService,
+            IResultUploader resultUploader,
+            ILogger<ServiceBusTrigger> logger)
         {
             _receiptRecognizerService = receiptRecognizerService;
+            _resultUploader = resultUploader;
             _logger = logger;
         }
 
@@ -35,6 +41,9 @@ namespace BS.ReceiptAnalyzer.ReceiptRecognizer.Func
             try
             {
                 var recognitionResult = await _receiptRecognizerService.RecognizeReceiptsAsync(request!.TaskId);
+                var contract = MapToContract(recognitionResult);
+                await _resultUploader.UploadResultsAsync(request.TaskId, contract);
+
                 resultBuilder.AddRecognitionResult(recognitionResult);
             }
             catch (Exception ex)
@@ -60,5 +69,12 @@ namespace BS.ReceiptAnalyzer.ReceiptRecognizer.Func
 
             return message;
         }
+
+        private static ReceiptsRecognitionModel MapToContract(ReceiptRecognizerServiceContract.Result recognitionResult) =>
+            new ReceiptsRecognitionModel
+            {
+                ReceiptsRecognized = recognitionResult.ReceiptsFound,
+                Receipts = recognitionResult.Receipts
+            };
     }
 }

@@ -3,6 +3,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using BS.ReceiptAnalyzer.ReceiptRecognizer.Core;
+using BS.ReceiptAnalyzer.ReceiptRecognizer.Func.Services;
 
 var host = new HostBuilder()
     .ConfigureFunctionsWebApplication()
@@ -11,7 +12,7 @@ var host = new HostBuilder()
         services.AddApplicationInsightsTelemetryWorkerService();
         services.ConfigureFunctionsApplicationInsights();
         services.AddAzureReceiptRecognizerCore(ctx.Configuration.GetConnectionString("Storage"));
-    })
-    .Build();
+        services.AddScoped<IResultUploader, ResultUploader>();
+    }).Build();
 
 host.Run();

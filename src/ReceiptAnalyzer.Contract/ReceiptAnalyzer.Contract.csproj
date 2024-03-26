@@ -12,7 +12,6 @@
     <Folder Include="Models\ReceiptsDataMatching\" />
     <Folder Include="Models\ReceiptsConvertion\" />
     <Folder Include="Models\ReceiptsPartitioning\" />
-    <Folder Include="Models\ReceiptsRecognition\" />
   </ItemGroup>
 
 </Project>
