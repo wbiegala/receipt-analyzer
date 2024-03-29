@@ -22,7 +22,6 @@ namespace BS.ReceiptAnalyzer.Local.Core.Storage
             var mime = ImageFormatHelper.GetMimeFileFormant(info.FullName);
             var orginal = File.ReadAllBytes(info.FullName);
             var content = ImageFormatHelper.ConvertToPng(mime, orginal);
-
             var path = _sourceImagePathStrategy.GetSourceImagePath(taskId);
             var saveResult = await _storageService.SaveFileAsync(content, path, true);
 
