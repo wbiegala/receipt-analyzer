@@ -13,7 +13,8 @@ namespace BS.ReceiptAnalyzer.Local.Core.Storage
             ISourceImagePathStrategy sourceImagePathStrategy)
         {
             _storageService = storageService ?? throw new ArgumentNullException(nameof(storageService));
-            _sourceImagePathStrategy = sourceImagePathStrategy ?? throw new ArgumentNullException(nameof(sourceImagePathStrategy));
+            _sourceImagePathStrategy = sourceImagePathStrategy 
+                ?? throw new ArgumentNullException(nameof(sourceImagePathStrategy));
         }
 
         public async Task<Tuple<bool, string?>> SaveSourceImage(string sourcePath, Guid taskId)
@@ -30,7 +31,8 @@ namespace BS.ReceiptAnalyzer.Local.Core.Storage
 
         public string GetSourceImagePath(Guid taskId)
         {
-            return Path.Combine(LocalAppConfig.StoragePath, _sourceImagePathStrategy.GetSourceImagePath(taskId));
+            return Path.Combine(LocalAppConfig.StoragePath,
+                _sourceImagePathStrategy.GetSourceImagePath(taskId));
         }
 
     }
