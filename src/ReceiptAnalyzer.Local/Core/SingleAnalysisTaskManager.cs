@@ -37,7 +37,11 @@ namespace BS.ReceiptAnalyzer.Local.Core
         public async Task<Contract.ExecuteNextStep.Result> ExecuteNextStep(Contract.ExecuteNextStep.Request request)
         {
             if (_current == null || _current.Status != AnalysisTaskStatus.OnProcessing)
-                return new Contract.ExecuteNextStep.Result { Success = false, Error = "Nie można wykonać kolejnego kroku" };
+                return new Contract.ExecuteNextStep.Result
+                { 
+                    Success = false,
+                    Error = "Nie można wykonać kolejnego kroku"
+                };
 
             switch (_current.Progression)
             {
