@@ -30,7 +30,8 @@ namespace BS.ReceiptAnalyzer.Shared.Storage
             }
             catch (Exception ex)
             {
-                return new StorageServiceContract.SaveFileResult(false, $"{ex.GetType().Name} - {ex.Message}");
+                return new StorageServiceContract.SaveFileResult(false,
+                    $"{ex.GetType().Name} - {ex.Message}");
             }
         }
 
