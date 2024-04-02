@@ -17,9 +17,12 @@ namespace BS.ReceiptAnalyzer.ReceiptRecognizer.Core
             IReceiptImageUploader receiptImageUploader,
             IReceiptRecognitionService receiptRecognitionService)
         {
-            _sourceImageReceiver = sourceImageReceiver ?? throw new ArgumentNullException(nameof(sourceImageReceiver));
-            _receiptImageUploader = receiptImageUploader ?? throw new ArgumentNullException(nameof(receiptImageUploader));
-            _receiptRecognitionService = receiptRecognitionService ?? throw new ArgumentNullException(nameof(receiptRecognitionService));
+            _sourceImageReceiver = sourceImageReceiver
+                ?? throw new ArgumentNullException(nameof(sourceImageReceiver));
+            _receiptImageUploader = receiptImageUploader
+                ?? throw new ArgumentNullException(nameof(receiptImageUploader));
+            _receiptRecognitionService = receiptRecognitionService
+                ?? throw new ArgumentNullException(nameof(receiptRecognitionService));
         }
 
         public async Task<ReceiptRecognizerServiceContract.Result> RecognizeReceiptsAsync(Guid taskId)
@@ -28,7 +31,8 @@ namespace BS.ReceiptAnalyzer.ReceiptRecognizer.Core
             {
                 var source = await _sourceImageReceiver.GetSourceImageAsync(taskId);
                 var sourceBytes = FileHelper.GetBytes(source);
-                var recognitionResult = await _receiptRecognitionService.FindReceiptsOnImageAsync(new MemoryStream(sourceBytes));
+                var recognitionResult = await _receiptRecognitionService
+                    .FindReceiptsOnImageAsync(new MemoryStream(sourceBytes));
 
                 if (recognitionResult is null || !recognitionResult.Any())
                     return FailResult(ReceiptsNotFound);
@@ -62,8 +66,10 @@ namespace BS.ReceiptAnalyzer.ReceiptRecognizer.Core
         private async Task<Guid> ProcessReceiptAsync(Guid taskId, ReceiptRecognized receipt, byte[] source)
         {
             var id = CreateReceiptId();
-            var receiptImage = ImageCroppingHelper.CropImage(source, receipt.X1, receipt.Y1, receipt.X2, receipt.Y2);
-            await _receiptImageUploader.UploadReceiptImageAsync(taskId,id, new MemoryStream(receiptImage));
+            var receiptImage = ImageCroppingHelper.CropImage(source,
+                receipt.X1, receipt.Y1, receipt.X2, receipt.Y2);
+            await _receiptImageUploader.UploadReceiptImageAsync(taskId,
+                id, new MemoryStream(receiptImage));
 
             return id;
         }
