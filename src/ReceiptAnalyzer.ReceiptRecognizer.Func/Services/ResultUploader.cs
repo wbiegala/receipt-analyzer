@@ -11,10 +11,13 @@ namespace BS.ReceiptAnalyzer.ReceiptRecognizer.Func.Services
         private readonly IStorageService _storageService;
         private readonly IReceiptRecognitionResultPathStrategy _pathStrategy;
 
-        public ResultUploader(IStorageService storageService, IReceiptRecognitionResultPathStrategy pathStrategy)
+        public ResultUploader(IStorageService storageService,
+            IReceiptRecognitionResultPathStrategy pathStrategy)
         {
-            _storageService = storageService ?? throw new ArgumentNullException(nameof(storageService));
-            _pathStrategy = pathStrategy ?? throw new ArgumentNullException(nameof(pathStrategy));
+            _storageService = storageService
+                ?? throw new ArgumentNullException(nameof(storageService));
+            _pathStrategy = pathStrategy
+                ?? throw new ArgumentNullException(nameof(pathStrategy));
         }
 
         public async Task UploadResultsAsync(Guid taskId, ReceiptsRecognitionModel results)
