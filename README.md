@@ -22,7 +22,7 @@ ReceiptAnalyzer to usługa web umożliwiająca analizę polskiego paragonu fiska
 	* kwota całkowita
 	* kwota udzielonych rabatów
 	* kwoty poszczególnych stawek VAT
-	* suma podatku VAT
+	* suma podatku VAT w poszczególnych stawkach
 + Stopka: 
 	* data i godzina transakcji
 	* forma płatności
