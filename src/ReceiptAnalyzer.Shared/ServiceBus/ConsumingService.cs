@@ -10,7 +10,8 @@ namespace BS.ReceiptAnalyzer.Shared.ServiceBus
 
         private List<ServiceBusProcessor> _processors = new();
 
-        public ConsumingService(ServiceBusConfiguration config, IEnumerable<IServiceBusConsumer> consumers)
+        public ConsumingService(ServiceBusConfiguration config,
+            IEnumerable<IServiceBusConsumer> consumers)
         {
             _client = new ServiceBusClient(config.ConnectionString);
             _consumers = consumers;
