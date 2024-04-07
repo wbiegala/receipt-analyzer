@@ -19,7 +19,10 @@ namespace BS.ReceiptAnalyzer.Local.Views
         private async Task ExecuteNextStep()
         {
             HandleStartProcessingStarted();
-            var request = new TaskManagerContract.ExecuteNextStep.Request { TaskId = _taskId!.Value };
+            var request = new TaskManagerContract.ExecuteNextStep.Request 
+            {
+                TaskId = _taskId!.Value
+            };
             var nextStepResult = await _taskManager.ExecuteNextStep(request);
             
             HandleNextStepFinished(nextStepResult);
@@ -37,7 +40,10 @@ namespace BS.ReceiptAnalyzer.Local.Views
 
             if (dialog.ShowDialog() == DialogResult.OK)
             {
-                var request = new TaskManagerContract.CreateTask.Request { FilePath = dialog.FileName };
+                var request = new TaskManagerContract.CreateTask.Request 
+                { 
+                    FilePath = dialog.FileName
+                };
                 var startTask = await _taskManager.CreateTask(request);
                 HandleTaskStarted(startTask);
                 await ExecuteNextStep();
