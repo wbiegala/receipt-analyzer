@@ -43,8 +43,6 @@ namespace ReceiptAnalyzer.Local
         {
             return Host.CreateDefaultBuilder()
             .ConfigureServices((context, services) => {
-                var configuration = context.Configuration;
-
                 services.AddViews();
                 services.AddSingleton<IAnalysisTaskManager, SingleAnalysisTaskManager>();
                 services.AddSingleton<IStorageFacade, StorageFacade>();
