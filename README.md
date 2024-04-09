@@ -2,7 +2,7 @@
 
 # Czym jest ReceiptAnalyzer?
 
-ReceiptAnalyzer to usługa web umożliwiająca analizę polskiego paragonu fiskalnego na podstawie jego zdjęcia lub skanu. Dane pozyskane w wyniku analizy mogą posłużyć do innych procesów realizowanych po stronie klienta (analiza wydatków, zgodność nagłówka/stopki ze standardami, wykrywanie nieprawidłowości, zbieranie danych statystycznych).
+ReceiptAnalyzer to aplikacja umożliwiająca analizę polskiego paragonu fiskalnego na podstawie jego zdjęcia lub skanu. Dane pozyskane w wyniku analizy mogą posłużyć do innych procesów realizowanych po stronie klienta (analiza wydatków, zgodność nagłówka/stopki ze standardami, wykrywanie nieprawidłowości, zbieranie danych statystycznych).
 
 ## Zakres pozyskanych danych
 ![receipt schema](./docs/images/receipt-schema.jpg)
