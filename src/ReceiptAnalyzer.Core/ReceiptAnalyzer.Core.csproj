@@ -20,10 +20,6 @@
     <ProjectReference Include="..\ReceiptAnalyzer.Shared\ReceiptAnalyzer.Shared.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="ResultsConsumers\" />
-  </ItemGroup>
-
 	<ItemGroup>
 		<InternalsVisibleTo Include="BS.ReceiptAnalyzer.Core.Tests" />
 	</ItemGroup>

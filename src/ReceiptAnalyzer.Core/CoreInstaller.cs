@@ -1,5 +1,7 @@
-﻿using BS.ReceiptAnalyzer.Data;
+﻿using BS.ReceiptAnalyzer.Core.ResultsConsumers;
+using BS.ReceiptAnalyzer.Data;
 using BS.ReceiptAnalyzer.Shared;
+using BS.ReceiptAnalyzer.Shared.ServiceBus;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -18,6 +20,8 @@ namespace BS.ReceiptAnalyzer.Core
             {
                 cfg.RegisterServicesFromAssemblyContaining(typeof(CoreInstaller));
             });
+
+            services.AddServiceBusConsumer<AnalysisTaskStepProcessingResultConsumer>();
 
             return services;
         }
