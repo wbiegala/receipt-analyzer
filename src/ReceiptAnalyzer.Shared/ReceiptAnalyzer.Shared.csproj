@@ -9,11 +9,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Azure.Messaging.ServiceBus" Version="7.17.4" />
+    <PackageReference Include="Azure.Messaging.ServiceBus" Version="7.17.5" />
     <PackageReference Include="Azure.Storage.Blobs" Version="12.19.1" />
-    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="8.0.0" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="8.0.1" />
     <PackageReference Include="Microsoft.Extensions.Hosting.Abstractions" Version="8.0.0" />
-    <PackageReference Include="System.Drawing.Common" Version="8.0.2" />
+    <PackageReference Include="System.Drawing.Common" Version="8.0.4" />
   </ItemGroup>
 
 </Project>
