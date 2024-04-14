@@ -2,6 +2,7 @@
 using BS.ReceiptAnalyzer.Data;
 using BS.ReceiptAnalyzer.Shared;
 using BS.ReceiptAnalyzer.Shared.ServiceBus;
+using MassTransit;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -13,12 +14,20 @@ namespace BS.ReceiptAnalyzer.Core
         {
             services.AddRepositories();
             services.AddAzureStorage(configuration.GetConnectionString("Storage"));
-            services.AddServiceBus(configuration.GetConnectionString("ServiceBus"));
+            //services.AddServiceBus(configuration.GetConnectionString("ServiceBus"));
             services.AddHashing();
 
             services.AddMediatR(cfg =>
             {
                 cfg.RegisterServicesFromAssemblyContaining(typeof(CoreInstaller));
+            });
+
+            services.AddMassTransit(cfg =>
+            {
+                cfg.UsingAzureServiceBus((ctx, conf) =>
+                {
+                    conf.Host(configuration.GetConnectionString("ServiceBus"));
+                });
             });
 
             services.AddServiceBusConsumer<AnalysisTaskStepProcessingResultConsumer>();
