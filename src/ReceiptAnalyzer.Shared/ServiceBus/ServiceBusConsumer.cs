@@ -8,20 +8,23 @@ namespace BS.ReceiptAnalyzer.Shared.ServiceBus
     {
         public abstract string QueueOrSubscription { get; }
 
-        public Task ConsumeAsync(ProcessMessageEventArgs args)
+        public async Task ConsumeAsync(ProcessMessageEventArgs args)
         {
             var body = args.Message.Body.ToString();
 
             var message = JsonSerializer.Deserialize<TMessage>(body);
             if (message == null)
-                return Task.CompletedTask;
+                return;
 
-            return Task.WhenAll(
-                new List<Task> 
-                { 
-                    ConsumeAsync(message, CancellationToken.None),
-                    args.CompleteMessageAsync(args.Message)
-                });
+            try
+            {
+                await ConsumeAsync(message, CancellationToken.None);
+                await args.CompleteMessageAsync(args.Message);
+            }
+            catch (Exception ex)
+            {
+                await args.DeadLetterMessageAsync(args.Message, ex.Message);
+            }            
         }
 
         public Task HandleErrorAsync(ProcessErrorEventArgs args)

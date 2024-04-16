@@ -1,4 +1,5 @@
 ﻿using Azure.Messaging.ServiceBus;
+using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 
 namespace BS.ReceiptAnalyzer.Shared.ServiceBus
@@ -6,23 +7,26 @@ namespace BS.ReceiptAnalyzer.Shared.ServiceBus
     internal class ConsumingService : BackgroundService
     {
         private readonly ServiceBusClient _client;
-        private readonly IEnumerable<IServiceBusConsumer> _consumers;
+        private readonly IServiceProvider _services;
 
         private List<ServiceBusProcessor> _processors = new();
 
-        public ConsumingService(ServiceBusConfiguration config,
-            IEnumerable<IServiceBusConsumer> consumers)
+        public ConsumingService(IServiceProvider services)
         {
+            var config = services.GetRequiredService<ServiceBusConfiguration>();
             _client = new ServiceBusClient(config.ConnectionString);
-            _consumers = consumers;
+            _services = services;
         }
 
-        protected override Task ExecuteAsync(CancellationToken stoppingToken)
+        protected override async Task ExecuteAsync(CancellationToken stoppingToken)
         {
-            if (_consumers == null || !_consumers.Any())
-                return Task.CompletedTask;
+            var scope = _services.CreateAsyncScope();
+            var consumers = scope.ServiceProvider.GetServices<IServiceBusConsumer>();
 
-            foreach (var consumer in _consumers)
+            if (consumers == null || !consumers.Any())
+                return;
+
+            foreach (var consumer in consumers)
             {
                 var processor = _client.CreateProcessor(consumer.QueueOrSubscription);
                 processor.ProcessMessageAsync += consumer.ConsumeAsync;
@@ -30,7 +34,7 @@ namespace BS.ReceiptAnalyzer.Shared.ServiceBus
                 _processors.Add(processor);
             }
 
-            return Task.WhenAll(_processors.Select(proc => proc.StartProcessingAsync(stoppingToken)));
+            await Task.WhenAll(_processors.Select(proc => proc.StartProcessingAsync(stoppingToken)));
         }
 
         public override async Task StopAsync(CancellationToken cancellationToken)

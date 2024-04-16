@@ -7,7 +7,7 @@ namespace BS.ReceiptAnalyzer.Shared.ServiceBus
         public static IServiceCollection AddServiceBusConsumer<TConsumer>(this IServiceCollection services)
             where TConsumer : class, IServiceBusConsumer
         {
-            services.AddSingleton<IServiceBusConsumer, TConsumer>();
+            services.AddScoped<IServiceBusConsumer, TConsumer>();
             
             return services;
         }
