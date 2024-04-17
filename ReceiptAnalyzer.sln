@@ -31,7 +31,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ReceiptAnalyzer.ReceiptReco
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ReceiptAnalyzer.ReceiptRecognizer.Core", "src\ReceiptAnalyzer.ReceiptRecognizer.Core\ReceiptAnalyzer.ReceiptRecognizer.Core.csproj", "{FD3CA395-A618-426C-95EA-FBFDB403FE0C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReceiptAnalyzer.Local", "src\ReceiptAnalyzer.Local\ReceiptAnalyzer.Local.csproj", "{84B1CD0F-8E51-44C4-9C28-601AB046F511}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ReceiptAnalyzer.Local", "src\ReceiptAnalyzer.Local\ReceiptAnalyzer.Local.csproj", "{84B1CD0F-8E51-44C4-9C28-601AB046F511}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReceiptAnalyzer.Tool", "src\ReceiptAnalyzer.Tool\ReceiptAnalyzer.Tool.csproj", "{09C0CBE8-CBF8-4AB7-8869-9C8D153A12F2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -87,6 +89,10 @@ Global
 		{84B1CD0F-8E51-44C4-9C28-601AB046F511}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{84B1CD0F-8E51-44C4-9C28-601AB046F511}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{84B1CD0F-8E51-44C4-9C28-601AB046F511}.Release|Any CPU.Build.0 = Release|Any CPU
+		{09C0CBE8-CBF8-4AB7-8869-9C8D153A12F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{09C0CBE8-CBF8-4AB7-8869-9C8D153A12F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{09C0CBE8-CBF8-4AB7-8869-9C8D153A12F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{09C0CBE8-CBF8-4AB7-8869-9C8D153A12F2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
