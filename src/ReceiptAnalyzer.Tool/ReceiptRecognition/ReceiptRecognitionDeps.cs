@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+﻿using BS.ReceiptAnalyzer.ReceiptRecognizer.Core;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace BS.ReceiptAnalyzer.Tool.ReceiptRecognition
 {
@@ -8,7 +9,8 @@ namespace BS.ReceiptAnalyzer.Tool.ReceiptRecognition
             string inputDir, string outputDir)
         {
             services.AddSingleton<IImagesProcessor, ReceiptRecognitionProcessor>();
-
+            services.AddLocalReceiptRecognizerCore();
+            
             return services;
         }
     }

@@ -1,10 +1,14 @@
-﻿namespace BS.ReceiptAnalyzer.Tool.ReceiptRecognition
+﻿using BS.ReceiptAnalyzer.ReceiptRecognizer.Core;
+
+namespace BS.ReceiptAnalyzer.Tool.ReceiptRecognition
 {
     internal class ReceiptRecognitionProcessor : IImagesProcessor
     {
-        public ReceiptRecognitionProcessor()
+        private readonly IReceiptRecognizerService _recognizer;
+
+        public ReceiptRecognitionProcessor(IReceiptRecognizerService recognizer)
         {
-            
+            _recognizer = recognizer ?? throw new ArgumentNullException(nameof(recognizer));
         }
 
         public async Task ProcessAsync()

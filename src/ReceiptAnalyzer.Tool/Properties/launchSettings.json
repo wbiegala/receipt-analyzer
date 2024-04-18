@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "ReceiptAnalyzer.Tool": {
+      "commandName": "Project",
+      "commandLineArgs": "\"./data\" ReceiptRecognition"
+    }
+  }
+}

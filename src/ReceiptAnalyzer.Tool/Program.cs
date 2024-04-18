@@ -1,6 +1,8 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using BS.ReceiptAnalyzer.Tool;
 using BS.ReceiptAnalyzer.Tool.ReceiptRecognition;
+using BS.ReceiptAnalyzer.Shared.Storage;
+using BS.ReceiptAnalyzer.Shared.Storage.FileSystem;
 
 Console.WriteLine("Starting processing...");
 
@@ -14,6 +16,9 @@ try
 
     var services = new ServiceCollection();
     services.AddReceiptRecognition(processConfig.InputDirectory, processConfig.OutputDirectory);
+    services.AddScoped<IStorageService, SimpleStorageService>();
+    services.AddSingleton<ISourceImagePathStrategy, PathStrategy>();
+    services.AddSingleton<IReceiptRecognitionImagePathStrategy, PathStrategy>();
 
     var provider = services.BuildServiceProvider();
 
