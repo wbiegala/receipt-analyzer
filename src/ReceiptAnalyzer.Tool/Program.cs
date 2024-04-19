@@ -15,6 +15,7 @@ try
     Console.WriteLine($"Output directory: {processConfig.OutputDirectory}");
 
     var services = new ServiceCollection();
+    services.AddSingleton(processConfig);
     services.AddReceiptRecognition(processConfig.InputDirectory, processConfig.OutputDirectory);
     services.AddScoped<IStorageService, SimpleStorageService>();
     services.AddSingleton<ISourceImagePathStrategy, PathStrategy>();
