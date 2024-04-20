@@ -16,13 +16,15 @@ namespace BS.ReceiptAnalyzer.Core.ResultsConsumers
         public override string QueueOrSubscription => MessagingConfiguration.AnalysisTaskSteps.ResultsQueue;
 
 
-        public AnalysisTaskStepProcessingResultConsumer(IMediator mediator, ILogger<AnalysisTaskStepProcessingResultConsumer> logger)
+        public AnalysisTaskStepProcessingResultConsumer(IMediator mediator,
+            ILogger<AnalysisTaskStepProcessingResultConsumer> logger)
         {
             _mediator = mediator ?? throw new ArgumentNullException(nameof(mediator));
             _logger = logger ?? throw new ArgumentNullException(nameof(logger));
         }
 
-        public override async Task ConsumeAsync(AnalysisTaskStepProcessingResult message, CancellationToken cancellationToken)
+        public override async Task ConsumeAsync(AnalysisTaskStepProcessingResult message,
+            CancellationToken cancellationToken)
         {
             try
             {
@@ -40,7 +42,8 @@ namespace BS.ReceiptAnalyzer.Core.ResultsConsumers
         }
 
 
-        private Task NotifyAnalysisTask(AnalysisTaskStepProcessingResult message, CancellationToken cancellationToken)
+        private Task NotifyAnalysisTask(AnalysisTaskStepProcessingResult message,
+            CancellationToken cancellationToken)
         {
             var command = new NotifyAnalysisTaskProgressCommand(
                     message.TaskId,
@@ -51,7 +54,8 @@ namespace BS.ReceiptAnalyzer.Core.ResultsConsumers
             return _mediator.Send(command, cancellationToken);
         }
 
-        private Task FailAnalysisTask(AnalysisTaskStepProcessingResult message, CancellationToken cancellationToken)
+        private Task FailAnalysisTask(AnalysisTaskStepProcessingResult message,
+            CancellationToken cancellationToken)
         {
             var command = new FailAnalysisTaskCommand(message.TaskId, message.FailReason!);
             return _mediator.Send(command, cancellationToken);
