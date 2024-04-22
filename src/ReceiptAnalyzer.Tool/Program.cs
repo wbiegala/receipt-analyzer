@@ -3,6 +3,7 @@ using BS.ReceiptAnalyzer.Tool;
 using BS.ReceiptAnalyzer.Tool.ReceiptRecognition;
 using BS.ReceiptAnalyzer.Shared.Storage;
 using BS.ReceiptAnalyzer.Shared.Storage.FileSystem;
+using BS.ReceiptAnalyzer.Shared;
 
 Console.WriteLine("Starting processing...");
 
@@ -16,7 +17,8 @@ try
 
     var services = new ServiceCollection();
     services.AddSingleton(processConfig);
-    services.AddReceiptRecognition(processConfig.InputDirectory, processConfig.OutputDirectory);
+    services.AddLocalStorage(processConfig.OutputDirectory);
+    services.AddReceiptRecognition();
     services.AddScoped<IStorageService, SimpleStorageService>();
     services.AddSingleton<ISourceImagePathStrategy, PathStrategy>();
     services.AddSingleton<IReceiptRecognitionImagePathStrategy, PathStrategy>();
