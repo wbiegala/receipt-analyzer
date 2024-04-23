@@ -29,7 +29,7 @@ namespace BS.ReceiptAnalyzer.Tool.ReceiptRecognition
             foreach (var file in files)
             {
                 var task = await PrepareTaskAsync(file);
-                var result = _recognizer.RecognizeReceiptsAsync(task);
+                var result = await _recognizer.RecognizeReceiptsAsync(task);
             }
         }
 
