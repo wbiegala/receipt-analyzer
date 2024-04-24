@@ -16,9 +16,12 @@ namespace BS.ReceiptAnalyzer.Tool.ReceiptRecognition
             ISourceImagePathStrategy sourceImagePathStrategy,
             IStorageService storageService, ProgramArgs config)
         {
-            _recognizer = recognizer ?? throw new ArgumentNullException(nameof(recognizer));
-            _sourceImagePathStrategy = sourceImagePathStrategy ?? throw new ArgumentNullException(nameof(sourceImagePathStrategy));
-            _storageService = storageService ?? throw new ArgumentNullException(nameof(storageService));
+            _recognizer = recognizer
+                ?? throw new ArgumentNullException(nameof(recognizer));
+            _sourceImagePathStrategy = sourceImagePathStrategy
+                ?? throw new ArgumentNullException(nameof(sourceImagePathStrategy));
+            _storageService = storageService
+                ?? throw new ArgumentNullException(nameof(storageService));
             _inputDirectory = config.InputDirectory;
         }
 
