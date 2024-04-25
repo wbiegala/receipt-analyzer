@@ -32,6 +32,7 @@ namespace BS.ReceiptAnalyzer.Shared.ServiceBus
             return Task.CompletedTask;
         }
 
-        public abstract Task ConsumeAsync(TMessage message, CancellationToken cancellationToken);
+        public abstract Task ConsumeAsync(TMessage message, 
+            CancellationToken cancellationToken);
     }
 }
