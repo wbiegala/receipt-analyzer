@@ -53,7 +53,8 @@ namespace BS.ReceiptAnalyzer.Tool.ReceiptRecognition
             {
                 var bytes = FileHelper.GetBytes(fileStream);
                 var pngFile = ImageFormatHelper.ConvertToPng(ImageFormatHelper.GetMimeFileFormant(file), bytes);
-                await _storageService.SaveFileAsync(pngFile, _sourceImagePathStrategy.GetSourceImagePath(taskId));
+                await _storageService.SaveFileAsync(pngFile,
+                    _sourceImagePathStrategy.GetSourceImagePath(taskId));
             }
             
             File.Delete(file);
