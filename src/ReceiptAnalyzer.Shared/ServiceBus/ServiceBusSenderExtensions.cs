@@ -12,6 +12,7 @@ namespace BS.ReceiptAnalyzer.Shared.ServiceBus
         {
             var body = JsonSerializer.Serialize(message);
             var payload = new ServiceBusMessage(body);
+
             return sender.SendMessageAsync(payload, cancellationToken);
         }
     }
