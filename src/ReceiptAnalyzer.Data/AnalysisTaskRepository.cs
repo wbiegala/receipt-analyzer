@@ -9,7 +9,8 @@ namespace BS.ReceiptAnalyzer.Data
 
         public AnalysisTaskRepository(ReceiptAnalyzerDbContext dbContext)
         {
-            _dbContext = dbContext ?? throw new ArgumentNullException(nameof(dbContext));
+            _dbContext = dbContext
+                ?? throw new ArgumentNullException(nameof(dbContext));
         }
 
         public IUnitOfWork UnitOfWork => _dbContext;
