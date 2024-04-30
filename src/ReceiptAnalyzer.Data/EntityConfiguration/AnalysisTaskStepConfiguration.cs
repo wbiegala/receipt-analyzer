@@ -4,7 +4,8 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace BS.ReceiptAnalyzer.Data.EntityConfiguration
 {
-    internal class AnalysisTaskStepConfiguration : IEntityTypeConfiguration<AnalysisTaskStep>
+    internal class AnalysisTaskStepConfiguration
+        : IEntityTypeConfiguration<AnalysisTaskStep>
     {
         public void Configure(EntityTypeBuilder<AnalysisTaskStep> builder)
         {
