@@ -2,7 +2,7 @@
   "profiles": {
     "ReceiptAnalyzer.Tool": {
       "commandName": "Project",
-      "commandLineArgs": "\"./data\" ReceiptRecognition"
+      "commandLineArgs": "\"C:\\temp\\ReceiptAnalyzer\\input1\" \"C:\\temp\\ReceiptAnalyzer\\output1\" ReceiptRecognition"
     }
   }
 }

@@ -17,11 +17,8 @@ try
 
     var services = new ServiceCollection();
     services.AddSingleton(processConfig);
-    services.AddLocalStorage(processConfig.OutputDirectory);
     services.AddReceiptRecognition();
-    services.AddScoped<IStorageService, SimpleStorageService>();
-    services.AddSingleton<ISourceImagePathStrategy, PathStrategy>();
-    services.AddSingleton<IReceiptRecognitionImagePathStrategy, PathStrategy>();
+    services.AddLocalStorage($"{processConfig.OutputDirectory}\\temp");
 
     var provider = services.BuildServiceProvider();
 
