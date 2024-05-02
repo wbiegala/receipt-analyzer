@@ -1,0 +1,9 @@
+{
+  "profiles": {
+    "ReceiptAnalyzer.ReceiptPartitioner.Func": {
+      "commandName": "Project",
+      "commandLineArgs": "--port 7113",
+      "launchBrowser": false
+    }
+  }
+}
