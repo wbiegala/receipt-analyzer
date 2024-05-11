@@ -5,7 +5,7 @@
         "name": "receipt-analyzer.receipt-partitioning.source",
         "providerType": "localFileSystemProxy",
         "providerOptions": {
-            "encrypted": "eyJjaXBoZXJ0ZXh0IjoiNGU4ZTU1OTNlYzFhN2Q2Y2ZhOGM0YzY4ZmQyNGQ4MWM1NzRiY2NhM2ZlNDg1YzkzMGNiYTA5ODZlNGY3YmYyODg5MTRiNmE3MmFmMWVkNzQwN2VlNjRiYzBkZGI4NzkyMDBlNTVkM2JkOTMwNjQ1OWNlYmE2OGE0YWYxZGMxNDExZWE4NzVjODRkZjU1MjIzOWQ4YzYzZTdlYzJkZGM3MGQyMDQ4N2U0MjVmZTk1NjNhMWI0NjdkZGQ0NDhlZmYwYmZkNDBlN2QxODZhMzM4Mzg0YjZlZWU4Mjc3ZjJmODgiLCJpdiI6IjNlY2ZmYzE3MzNiOTUwODJhYTU2Yjg0MzRhMjdlYjJhZDM4YWRiY2Y0NWNhNDBiYiJ9"
+            "encrypted": "eyJjaXBoZXJ0ZXh0IjoiMjMzYmI2ZDRjNTBiY2ExMmY1MDFkNDViNjMyNzUwNDJjMTI4Y2Q1M2MyZmMwOTk3NmNhOGFjNGVjZmI4ZDU5Mjk0N2I3NjMzZjM4N2IyMGIyMjg2YTg0MjJhNTRhODlkMWQwZDI3NWVkOTU2YzRlYTZjOWU4MjZjY2UyMzBlYTZhZGQ3YjIxZTZjZTY0ZTA0NzZkN2E1NDA5N2E3ZTBhYTA0MDYxZDlhMjE4OGJmZGFjZDVhZDZlYzk1ZDgzMTMwMjU4OTEwNTUzM2JmZTY2ZGQ1ZDlkNDU0MjQ1ODJhODYiLCJpdiI6ImNiMGQ1NjE1NDkyMDdiYmFhN2MzMDMyMTcwOWUxMTI5YTEwYWU1ODU1NmUyN2RjZSJ9"
         },
         "id": "eL_Fs4AAX"
     },
@@ -13,7 +13,7 @@
         "name": "receipt-analyzer.receipt-partitioning.target",
         "providerType": "localFileSystemProxy",
         "providerOptions": {
-            "encrypted": "eyJjaXBoZXJ0ZXh0IjoiNWRlNTk5OTRmYWIxODhmZTEyNGFiNTRlNWE5ODVhMzgwMDk4NjI5MzZkMGMwYmVkYzhkZmUzNjk1NGRkYmFlYzdiOWI2NWE1NzA2MWI0YmZkOTg4M2NhMDkyYjJlYjc2YTE4Y2Q2N2M1OTQwNDNlZTM1MDMxN2ViNWRiNTUwZjI0MDRiNzEyNGZlYmI4YzEzODkxY2RhNjg1ZWNlYjAxNmQ0ZDVkZjE1ZjVmYWViMTU5Yjc4ZGU2OTc5ZjBmMGRkMjNhMzRlZGFjZjQ2YjllYjJhYWQ4NjU5OGY5Zjk5OGIiLCJpdiI6ImQyNTQyZDMxM2JjNjg5NGM2MzNjMzYzYTQ1M2Q4OWVmMzgxNmYyMjhjNjhhODZlNCJ9"
+            "encrypted": "eyJjaXBoZXJ0ZXh0IjoiMGU5N2Q3OWRkMjY3OTJlNWIyY2NmMWM0ZjgxMjY4OGU0ODJjNTM4M2U1ODUzZjMyZDk5MDMxN2E5NzgyMjBjYmZhZDZjYWY2NGI3NmIxZjdlYzFkMzEzMzQ5MjMzYTljOTQzMzBjNjhmM2EwNzdjOGRmZTUzNGFmNzRhYzlhYzljMzBkNzk4MGY4YjY2OGZkZTY2ZTMwZDVjZGNhMTFkZDI4NjNjNTEwYTgzZWFhYjQyNzdlNWM1NjY2YTA5MzU5NzU5MDU5M2QxMzczZmIwNmRlZjY3NTdhN2U3NGZhYTQiLCJpdiI6ImFjNGQwNTI0NmUyYjE5MTdjYzFiNmMyZDUwMjE0ZjU2YjdkNjVjZjI0YjJiMjk2MCJ9"
         },
         "id": "ISmGd7khj"
     },
@@ -51,11 +51,11 @@
     "exportFormat": {
         "providerType": "vottJson",
         "providerOptions": {
-            "encrypted": "eyJjaXBoZXJ0ZXh0IjoiNjdhOGFmMTk2YWI2YTdlNjgxZjUzZDNiNTk1ODAxYjdmNGJmNmVlOWVlNzJmYWYyNDYwNmU1OTUxYTRlZWVhNTBkMTQxNzE4Y2MxMTM0YWYzZjc4NGFiNTljMmQwN2Y4IiwiaXYiOiI5OThiYWMzNWJjNDUzNjRmY2QyNDRmZTkzOTMwZWU0Y2FhYjkxOTJmOTdiNTU0MGYifQ=="
+            "encrypted": "eyJjaXBoZXJ0ZXh0IjoiYjdlMTk3YTU5YWMzOWExZjIzNmY3ZjMzZWU5OWVlYmRlNmUwZjkxNmYzZWI0OGVkNWE0OTU4NjQ0M2FjYzRlYTBmMWY2ZTU4ZjgzNzI3YzFmNjljNTlmMzE3MDgwOTY3IiwiaXYiOiI0MjljMDY1NWQzZGZlMDQ2NWZmNDNiMWFjNGZhMDE2YTNlOWQ5NDQxMzYxMGI3ZWQifQ=="
         }
     },
     "version": "2.2.0",
-    "lastVisitedAssetId": "f3e2fa44813e5ff42dfcb755897426cd",
+    "lastVisitedAssetId": "f94e1e4d6e6efe962dbdcf408e9218a1",
     "assets": {
         "286f457423c812ea1e49388f321629cb": {
             "format": "png",
@@ -1626,7 +1626,115 @@
                 "width": 1170,
                 "height": 764
             },
+            "state": 2,
+            "type": 1
+        },
+        "80c206b4b446e315ac9c1139f4098784": {
+            "format": "png",
+            "id": "80c206b4b446e315ac9c1139f4098784",
+            "name": "B_1977b8fe9949bbb893f75c90631307.png",
+            "path": "file:C:/Repositories/BS.ReceiptAnalyzer/machine-learning-data/receipt-partitioning/images/B_1977b8fe9949bbb893f75c90631307.png",
+            "size": {
+                "width": 1060,
+                "height": 862
+            },
+            "state": 2,
+            "type": 1
+        },
+        "f01068a69ea5a2e649b38bb9e2054537": {
+            "format": "png",
+            "id": "f01068a69ea5a2e649b38bb9e2054537",
+            "name": "B_2017058c734ccf81b9848060bfc5b6.png",
+            "path": "file:C:/Repositories/BS.ReceiptAnalyzer/machine-learning-data/receipt-partitioning/images/B_2017058c734ccf81b9848060bfc5b6.png",
+            "size": {
+                "width": 1026,
+                "height": 782
+            },
+            "state": 2,
+            "type": 1
+        },
+        "0caf522941d199fcc6bda772495d8c8c": {
+            "format": "png",
+            "id": "0caf522941d199fcc6bda772495d8c8c",
+            "name": "B_248d434e8d46ddb9801dbff617d53a.png",
+            "path": "file:C:/Repositories/BS.ReceiptAnalyzer/machine-learning-data/receipt-partitioning/images/B_248d434e8d46ddb9801dbff617d53a.png",
+            "size": {
+                "width": 981,
+                "height": 521
+            },
+            "state": 2,
+            "type": 1
+        },
+        "b1822a0b6253038394e726088c889474": {
+            "format": "png",
+            "id": "b1822a0b6253038394e726088c889474",
+            "name": "B_2566bbcd5a4f3cba21b8b0b95ebc91.png",
+            "path": "file:C:/Repositories/BS.ReceiptAnalyzer/machine-learning-data/receipt-partitioning/images/B_2566bbcd5a4f3cba21b8b0b95ebc91.png",
+            "size": {
+                "width": 510,
+                "height": 727
+            },
+            "state": 2,
+            "type": 1
+        },
+        "6ae7e41b110da8b5c6296a5d60ebb081": {
+            "format": "png",
+            "id": "6ae7e41b110da8b5c6296a5d60ebb081",
+            "name": "B_25c529038f4a7dba4c593c8363b8de.png",
+            "path": "file:C:/Repositories/BS.ReceiptAnalyzer/machine-learning-data/receipt-partitioning/images/B_25c529038f4a7dba4c593c8363b8de.png",
+            "size": {
+                "width": 680,
+                "height": 792
+            },
+            "state": 2,
+            "type": 1
+        },
+        "c611d3d4b60cb84b52e3f4046a8ca5af": {
+            "format": "png",
+            "id": "c611d3d4b60cb84b52e3f4046a8ca5af",
+            "name": "B_268b5288d246359301a5c6ad984a12.png",
+            "path": "file:C:/Repositories/BS.ReceiptAnalyzer/machine-learning-data/receipt-partitioning/images/B_268b5288d246359301a5c6ad984a12.png",
+            "size": {
+                "width": 1159,
+                "height": 623
+            },
             "state": 1,
+            "type": 1
+        },
+        "ae7aa05ccf96e3c9a07cc7e39dec85fd": {
+            "format": "png",
+            "id": "ae7aa05ccf96e3c9a07cc7e39dec85fd",
+            "name": "B_2a2c62b706456ab22e88c7dcfbba6f.png",
+            "path": "file:C:/Repositories/BS.ReceiptAnalyzer/machine-learning-data/receipt-partitioning/images/B_2a2c62b706456ab22e88c7dcfbba6f.png",
+            "size": {
+                "width": 960,
+                "height": 798
+            },
+            "state": 2,
+            "type": 1
+        },
+        "4c30ce959b3059a70b0018a5b0ca284c": {
+            "format": "png",
+            "id": "4c30ce959b3059a70b0018a5b0ca284c",
+            "name": "B_2c0517a29742c6a8b81211cc3dbd21.png",
+            "path": "file:C:/Repositories/BS.ReceiptAnalyzer/machine-learning-data/receipt-partitioning/images/B_2c0517a29742c6a8b81211cc3dbd21.png",
+            "size": {
+                "width": 663,
+                "height": 750
+            },
+            "state": 2,
+            "type": 1
+        },
+        "f94e1e4d6e6efe962dbdcf408e9218a1": {
+            "format": "png",
+            "id": "f94e1e4d6e6efe962dbdcf408e9218a1",
+            "name": "B_2c8a7ec846401fa50839399bf4a8f7.png",
+            "path": "file:C:/Repositories/BS.ReceiptAnalyzer/machine-learning-data/receipt-partitioning/images/B_2c8a7ec846401fa50839399bf4a8f7.png",
+            "size": {
+                "width": 1159,
+                "height": 626
+            },
+            "state": 2,
             "type": 1
         }
     }
