@@ -5,7 +5,7 @@
         "name": "receipt-analyzer.receipt-partitioning.source",
         "providerType": "localFileSystemProxy",
         "providerOptions": {
-            "encrypted": "eyJjaXBoZXJ0ZXh0IjoiYTk5YTRlMGZjYzBlMGRmOTRiNDhiYWNmNTI3ODIwZjQ4ZThjNjBhOGI1MzMzZWEzZDYyODUzZWExNWRlNGExYmE3ZjY1OWYyMGU5ZWUwNGFjYzNmN2NmM2VkZDVlNzdkMzI0OWM5N2VmYWU4MzViNzYzZjU3YWU4ZTIyNjQ1YzUzNGI0YzBhNDcxYTYxNDMwMmIxMjhlN2Y3NTM4NmNlNDg4YjZiYzUxOWU2MjVlY2NiYTkzZTZjZTA5ZGIyMmU4MGRhMzczMDNhZDFmYTYyNzFkNDQ3Y2I4MDhkODU5NjAiLCJpdiI6IjY2NjUwYTgwYWFjMWM3MDhjZDU1MmNhY2JhZDEyZWVkNDUyYmI5M2M1NDhlNjY4OCJ9"
+            "encrypted": "eyJjaXBoZXJ0ZXh0IjoiMTczM2E4NjNkY2ExZDY5OTQ2MzdlZjg3NzNiZmYzOGNhZjRkZTMxZTI0YzdhZjA0ZmU5ZTQ0M2NlMjY3Yjc4Y2JmZGVlMmUyMDMzMjkyOWJjZDU2ZGRlYmY0MDIyYmMyOWQ3Y2Q1YTM1ODU1NWJlNzQ0NGE0ZjJhMzM4NjRjNTMyZjVlNmRmMzJmNjYwYjU5YWZjYTg5MTFhZTFhZjRjOTM3YzVlN2VmNmY4YmUwMjJlYWQyN2NjMTBiZTUxMDEzNjUyMjVjMWRhZGFiZWRmZGZiOGMzNDE3ZDk3MGE5OGMiLCJpdiI6IjNlMWViYmI5YzdjNjk0ODc5OTE2MmQ2MGMxZmVlNWQyNjBiMmY0OGFhM2Y4MGQyZiJ9"
         },
         "id": "eL_Fs4AAX"
     },
@@ -13,7 +13,7 @@
         "name": "receipt-analyzer.receipt-partitioning.target",
         "providerType": "localFileSystemProxy",
         "providerOptions": {
-            "encrypted": "eyJjaXBoZXJ0ZXh0IjoiMTgxMzlkNDY2OWJjN2M4ODg5MDZmYTI4NWU3NmIyM2Q3NWIzNDgzMjM4MTI2NzRmNzFhODI1MWM3N2ViMGVlMzI2YzdjYThiNjNiY2Y0Y2QwYzNmZDVjNTU3ZGEwOWI1NDE3YzlkMmQ3MmJmNTE4N2NhMTE5NjZlNTYxODI3NzRhYzIyZTk4M2E5ZTM0YzE5NjdhNWY1ODE1Y2M0NjgxYmRkZDgzN2M3ODhkZmM3YTE0ODMxNTFkOGZkYzRlY2E0ZDI0OWE1OWZkYTE3MDRmNWMzZTgwMjM3NTRkNTRiOWIiLCJpdiI6ImI1MDA1OGQwNDZjZDE3MWZjYWM3MTVlYzQzZmNhY2JhNWZiZjViNjUzMGE2NjdhMCJ9"
+            "encrypted": "eyJjaXBoZXJ0ZXh0IjoiNTc4ZjAwMWM4ZjM2ZjRhZmUxZjcyYWUyNzFiYWMxYjZlMzBmMjY3OTY5ODVhZjFjNDM5N2Y0ZDBkMDIyZjk5NzUzOGNhMGQwZjdhYzFhZmZiNzk0Y2FkZGZiMzBhZmMzYmY1ZjkwYWNjNTBjNmE3YzE3MGNkMmY0M2RkODkwZDhkYzNmNDkyNGUwYTE0YzRkZmYzN2Y0ZmRmYjljZDZjZWVlZjZkZGE3MTA3NDRkNmIyNTI2N2FmNjBmZDc3M2E4OWE2MTNjMDJiNzA4MDczMjI4OTM5MDk3ZTIyN2JiOGQiLCJpdiI6ImFkOWZkMjEwMmI2ZDg5YzUzZWMzOGMyMjkwMTFjMTIzOTVmNTZhY2I1YzFhNWVmOSJ9"
         },
         "id": "ISmGd7khj"
     },
@@ -51,11 +51,11 @@
     "exportFormat": {
         "providerType": "vottJson",
         "providerOptions": {
-            "encrypted": "eyJjaXBoZXJ0ZXh0IjoiYTIxY2FmNzM5OWQ1Yjg1NGUxZTM3NTU1NGQ1Njc5ZWE2ZTY5M2Y1M2QzNGM5Y2FjYzkzMDFmZWM2YmM1MzI1YWJmNjJjZDY1NzVlYzZmNDA1YTBmNjQ4YjRiMmMwMDVlIiwiaXYiOiI5ZmNjMDZkNzUwODRlOWM3NDhiYmM1YjNjYTRiMDk2NTlhNTlhZWNhYzFhMmQxOGUifQ=="
+            "encrypted": "eyJjaXBoZXJ0ZXh0IjoiNDUwODM3NjdmZTllZWY1YWYxNTM1OGE0OGVmOThiMjRkNTMzOTFjNzA2ZTczNzg0MTIwM2MzMjYxNmQ0NjU3MzBlZTQxNjZhNDE3ZDI3ZGFjYWUwNWZlY2RjODgwNzI1IiwiaXYiOiI1ODkxY2I4MGE3MWNjNTY0NmQ0ZjI5ODgyZWFmYmM3ZGIzYTA5M2Y3YTA2ZWIxYzIifQ=="
         }
     },
     "version": "2.2.0",
-    "lastVisitedAssetId": "0f35c6a75da1a5addaf1ed38f8fe9583",
+    "lastVisitedAssetId": "0d1a59cdaa4d13a74ab62f9c04512970",
     "assets": {
         "286f457423c812ea1e49388f321629cb": {
             "format": "png",
@@ -2539,6 +2539,30 @@
                 "height": 600
             },
             "state": 1,
+            "type": 1
+        },
+        "0d1a59cdaa4d13a74ab62f9c04512970": {
+            "format": "png",
+            "id": "0d1a59cdaa4d13a74ab62f9c04512970",
+            "name": "B_cdc44bf9fe455f8d7012bed0742226.png",
+            "path": "file:C:/Repositories/BS.ReceiptAnalyzer/machine-learning-data/receipt-partitioning/images/B_cdc44bf9fe455f8d7012bed0742226.png",
+            "size": {
+                "width": 1150,
+                "height": 588
+            },
+            "state": 2,
+            "type": 1
+        },
+        "c707b9c805e6fbd64076debd7924f28f": {
+            "format": "png",
+            "id": "c707b9c805e6fbd64076debd7924f28f",
+            "name": "B_d15c724eec43c1b7d1a48180f2e931.png",
+            "path": "file:C:/Repositories/BS.ReceiptAnalyzer/machine-learning-data/receipt-partitioning/images/B_d15c724eec43c1b7d1a48180f2e931.png",
+            "size": {
+                "width": 761,
+                "height": 474
+            },
+            "state": 2,
             "type": 1
         }
     }
