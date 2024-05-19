@@ -5,7 +5,7 @@
         "name": "receipt-analyzer.receipt-partitioning.source",
         "providerType": "localFileSystemProxy",
         "providerOptions": {
-            "encrypted": "eyJjaXBoZXJ0ZXh0IjoiNjdhZGY4NGI3N2NhOWRjYTEwYzRmOTkyNzY1MjE4Mjg3ZTE1MDM2ZmE5N2IxZTdkMTQ0MWNhZmQxODk0NGRiZTE0NjBkZTlkNjgxZmJjZDkyYThjNmQzOTQ1OGQyMTNkNDRlM2FiYzE5MGY3Y2M0NDgwMGY4NmI3ZjE3YTA4ZDIwMTU0YTk2ZWU2YWQyZTc3NjI2ODRiNTdiZDJlOTg1NTBjZWFhOTUwZDg3MTQ1OGYwMDUzYmY0NDBiNzY3ZWJkNTJkMjJmNDExYWM0MWNmNGI0MjFjMTczMzc4OWVjNGYiLCJpdiI6IjNiYWViODVkY2RmYzZlM2M0MWQ3MmU2OThmZDc5ODMxMmI3Yzk4ZTA0MmU0OTQ0MyJ9"
+            "encrypted": "eyJjaXBoZXJ0ZXh0IjoiYmY0MWRjYjNjZTJhZDllMDQ0Mjc3Yjg5ZGMwZjJhZTQyYTVmMDQzMGVlZTczNzlhMzg4NTI3MDljZmUyZmYzNDQzMDY2Y2IzMjIzMWViODU2ZDRlZjgxZDdmMjE0ZmUyOTI5MzhjYTc4YWE2MTU1ODdmODIwZDcwYjNlY2ExYWMwOGM3ZDQ4NmRhMTQ5MDI3MzY3ZjgzNjc1NDdkOGNlY2ZlYWI4Y2M2ZjAxY2U5ZTEzZGU0Mzk0ZGJjOTYwZGNiMzc0NmMwMGZkZmIyOWE1NjM0NzU1Yjg5NzQ5YzBmZTUiLCJpdiI6IjkyMWM5ZGU2YTRlYzI2ZGVjNmI1NTgzOWIxMTVmOWI5NjY3YzA1OGViMGZhNWMwNSJ9"
         },
         "id": "eL_Fs4AAX"
     },
@@ -13,7 +13,7 @@
         "name": "receipt-analyzer.receipt-partitioning.target",
         "providerType": "localFileSystemProxy",
         "providerOptions": {
-            "encrypted": "eyJjaXBoZXJ0ZXh0IjoiMmU4Mjc3Mzc2YzhlNjhlZGEzNmM1ZmUxZWU5OTkyZmU4NjE0MzYxOTAzYjk4ODkzNjBkMDQ3ZmZkZjk2NzZlNTg1NzEwY2QzZWNiOTdiMGI0ODcyZDI4YWZlZmE2MmJjN2VmYTI1NTE1YWExYmNmNjQxNGIxNzBiM2QyOTVkM2E0YTNiODUxZTM4NTdlZmYwNzU3ZjBmOGJkYzI5ZTIxMzlhNjIyMzI4MWNiMzBhYjEzZGFhYTFhMTA0MzIyYzNiYzJjYjliMDdjZmVhNTg3OGI3MDM4MDgwMDEyYWViN2QiLCJpdiI6ImFiZWRiODdiOTA2NjlmNmRjNmY1ZWVjOTk0YmIxZWU4MzZmODdkYTdiYWQzNjg5MSJ9"
+            "encrypted": "eyJjaXBoZXJ0ZXh0IjoiNWY0ZThjY2M1YTYwYWY0ODQ3NGYwNTRkNjRhODQwNzQ5MGJhYzU3Yjk5Mzc2MjcwODRlNzllNjVlOTk5NTgwOGJiNzVlOWE5MWI0ZmNhMjk0NDQ5MWM2Njk3NzljYzU5NThkYzJjZjBhOWUzMjAxN2ViZDRhMDYyYjVhNzU3NjM2ZGE0ZmQ2YzEyZGVkNmQzYTc0N2ViYTliYmMxNjVjMDA4NGNmMDVmMTFmMTBiYjVlNjc1MzllYzc1NzIyODYzYTFmM2YyOGNjYjc1Mjk0Nzc2ZTc1YTkxN2NlOGJhZjQiLCJpdiI6Ijk3NWRhOGM5YWM5MDJiN2Y2MzEwZDllYTJjNGIyZWRjYTgyZTE5OTc0NWFiOWMzNyJ9"
         },
         "id": "ISmGd7khj"
     },
@@ -51,11 +51,11 @@
     "exportFormat": {
         "providerType": "vottJson",
         "providerOptions": {
-            "encrypted": "eyJjaXBoZXJ0ZXh0IjoiMzI2MDE4NWJhMjI1MzVlMDczN2ZkZjMzYjA3NjFmNzZjOTBmNmI0MzIwODkyZGFhNzlkZmU3N2ZjZjU4NjYxMGJlNWVmM2ZhYjQ2MDk4ODIxZTVlMmFmYTUzODk2NWFhIiwiaXYiOiJiMjQ1MjRkYmJkOWNlZGJiYWJhMDRmODk3MDJjMGQ1ZjliMWUzNDllOTBhNzhkMzEifQ=="
+            "encrypted": "eyJjaXBoZXJ0ZXh0IjoiY2RmMDc3NGVmZThlYmFjZDVhZmE3MDcyMDdlNTA0MDViYjQ2M2VkMDYwYjZiNDYxMjczZWFkNjk4NjA3YWM5NGEyMTAxMGRlMjY4ODE0NGY2MjJjMzMxYTdmYmRhYjEzIiwiaXYiOiJiZTI3MWE2NzU1ZDkyMTM4Mzg2ODgyYzUyZjZhNGYwMDM1M2YwOGJhMzE3ZTRkYTUifQ=="
         }
     },
     "version": "2.2.0",
-    "lastVisitedAssetId": "f60b4e33b9fd12204b57d09fe7422bd5",
+    "lastVisitedAssetId": "aa8969f83b0d4cc5bbdf55ae84ccaf00",
     "assets": {
         "286f457423c812ea1e49388f321629cb": {
             "format": "png",
@@ -3018,7 +3018,127 @@
                 "width": 727,
                 "height": 510
             },
-            "state": 1,
+            "state": 2,
+            "type": 1
+        },
+        "5908a9439e6acea32e4af01b0b7b7b7a": {
+            "format": "png",
+            "id": "5908a9439e6acea32e4af01b0b7b7b7a",
+            "name": "C_248d434e8d46ddb9801dbff617d53a.png",
+            "path": "file:C:/Repositories/BS.ReceiptAnalyzer/machine-learning-data/receipt-partitioning/images/C_248d434e8d46ddb9801dbff617d53a.png",
+            "size": {
+                "width": 521,
+                "height": 981
+            },
+            "state": 2,
+            "type": 1
+        },
+        "c127ff2c0eb5a21d7b9050f8d567adf0": {
+            "format": "png",
+            "id": "c127ff2c0eb5a21d7b9050f8d567adf0",
+            "name": "C_25c529038f4a7dba4c593c8363b8de.png",
+            "path": "file:C:/Repositories/BS.ReceiptAnalyzer/machine-learning-data/receipt-partitioning/images/C_25c529038f4a7dba4c593c8363b8de.png",
+            "size": {
+                "width": 792,
+                "height": 680
+            },
+            "state": 2,
+            "type": 1
+        },
+        "18d02be3197eee32887bc3ac601310b8": {
+            "format": "png",
+            "id": "18d02be3197eee32887bc3ac601310b8",
+            "name": "C_268b5288d246359301a5c6ad984a12.png",
+            "path": "file:C:/Repositories/BS.ReceiptAnalyzer/machine-learning-data/receipt-partitioning/images/C_268b5288d246359301a5c6ad984a12.png",
+            "size": {
+                "width": 623,
+                "height": 1159
+            },
+            "state": 2,
+            "type": 1
+        },
+        "8ec328516a3c50150181fee53e64386c": {
+            "format": "png",
+            "id": "8ec328516a3c50150181fee53e64386c",
+            "name": "C_2a2c62b706456ab22e88c7dcfbba6f.png",
+            "path": "file:C:/Repositories/BS.ReceiptAnalyzer/machine-learning-data/receipt-partitioning/images/C_2a2c62b706456ab22e88c7dcfbba6f.png",
+            "size": {
+                "width": 798,
+                "height": 960
+            },
+            "state": 2,
+            "type": 1
+        },
+        "c56b960e9916a58cb15f0788fb7c57a4": {
+            "format": "png",
+            "id": "c56b960e9916a58cb15f0788fb7c57a4",
+            "name": "C_2c0517a29742c6a8b81211cc3dbd21.png",
+            "path": "file:C:/Repositories/BS.ReceiptAnalyzer/machine-learning-data/receipt-partitioning/images/C_2c0517a29742c6a8b81211cc3dbd21.png",
+            "size": {
+                "width": 750,
+                "height": 663
+            },
+            "state": 2,
+            "type": 1
+        },
+        "95a0c9363de41ea346d5096721c02576": {
+            "format": "png",
+            "id": "95a0c9363de41ea346d5096721c02576",
+            "name": "C_2c8a7ec846401fa50839399bf4a8f7.png",
+            "path": "file:C:/Repositories/BS.ReceiptAnalyzer/machine-learning-data/receipt-partitioning/images/C_2c8a7ec846401fa50839399bf4a8f7.png",
+            "size": {
+                "width": 626,
+                "height": 1159
+            },
+            "state": 2,
+            "type": 1
+        },
+        "6a7855410d6b003b65af5221a3d1cd66": {
+            "format": "png",
+            "id": "6a7855410d6b003b65af5221a3d1cd66",
+            "name": "C_32d7f943ec48eba50a9d2242fdc4be.png",
+            "path": "file:C:/Repositories/BS.ReceiptAnalyzer/machine-learning-data/receipt-partitioning/images/C_32d7f943ec48eba50a9d2242fdc4be.png",
+            "size": {
+                "width": 530,
+                "height": 1157
+            },
+            "state": 2,
+            "type": 1
+        },
+        "9cd93670e82dca45a88478e778f5067d": {
+            "format": "png",
+            "id": "9cd93670e82dca45a88478e778f5067d",
+            "name": "C_35ae1e0b4a473c8239a5d555eb54a8.png",
+            "path": "file:C:/Repositories/BS.ReceiptAnalyzer/machine-learning-data/receipt-partitioning/images/C_35ae1e0b4a473c8239a5d555eb54a8.png",
+            "size": {
+                "width": 652,
+                "height": 1109
+            },
+            "state": 2,
+            "type": 1
+        },
+        "f6464fe57ee35b5250e9924f1858f328": {
+            "format": "png",
+            "id": "f6464fe57ee35b5250e9924f1858f328",
+            "name": "C_35fb552f124269bc4704937a356227.png",
+            "path": "file:C:/Repositories/BS.ReceiptAnalyzer/machine-learning-data/receipt-partitioning/images/C_35fb552f124269bc4704937a356227.png",
+            "size": {
+                "width": 496,
+                "height": 1176
+            },
+            "state": 2,
+            "type": 1
+        },
+        "aa8969f83b0d4cc5bbdf55ae84ccaf00": {
+            "format": "png",
+            "id": "aa8969f83b0d4cc5bbdf55ae84ccaf00",
+            "name": "C_37bdecec6047fcaff237962728102d.png",
+            "path": "file:C:/Repositories/BS.ReceiptAnalyzer/machine-learning-data/receipt-partitioning/images/C_37bdecec6047fcaff237962728102d.png",
+            "size": {
+                "width": 633,
+                "height": 1187
+            },
+            "state": 2,
             "type": 1
         }
     }
