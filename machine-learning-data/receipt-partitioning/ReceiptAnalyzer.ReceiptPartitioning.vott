@@ -5,7 +5,7 @@
         "name": "receipt-analyzer.receipt-partitioning.source",
         "providerType": "localFileSystemProxy",
         "providerOptions": {
-            "encrypted": "eyJjaXBoZXJ0ZXh0IjoiOTQ0NDc1ZDIzZGRiMGQ2MGEzOWYwZGE3NjgwNzMyNWM0NTA5ZDIzM2QzNTZjMTYzZWIzZjA5NzBiNTU5MWNhNWVkNDQ5MzNhYTY2Mjc4NGQ2NDU2NGFjZWQ1MjM2NjQyYWE3ZTdkMDRmNTdiM2FiMWJkZDJkMDU0OTcwMzNkNDUyN2NkZDFmZDhlYTdkY2M5YWI0MDZiNzQzMjgwOTU0MjJmODRmZDIyNmY1ZTNmZTE2NDcyMzExMmZmZjY0NDg5NzAzYmM1MDZiNzQyYzE2MDQ1M2JjMzY0ZjM2NTRiNDYiLCJpdiI6IjM4OGZhN2VkOTk2N2IxMTU5OWIyNWYzNzk2MGNkNzhiOGY4NzY1YzRhMmNiMTllOCJ9"
+            "encrypted": "eyJjaXBoZXJ0ZXh0IjoiYWFiMjUwZjZmMDc3YjkwNTJmYWZmMDdlOGZkMDQxYjA2Mzg1NmM1M2I3ZjNmOWEyODJiNThiY2VmN2NkMWU4Y2ZiYTdmM2YyNzI5ODUwNGRjNTdkMjhmM2ZhODZiYjgxYjFhOWRjMWYxYWZhMGVkOGI2Njc2NGFiMjY3ZTg0Y2JkOGQ0Y2VjODI4YzUwZGM4NmM0MzRhZWIzMjdhYzk5NWQ1Njc3OGFlNTAzYjAwNjA3YTQxYjA1NmY2YmEzMzA1YTNhZGJlOTQ5NGViMWE5ZGU1ZDFjOGZmY2NkNjdiOGIiLCJpdiI6Ijk0NDZjOGVmOTc1YjJiNmYyYzYxNmVmZmQwYzYxZTNmNGZjOGEwMTdjZGQ1NWRlZSJ9"
         },
         "id": "eL_Fs4AAX"
     },
@@ -13,7 +13,7 @@
         "name": "receipt-analyzer.receipt-partitioning.target",
         "providerType": "localFileSystemProxy",
         "providerOptions": {
-            "encrypted": "eyJjaXBoZXJ0ZXh0IjoiYTIwZWM5NWI5YjkxMDVlZDMzYTVmNTQ2MWRhNzkyMTZhOGQyMzZkM2JjZmE1ODk5NWZmZTkxNTQxMTdhNzUwMGZmZDFkYTliMjA3NGJiOGZmMjgwY2Q0ZTEwNWVhNTE1ZjkwZDMwNTRlZGEzNTU2ZTNjNzJlYzdhOGFjMzBjMjUyMzE4ZTg2MjlmNWYxOTdlN2JhZjEyM2FkYmY5MTQwYTQ4ZjFhNzc4MGRkZjIwMzc4OTY1Y2M0ZWRmMTJkYWJhYjU4MTI0Mzg5YWE4NjRiOWZiYjdmOTAwNjNiODg1YTkiLCJpdiI6ImI1ZDRiNzczZDQ1OWU5ZDJhZWZmNzA2YTNiYjMwOTFjNTY3OWQ5OTE4ZjliNDZhMiJ9"
+            "encrypted": "eyJjaXBoZXJ0ZXh0IjoiNDIwMGJhOWE3MzQ1NzRlYWU2MTIwMGU3OGQ4NzEzMzc5MDk5MDNhM2IxM2EwNWFjYjVjMjU4MDMzN2ZiNmY0MmNmZGU4MjNlODQwMTQ3Zjg1N2RlYTYxN2Y2ODA1NzBkNGQ2MmZiZTVjMDczNzVlZTlmMTdmYzhiYTczZjczZDUyYTEyNjg1OWZhZWQ5OWEzMGQ0OGQ3OGJjZDhiODdhYjI2OTdhNDdhMTk1YzQxNDEzMzRlNGNhZDVhNzRkMDQ3NTQwZjgxN2JkZjFmODQyN2U3ZDdiNmY4YmZjNTc5MzciLCJpdiI6IjJkOWViOGQ4NWZkNjVhMjU3MDI2ZmEzZDlhNzMyY2FiYzA2NTI5ZGJiY2M4NjRjNCJ9"
         },
         "id": "ISmGd7khj"
     },
@@ -51,11 +51,11 @@
     "exportFormat": {
         "providerType": "vottJson",
         "providerOptions": {
-            "encrypted": "eyJjaXBoZXJ0ZXh0IjoiYWExZjJhYzk2OTE4ZTMwNzJmZDUyM2M1OTRhMDYwY2EzYzU5N2Q0NDBkY2YwMGZiMTZkZWVmNjc2MmI1NjdhZDUzNmIxNDJjYWIzNDIwMmYwYjhmMDNlYzAyN2E4YWI1IiwiaXYiOiJhZWNkOGVlNTVhMzQ1MWJmNjAxYmNiYWM5YjE5NzQwNWMyZDEwMDZhMmJhNDg5ZDkifQ=="
+            "encrypted": "eyJjaXBoZXJ0ZXh0IjoiOWI3ZGIxZjQzZWFlOTU5NWQ2MGRmMTEzMGYxYTQ1ZmQwYWU2NDFjZWZkN2EyMTg5OGM3ZmY4YWRjMjJjNGY5MGQ1OTdhZTllZjYxMWE3ZmU4OWI2YmM2ZTNkMGVhMDA2IiwiaXYiOiI2Yzg4ZDcxYmIxNDRkNzU3NmY2ZDM4NzhjZjAyNWVhYTUzOTJkZTkxNjk3YjU4ZDQifQ=="
         }
     },
     "version": "2.2.0",
-    "lastVisitedAssetId": "2c35ec56ba1af585c29f73f5d9c2140b",
+    "lastVisitedAssetId": "872dfafbace96241c29ac01d8bc7e610",
     "assets": {
         "286f457423c812ea1e49388f321629cb": {
             "format": "png",
@@ -4290,7 +4290,7 @@
                 "width": 1556,
                 "height": 637
             },
-            "state": 1,
+            "state": 2,
             "type": 1
         },
         "990d2654c2edfa47b3fe3aa941b8ac2c": {
@@ -4458,7 +4458,7 @@
                 "width": 1159,
                 "height": 623
             },
-            "state": 1,
+            "state": 2,
             "type": 1
         },
         "e3af3c46c37cf492475a6a7ae9309d66": {
@@ -4470,7 +4470,7 @@
                 "width": 1580,
                 "height": 661
             },
-            "state": 1,
+            "state": 2,
             "type": 1
         },
         "baf313a224a2bbbe2b486787e8208108": {
@@ -4482,7 +4482,7 @@
                 "width": 1189,
                 "height": 670
             },
-            "state": 1,
+            "state": 2,
             "type": 1
         },
         "1798997c6c53a9df62c953c596ab2472": {
@@ -4506,7 +4506,7 @@
                 "width": 1170,
                 "height": 746
             },
-            "state": 1,
+            "state": 2,
             "type": 1
         },
         "6ad0e1bb1772d13f77913eba914e9988": {
@@ -4518,7 +4518,7 @@
                 "width": 1187,
                 "height": 633
             },
-            "state": 1,
+            "state": 2,
             "type": 1
         },
         "2c35ec56ba1af585c29f73f5d9c2140b": {
@@ -4529,6 +4529,666 @@
             "size": {
                 "width": 1176,
                 "height": 496
+            },
+            "state": 2,
+            "type": 1
+        },
+        "9de1c31cca88a71265437eb62220c38b": {
+            "format": "png",
+            "id": "9de1c31cca88a71265437eb62220c38b",
+            "name": "D_4224c08a1d42ab808e58c8d8d0c883.png",
+            "path": "file:C:/Repositories/BS.ReceiptAnalyzer/machine-learning-data/receipt-partitioning/images/D_4224c08a1d42ab808e58c8d8d0c883.png",
+            "size": {
+                "width": 1160,
+                "height": 565
+            },
+            "state": 2,
+            "type": 1
+        },
+        "422c4e5236c7da4fabd5262f49ff69c9": {
+            "format": "png",
+            "id": "422c4e5236c7da4fabd5262f49ff69c9",
+            "name": "D_42b7f5046247a897ed0f1984a47f40.png",
+            "path": "file:C:/Repositories/BS.ReceiptAnalyzer/machine-learning-data/receipt-partitioning/images/D_42b7f5046247a897ed0f1984a47f40.png",
+            "size": {
+                "width": 1150,
+                "height": 671
+            },
+            "state": 2,
+            "type": 1
+        },
+        "399f71471ddfffe8dad87c7bbbbe6c3c": {
+            "format": "png",
+            "id": "399f71471ddfffe8dad87c7bbbbe6c3c",
+            "name": "D_446b5d10334898804203be5f2f0a3f.png",
+            "path": "file:C:/Repositories/BS.ReceiptAnalyzer/machine-learning-data/receipt-partitioning/images/D_446b5d10334898804203be5f2f0a3f.png",
+            "size": {
+                "width": 1184,
+                "height": 674
+            },
+            "state": 2,
+            "type": 1
+        },
+        "8a3ca652163d37e437602f41f6dc3a12": {
+            "format": "png",
+            "id": "8a3ca652163d37e437602f41f6dc3a12",
+            "name": "D_4827d36719442e844ab83f43b8981d.png",
+            "path": "file:C:/Repositories/BS.ReceiptAnalyzer/machine-learning-data/receipt-partitioning/images/D_4827d36719442e844ab83f43b8981d.png",
+            "size": {
+                "width": 1185,
+                "height": 710
+            },
+            "state": 2,
+            "type": 1
+        },
+        "b1e773b0d1d874436a1989700ba7b578": {
+            "format": "png",
+            "id": "b1e773b0d1d874436a1989700ba7b578",
+            "name": "D_4a1063c39040a1b8593cdbc5378332.png",
+            "path": "file:C:/Repositories/BS.ReceiptAnalyzer/machine-learning-data/receipt-partitioning/images/D_4a1063c39040a1b8593cdbc5378332.png",
+            "size": {
+                "width": 932,
+                "height": 860
+            },
+            "state": 2,
+            "type": 1
+        },
+        "f90d82fd4ffd26c5773c6555f41b2466": {
+            "format": "png",
+            "id": "f90d82fd4ffd26c5773c6555f41b2466",
+            "name": "D_4b54be2a9e4b8f83b73a83ba29139c.png",
+            "path": "file:C:/Repositories/BS.ReceiptAnalyzer/machine-learning-data/receipt-partitioning/images/D_4b54be2a9e4b8f83b73a83ba29139c.png",
+            "size": {
+                "width": 1197,
+                "height": 741
+            },
+            "state": 2,
+            "type": 1
+        },
+        "f8883e5ed471a51d3bbb9510179a6719": {
+            "format": "png",
+            "id": "f8883e5ed471a51d3bbb9510179a6719",
+            "name": "D_4bba2552684f449f96c9bd73276b97.png",
+            "path": "file:C:/Repositories/BS.ReceiptAnalyzer/machine-learning-data/receipt-partitioning/images/D_4bba2552684f449f96c9bd73276b97.png",
+            "size": {
+                "width": 1126,
+                "height": 587
+            },
+            "state": 2,
+            "type": 1
+        },
+        "028bd5c31f185592cc417e4c7e5f6489": {
+            "format": "png",
+            "id": "028bd5c31f185592cc417e4c7e5f6489",
+            "name": "D_4cc4df3fd94b7d929ed5d50018fd57.png",
+            "path": "file:C:/Repositories/BS.ReceiptAnalyzer/machine-learning-data/receipt-partitioning/images/D_4cc4df3fd94b7d929ed5d50018fd57.png",
+            "size": {
+                "width": 826,
+                "height": 867
+            },
+            "state": 2,
+            "type": 1
+        },
+        "88f69b24923522c020b4715f13b0752a": {
+            "format": "png",
+            "id": "88f69b24923522c020b4715f13b0752a",
+            "name": "D_4d6196afc740c2b677d4fdd18b467e.png",
+            "path": "file:C:/Repositories/BS.ReceiptAnalyzer/machine-learning-data/receipt-partitioning/images/D_4d6196afc740c2b677d4fdd18b467e.png",
+            "size": {
+                "width": 1078,
+                "height": 566
+            },
+            "state": 2,
+            "type": 1
+        },
+        "55d35b50c84971192494eecac3b7dce0": {
+            "format": "png",
+            "id": "55d35b50c84971192494eecac3b7dce0",
+            "name": "D_4e48bb10774fbe9732c8ed39b8fa4d.png",
+            "path": "file:C:/Repositories/BS.ReceiptAnalyzer/machine-learning-data/receipt-partitioning/images/D_4e48bb10774fbe9732c8ed39b8fa4d.png",
+            "size": {
+                "width": 1087,
+                "height": 548
+            },
+            "state": 2,
+            "type": 1
+        },
+        "53a37d51405f84330e9f2fbfc855090d": {
+            "format": "png",
+            "id": "53a37d51405f84330e9f2fbfc855090d",
+            "name": "D_51a651fde64c989f870dc01b9509c1.png",
+            "path": "file:C:/Repositories/BS.ReceiptAnalyzer/machine-learning-data/receipt-partitioning/images/D_51a651fde64c989f870dc01b9509c1.png",
+            "size": {
+                "width": 1048,
+                "height": 555
+            },
+            "state": 2,
+            "type": 1
+        },
+        "2af81c0418abb7b5f2f53a05f4a9b5b1": {
+            "format": "png",
+            "id": "2af81c0418abb7b5f2f53a05f4a9b5b1",
+            "name": "D_524b3efd7c4f3991bfb9075ee6b28e.png",
+            "path": "file:C:/Repositories/BS.ReceiptAnalyzer/machine-learning-data/receipt-partitioning/images/D_524b3efd7c4f3991bfb9075ee6b28e.png",
+            "size": {
+                "width": 1134,
+                "height": 557
+            },
+            "state": 2,
+            "type": 1
+        },
+        "791d866f90744a2bebed28b5736198ff": {
+            "format": "png",
+            "id": "791d866f90744a2bebed28b5736198ff",
+            "name": "D_53e400c18543288d330203b0e38771.png",
+            "path": "file:C:/Repositories/BS.ReceiptAnalyzer/machine-learning-data/receipt-partitioning/images/D_53e400c18543288d330203b0e38771.png",
+            "size": {
+                "width": 1070,
+                "height": 710
+            },
+            "state": 2,
+            "type": 1
+        },
+        "61563e3dd0413264afad5b2753f72a65": {
+            "format": "png",
+            "id": "61563e3dd0413264afad5b2753f72a65",
+            "name": "D_55cbaf22c94327903e7a8d981f585e.png",
+            "path": "file:C:/Repositories/BS.ReceiptAnalyzer/machine-learning-data/receipt-partitioning/images/D_55cbaf22c94327903e7a8d981f585e.png",
+            "size": {
+                "width": 611,
+                "height": 600
+            },
+            "state": 2,
+            "type": 1
+        },
+        "ed467e1a38683338bc84a47a671b0099": {
+            "format": "png",
+            "id": "ed467e1a38683338bc84a47a671b0099",
+            "name": "D_59758aa38d4086bcc1107968ed7b72.png",
+            "path": "file:C:/Repositories/BS.ReceiptAnalyzer/machine-learning-data/receipt-partitioning/images/D_59758aa38d4086bcc1107968ed7b72.png",
+            "size": {
+                "width": 1157,
+                "height": 636
+            },
+            "state": 2,
+            "type": 1
+        },
+        "68dda681bcfab3de3121836b9ae1aa02": {
+            "format": "png",
+            "id": "68dda681bcfab3de3121836b9ae1aa02",
+            "name": "D_597e862f7043dba5d77d6fc9da2659.png",
+            "path": "file:C:/Repositories/BS.ReceiptAnalyzer/machine-learning-data/receipt-partitioning/images/D_597e862f7043dba5d77d6fc9da2659.png",
+            "size": {
+                "width": 899,
+                "height": 676
+            },
+            "state": 2,
+            "type": 1
+        },
+        "00254fdce2a09ccfe27e57722836b2db": {
+            "format": "png",
+            "id": "00254fdce2a09ccfe27e57722836b2db",
+            "name": "D_59d31275464c7288ef5077ba691739.png",
+            "path": "file:C:/Repositories/BS.ReceiptAnalyzer/machine-learning-data/receipt-partitioning/images/D_59d31275464c7288ef5077ba691739.png",
+            "size": {
+                "width": 1090,
+                "height": 825
+            },
+            "state": 2,
+            "type": 1
+        },
+        "d5c3a540e44a46558005a1c4df90ff1e": {
+            "format": "png",
+            "id": "d5c3a540e44a46558005a1c4df90ff1e",
+            "name": "D_5ab661bb3043b380b95b63a06ce7b7.png",
+            "path": "file:C:/Repositories/BS.ReceiptAnalyzer/machine-learning-data/receipt-partitioning/images/D_5ab661bb3043b380b95b63a06ce7b7.png",
+            "size": {
+                "width": 1129,
+                "height": 740
+            },
+            "state": 2,
+            "type": 1
+        },
+        "d15ed409560809cd7b3ac7cf24b02163": {
+            "format": "png",
+            "id": "d15ed409560809cd7b3ac7cf24b02163",
+            "name": "D_5b1da573f34f469ca69a3015a62b21.png",
+            "path": "file:C:/Repositories/BS.ReceiptAnalyzer/machine-learning-data/receipt-partitioning/images/D_5b1da573f34f469ca69a3015a62b21.png",
+            "size": {
+                "width": 1135,
+                "height": 648
+            },
+            "state": 2,
+            "type": 1
+        },
+        "41390e90b8662a00cf7ca7b1235388ed": {
+            "format": "png",
+            "id": "41390e90b8662a00cf7ca7b1235388ed",
+            "name": "D_5cab98a75f4279835e2179b6a18de8.png",
+            "path": "file:C:/Repositories/BS.ReceiptAnalyzer/machine-learning-data/receipt-partitioning/images/D_5cab98a75f4279835e2179b6a18de8.png",
+            "size": {
+                "width": 1158,
+                "height": 618
+            },
+            "state": 2,
+            "type": 1
+        },
+        "6c96c9a0302bcf1d58ebdc5be7bd7d11": {
+            "format": "png",
+            "id": "6c96c9a0302bcf1d58ebdc5be7bd7d11",
+            "name": "D_5e05ba8a2b46f8aa67f8bf9bc1c64b.png",
+            "path": "file:C:/Repositories/BS.ReceiptAnalyzer/machine-learning-data/receipt-partitioning/images/D_5e05ba8a2b46f8aa67f8bf9bc1c64b.png",
+            "size": {
+                "width": 1161,
+                "height": 704
+            },
+            "state": 2,
+            "type": 1
+        },
+        "b16251ff80d589b92cc29c7cdd8ed53c": {
+            "format": "png",
+            "id": "b16251ff80d589b92cc29c7cdd8ed53c",
+            "name": "D_61311341414f07b5ae01e195b44873.png",
+            "path": "file:C:/Repositories/BS.ReceiptAnalyzer/machine-learning-data/receipt-partitioning/images/D_61311341414f07b5ae01e195b44873.png",
+            "size": {
+                "width": 546,
+                "height": 790
+            },
+            "state": 2,
+            "type": 1
+        },
+        "0d2ecad0d631eac5d18745dd04d4bcbc": {
+            "format": "png",
+            "id": "0d2ecad0d631eac5d18745dd04d4bcbc",
+            "name": "D_64f156dc1e4f70a7f5b161a0ff1904.png",
+            "path": "file:C:/Repositories/BS.ReceiptAnalyzer/machine-learning-data/receipt-partitioning/images/D_64f156dc1e4f70a7f5b161a0ff1904.png",
+            "size": {
+                "width": 1110,
+                "height": 451
+            },
+            "state": 2,
+            "type": 1
+        },
+        "99f99d80fb6ca4408d7861c8a9ff2f7e": {
+            "format": "png",
+            "id": "99f99d80fb6ca4408d7861c8a9ff2f7e",
+            "name": "D_65444523fe4e59a57f46ce2c411127.png",
+            "path": "file:C:/Repositories/BS.ReceiptAnalyzer/machine-learning-data/receipt-partitioning/images/D_65444523fe4e59a57f46ce2c411127.png",
+            "size": {
+                "width": 1006,
+                "height": 833
+            },
+            "state": 2,
+            "type": 1
+        },
+        "082fced955e41ad5a3b4e597e9041666": {
+            "format": "png",
+            "id": "082fced955e41ad5a3b4e597e9041666",
+            "name": "D_6961be8c4f456da9640d03184c40f1.png",
+            "path": "file:C:/Repositories/BS.ReceiptAnalyzer/machine-learning-data/receipt-partitioning/images/D_6961be8c4f456da9640d03184c40f1.png",
+            "size": {
+                "width": 1172,
+                "height": 684
+            },
+            "state": 2,
+            "type": 1
+        },
+        "5c804cfcfa2b0bc3b925f79b6e3f1a09": {
+            "format": "png",
+            "id": "5c804cfcfa2b0bc3b925f79b6e3f1a09",
+            "name": "D_712a7a14e2443f84ffea26c17992a4.png",
+            "path": "file:C:/Repositories/BS.ReceiptAnalyzer/machine-learning-data/receipt-partitioning/images/D_712a7a14e2443f84ffea26c17992a4.png",
+            "size": {
+                "width": 1113,
+                "height": 681
+            },
+            "state": 2,
+            "type": 1
+        },
+        "a2788d2172636e314533290b9e7029e8": {
+            "format": "png",
+            "id": "a2788d2172636e314533290b9e7029e8",
+            "name": "D_7e575e43314f6bae7748a3835b0b15.png",
+            "path": "file:C:/Repositories/BS.ReceiptAnalyzer/machine-learning-data/receipt-partitioning/images/D_7e575e43314f6bae7748a3835b0b15.png",
+            "size": {
+                "width": 761,
+                "height": 647
+            },
+            "state": 2,
+            "type": 1
+        },
+        "3180f20439630f266a36a6e2baf4f402": {
+            "format": "png",
+            "id": "3180f20439630f266a36a6e2baf4f402",
+            "name": "D_7f4201b4d94d2b83bd3d6ce919fa26.png",
+            "path": "file:C:/Repositories/BS.ReceiptAnalyzer/machine-learning-data/receipt-partitioning/images/D_7f4201b4d94d2b83bd3d6ce919fa26.png",
+            "size": {
+                "width": 1063,
+                "height": 783
+            },
+            "state": 2,
+            "type": 1
+        },
+        "efb10233a0df694a69a0a69e30d20f61": {
+            "format": "png",
+            "id": "efb10233a0df694a69a0a69e30d20f61",
+            "name": "D_8009dee82d478fb9a9fd1fea5a5795.png",
+            "path": "file:C:/Repositories/BS.ReceiptAnalyzer/machine-learning-data/receipt-partitioning/images/D_8009dee82d478fb9a9fd1fea5a5795.png",
+            "size": {
+                "width": 1119,
+                "height": 555
+            },
+            "state": 2,
+            "type": 1
+        },
+        "77d99d11ea981ddea5280c6e0a8fa9f6": {
+            "format": "png",
+            "id": "77d99d11ea981ddea5280c6e0a8fa9f6",
+            "name": "D_80156d746340ada4d640550195f137.png",
+            "path": "file:C:/Repositories/BS.ReceiptAnalyzer/machine-learning-data/receipt-partitioning/images/D_80156d746340ada4d640550195f137.png",
+            "size": {
+                "width": 1060,
+                "height": 670
+            },
+            "state": 2,
+            "type": 1
+        },
+        "05222ade4147a6333492bf610ece542d": {
+            "format": "png",
+            "id": "05222ade4147a6333492bf610ece542d",
+            "name": "D_83301e50b54066868414c843976b2e.png",
+            "path": "file:C:/Repositories/BS.ReceiptAnalyzer/machine-learning-data/receipt-partitioning/images/D_83301e50b54066868414c843976b2e.png",
+            "size": {
+                "width": 1034,
+                "height": 696
+            },
+            "state": 2,
+            "type": 1
+        },
+        "0134d3120a97ea29c75061e7b131afaf": {
+            "format": "png",
+            "id": "0134d3120a97ea29c75061e7b131afaf",
+            "name": "D_8408ed5e4f4f93ac4e6c72ed924769.png",
+            "path": "file:C:/Repositories/BS.ReceiptAnalyzer/machine-learning-data/receipt-partitioning/images/D_8408ed5e4f4f93ac4e6c72ed924769.png",
+            "size": {
+                "width": 1031,
+                "height": 820
+            },
+            "state": 2,
+            "type": 1
+        },
+        "7746b50666627230fa30a67f7475445d": {
+            "format": "png",
+            "id": "7746b50666627230fa30a67f7475445d",
+            "name": "D_8895c49d0447c6bad260ba88e00699.png",
+            "path": "file:C:/Repositories/BS.ReceiptAnalyzer/machine-learning-data/receipt-partitioning/images/D_8895c49d0447c6bad260ba88e00699.png",
+            "size": {
+                "width": 1186,
+                "height": 582
+            },
+            "state": 2,
+            "type": 1
+        },
+        "6e53cac38305a73eb143388183f2e46f": {
+            "format": "png",
+            "id": "6e53cac38305a73eb143388183f2e46f",
+            "name": "D_8b761a157747c1b684f326cee11afd.png",
+            "path": "file:C:/Repositories/BS.ReceiptAnalyzer/machine-learning-data/receipt-partitioning/images/D_8b761a157747c1b684f326cee11afd.png",
+            "size": {
+                "width": 1499,
+                "height": 921
+            },
+            "state": 2,
+            "type": 1
+        },
+        "bb62d316cebb7f1e6f547c1bcbe20e5e": {
+            "format": "png",
+            "id": "bb62d316cebb7f1e6f547c1bcbe20e5e",
+            "name": "D_8ed7cf7fde448384296cef4097d6fd.png",
+            "path": "file:C:/Repositories/BS.ReceiptAnalyzer/machine-learning-data/receipt-partitioning/images/D_8ed7cf7fde448384296cef4097d6fd.png",
+            "size": {
+                "width": 1140,
+                "height": 694
+            },
+            "state": 2,
+            "type": 1
+        },
+        "e334248804be220c3459065c0675eb96": {
+            "format": "png",
+            "id": "e334248804be220c3459065c0675eb96",
+            "name": "D_94ed08dc9b45059bf64ca08f8e5214.png",
+            "path": "file:C:/Repositories/BS.ReceiptAnalyzer/machine-learning-data/receipt-partitioning/images/D_94ed08dc9b45059bf64ca08f8e5214.png",
+            "size": {
+                "width": 752,
+                "height": 718
+            },
+            "state": 2,
+            "type": 1
+        },
+        "c7bd7f9286d3636984070dcc00d339ab": {
+            "format": "png",
+            "id": "c7bd7f9286d3636984070dcc00d339ab",
+            "name": "D_95b8ffb9f8455c964c9b7724b3568b.png",
+            "path": "file:C:/Repositories/BS.ReceiptAnalyzer/machine-learning-data/receipt-partitioning/images/D_95b8ffb9f8455c964c9b7724b3568b.png",
+            "size": {
+                "width": 1200,
+                "height": 770
+            },
+            "state": 2,
+            "type": 1
+        },
+        "ed90431b50d92811bd5c4a4ecdd1df74": {
+            "format": "png",
+            "id": "ed90431b50d92811bd5c4a4ecdd1df74",
+            "name": "D_9b276aea9f4fad9c751c65c78c5d82.png",
+            "path": "file:C:/Repositories/BS.ReceiptAnalyzer/machine-learning-data/receipt-partitioning/images/D_9b276aea9f4fad9c751c65c78c5d82.png",
+            "size": {
+                "width": 1198,
+                "height": 694
+            },
+            "state": 2,
+            "type": 1
+        },
+        "92003cbcfa0e7ee6820e160887c05090": {
+            "format": "png",
+            "id": "92003cbcfa0e7ee6820e160887c05090",
+            "name": "D_9f1941a4e2430ea26c7a2a7f96ce75.png",
+            "path": "file:C:/Repositories/BS.ReceiptAnalyzer/machine-learning-data/receipt-partitioning/images/D_9f1941a4e2430ea26c7a2a7f96ce75.png",
+            "size": {
+                "width": 1190,
+                "height": 655
+            },
+            "state": 2,
+            "type": 1
+        },
+        "4cc4209ade0aee560e7562a898dd835c": {
+            "format": "png",
+            "id": "4cc4209ade0aee560e7562a898dd835c",
+            "name": "D_a11fc9ec0147d1a3c079cbbef68b14.png",
+            "path": "file:C:/Repositories/BS.ReceiptAnalyzer/machine-learning-data/receipt-partitioning/images/D_a11fc9ec0147d1a3c079cbbef68b14.png",
+            "size": {
+                "width": 861,
+                "height": 886
+            },
+            "state": 2,
+            "type": 1
+        },
+        "ce783889cb2f1965d79ee9db1bc046db": {
+            "format": "png",
+            "id": "ce783889cb2f1965d79ee9db1bc046db",
+            "name": "D_a5f136230e470ea8b24d9c56adc19a.png",
+            "path": "file:C:/Repositories/BS.ReceiptAnalyzer/machine-learning-data/receipt-partitioning/images/D_a5f136230e470ea8b24d9c56adc19a.png",
+            "size": {
+                "width": 546,
+                "height": 682
+            },
+            "state": 2,
+            "type": 1
+        },
+        "c547a0cc04c0e3088e173a1271f326ec": {
+            "format": "png",
+            "id": "c547a0cc04c0e3088e173a1271f326ec",
+            "name": "D_a12f1b12ec4239893de816372365b4.png",
+            "path": "file:C:/Repositories/BS.ReceiptAnalyzer/machine-learning-data/receipt-partitioning/images/D_a12f1b12ec4239893de816372365b4.png",
+            "size": {
+                "width": 909,
+                "height": 420
+            },
+            "state": 2,
+            "type": 1
+        },
+        "599124a2e5a95383d9acc226a67766cb": {
+            "format": "png",
+            "id": "599124a2e5a95383d9acc226a67766cb",
+            "name": "D_a1dd2bfac44993bb98779ac407c1fa.png",
+            "path": "file:C:/Repositories/BS.ReceiptAnalyzer/machine-learning-data/receipt-partitioning/images/D_a1dd2bfac44993bb98779ac407c1fa.png",
+            "size": {
+                "width": 1200,
+                "height": 662
+            },
+            "state": 2,
+            "type": 1
+        },
+        "3aac5638a5ddab7b47b1b9b03d80dfc0": {
+            "format": "png",
+            "id": "3aac5638a5ddab7b47b1b9b03d80dfc0",
+            "name": "D_a6b9c876444c0184f38882f24011b4.png",
+            "path": "file:C:/Repositories/BS.ReceiptAnalyzer/machine-learning-data/receipt-partitioning/images/D_a6b9c876444c0184f38882f24011b4.png",
+            "size": {
+                "width": 1173,
+                "height": 658
+            },
+            "state": 2,
+            "type": 1
+        },
+        "519bfb939dfcfe970757579c6f5a8106": {
+            "format": "png",
+            "id": "519bfb939dfcfe970757579c6f5a8106",
+            "name": "D_a72985263c46c180a90ec555572b72.png",
+            "path": "file:C:/Repositories/BS.ReceiptAnalyzer/machine-learning-data/receipt-partitioning/images/D_a72985263c46c180a90ec555572b72.png",
+            "size": {
+                "width": 1176,
+                "height": 591
+            },
+            "state": 2,
+            "type": 1
+        },
+        "85588039f8085cfdab6eeb7de3a5422d": {
+            "format": "png",
+            "id": "85588039f8085cfdab6eeb7de3a5422d",
+            "name": "D_a8916f675b4d2ab7bbc47e6353e00b.png",
+            "path": "file:C:/Repositories/BS.ReceiptAnalyzer/machine-learning-data/receipt-partitioning/images/D_a8916f675b4d2ab7bbc47e6353e00b.png",
+            "size": {
+                "width": 962,
+                "height": 616
+            },
+            "state": 2,
+            "type": 1
+        },
+        "0aa27f641fa5cdaa53f4af938cbf9103": {
+            "format": "png",
+            "id": "0aa27f641fa5cdaa53f4af938cbf9103",
+            "name": "D_aa1768504047118a2460d0b9a14433.png",
+            "path": "file:C:/Repositories/BS.ReceiptAnalyzer/machine-learning-data/receipt-partitioning/images/D_aa1768504047118a2460d0b9a14433.png",
+            "size": {
+                "width": 874,
+                "height": 727
+            },
+            "state": 2,
+            "type": 1
+        },
+        "87e037d80060b772421cd72c0a3d5b3d": {
+            "format": "png",
+            "id": "87e037d80060b772421cd72c0a3d5b3d",
+            "name": "D_b42596c4624c9c926925b9f97365e4.png",
+            "path": "file:C:/Repositories/BS.ReceiptAnalyzer/machine-learning-data/receipt-partitioning/images/D_b42596c4624c9c926925b9f97365e4.png",
+            "size": {
+                "width": 1200,
+                "height": 786
+            },
+            "state": 2,
+            "type": 1
+        },
+        "baed369e99cb7ca26fd72112d7e14d2e": {
+            "format": "png",
+            "id": "baed369e99cb7ca26fd72112d7e14d2e",
+            "name": "D_b4f430f0d0483a8dc09a8c5402b8fd.png",
+            "path": "file:C:/Repositories/BS.ReceiptAnalyzer/machine-learning-data/receipt-partitioning/images/D_b4f430f0d0483a8dc09a8c5402b8fd.png",
+            "size": {
+                "width": 827,
+                "height": 464
+            },
+            "state": 1,
+            "type": 1
+        },
+        "697479a662198e0c0f5a46c98fa99e87": {
+            "format": "png",
+            "id": "697479a662198e0c0f5a46c98fa99e87",
+            "name": "D_b62064d666418d91f0cfb1fed69987.png",
+            "path": "file:C:/Repositories/BS.ReceiptAnalyzer/machine-learning-data/receipt-partitioning/images/D_b62064d666418d91f0cfb1fed69987.png",
+            "size": {
+                "width": 883,
+                "height": 520
+            },
+            "state": 2,
+            "type": 1
+        },
+        "a4a5d207b1545472d90dc3210ba7e326": {
+            "format": "png",
+            "id": "a4a5d207b1545472d90dc3210ba7e326",
+            "name": "D_b83d9902ca4f67990afd74c6c4d55c.png",
+            "path": "file:C:/Repositories/BS.ReceiptAnalyzer/machine-learning-data/receipt-partitioning/images/D_b83d9902ca4f67990afd74c6c4d55c.png",
+            "size": {
+                "width": 1006,
+                "height": 749
+            },
+            "state": 2,
+            "type": 1
+        },
+        "e78d5844afb1b355605d751347f904fc": {
+            "format": "png",
+            "id": "e78d5844afb1b355605d751347f904fc",
+            "name": "D_b8b595ccb44592860e12cc3c379c74.png",
+            "path": "file:C:/Repositories/BS.ReceiptAnalyzer/machine-learning-data/receipt-partitioning/images/D_b8b595ccb44592860e12cc3c379c74.png",
+            "size": {
+                "width": 561,
+                "height": 721
+            },
+            "state": 2,
+            "type": 1
+        },
+        "60c4749f0034678c395921db89695013": {
+            "format": "png",
+            "id": "60c4749f0034678c395921db89695013",
+            "name": "D_b915e1dcfd4589bd9837a703cf0f9b.png",
+            "path": "file:C:/Repositories/BS.ReceiptAnalyzer/machine-learning-data/receipt-partitioning/images/D_b915e1dcfd4589bd9837a703cf0f9b.png",
+            "size": {
+                "width": 692,
+                "height": 670
+            },
+            "state": 2,
+            "type": 1
+        },
+        "b1ce3e5968e159a4a2598150f9289c90": {
+            "format": "png",
+            "id": "b1ce3e5968e159a4a2598150f9289c90",
+            "name": "D_bb739bfe4a47e19671e6c658571144.png",
+            "path": "file:C:/Repositories/BS.ReceiptAnalyzer/machine-learning-data/receipt-partitioning/images/D_bb739bfe4a47e19671e6c658571144.png",
+            "size": {
+                "width": 1122,
+                "height": 462
+            },
+            "state": 2,
+            "type": 1
+        },
+        "872dfafbace96241c29ac01d8bc7e610": {
+            "format": "png",
+            "id": "872dfafbace96241c29ac01d8bc7e610",
+            "name": "D_bdf5cd47434c839b5446dd73c4dbf7.png",
+            "path": "file:C:/Repositories/BS.ReceiptAnalyzer/machine-learning-data/receipt-partitioning/images/D_bdf5cd47434c839b5446dd73c4dbf7.png",
+            "size": {
+                "width": 1061,
+                "height": 718
             },
             "state": 2,
             "type": 1
