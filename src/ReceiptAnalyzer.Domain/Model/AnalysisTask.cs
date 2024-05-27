@@ -80,7 +80,7 @@ namespace BS.ReceiptAnalyzer.Domain.Model
             _progressionDetails.Add(step);
             Progression = step.StepType;
 
-            AddEvent(new AnalysisTaskProgressionNotified(Id));
+            AddEvent(new AnalysisTaskProgressionNotified(Id, step.StepType, step.Success));
         }
 
         /// <summary>
