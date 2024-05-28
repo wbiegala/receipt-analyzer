@@ -14,6 +14,9 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ReceiptAnalyzer.Supervisor.Contract", "src\ReceiptAnalyzer.Supervisor.Contract\ReceiptAnalyzer.Supervisor.Contract.csproj", "{96905CE6-E910-4AA9-AF6A-DADF8D85C8D1}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Supervisor", "Supervisor", "{315C76BD-85DA-41CE-A1A7-11A02E5B529A}"
+	ProjectSection(SolutionItems) = preProject
+		src\ReceiptAnalyzer.ReceiptRecognizer.Func\ServiceBusTrigger.cs = src\ReceiptAnalyzer.ReceiptRecognizer.Func\ServiceBusTrigger.cs
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_TEST", "_TEST", "{099AA814-4C34-40F7-9197-937C6A5707C3}"
 EndProject
@@ -37,9 +40,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ReceiptAnalyzer.Tool", "src
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ReceiptPartitioning", "ReceiptPartitioning", "{8A1FB248-6D13-4F98-BA9B-ACDF5470C04D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReceiptAnalyzer.ReceiptPartitioner.Func", "src\ReceiptAnalyzer.ReceiptPartitioner.Func\ReceiptAnalyzer.ReceiptPartitioner.Func.csproj", "{5E7DEE6C-C81F-475D-85B0-87E61753DD24}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ReceiptAnalyzer.ReceiptPartitioner.Func", "src\ReceiptAnalyzer.ReceiptPartitioner.Func\ReceiptAnalyzer.ReceiptPartitioner.Func.csproj", "{5E7DEE6C-C81F-475D-85B0-87E61753DD24}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReceiptAnalyzer.ReceiptPartitioner.Core", "src\ReceiptAnalyzer.ReceiptPartitioner.Core\ReceiptAnalyzer.ReceiptPartitioner.Core.csproj", "{7146BBB3-2A65-43EE-AD20-2EB80D9EF2DE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ReceiptAnalyzer.ReceiptPartitioner.Core", "src\ReceiptAnalyzer.ReceiptPartitioner.Core\ReceiptAnalyzer.ReceiptPartitioner.Core.csproj", "{7146BBB3-2A65-43EE-AD20-2EB80D9EF2DE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -15,5 +15,9 @@
     <PackageReference Include="Microsoft.ML.OnnxRuntime" Version="1.17.3" />
     <PackageReference Include="Microsoft.ML.OnnxTransformer" Version="3.0.1" />
   </ItemGroup>
+	
+  <ItemGroup>
+    <ProjectReference Include="..\ReceiptAnalyzer.Shared\ReceiptAnalyzer.Shared.csproj" />
+  </ItemGroup>
 
 </Project>
