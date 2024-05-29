@@ -36,8 +36,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ReceiptAnalyzer.ReceiptReco
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ReceiptAnalyzer.Local", "src\ReceiptAnalyzer.Local\ReceiptAnalyzer.Local.csproj", "{84B1CD0F-8E51-44C4-9C28-601AB046F511}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ReceiptAnalyzer.Tool", "src\ReceiptAnalyzer.Tool\ReceiptAnalyzer.Tool.csproj", "{09C0CBE8-CBF8-4AB7-8869-9C8D153A12F2}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ReceiptPartitioning", "ReceiptPartitioning", "{8A1FB248-6D13-4F98-BA9B-ACDF5470C04D}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ReceiptAnalyzer.ReceiptPartitioner.Func", "src\ReceiptAnalyzer.ReceiptPartitioner.Func\ReceiptAnalyzer.ReceiptPartitioner.Func.csproj", "{5E7DEE6C-C81F-475D-85B0-87E61753DD24}"
@@ -98,10 +96,6 @@ Global
 		{84B1CD0F-8E51-44C4-9C28-601AB046F511}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{84B1CD0F-8E51-44C4-9C28-601AB046F511}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{84B1CD0F-8E51-44C4-9C28-601AB046F511}.Release|Any CPU.Build.0 = Release|Any CPU
-		{09C0CBE8-CBF8-4AB7-8869-9C8D153A12F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{09C0CBE8-CBF8-4AB7-8869-9C8D153A12F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{09C0CBE8-CBF8-4AB7-8869-9C8D153A12F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{09C0CBE8-CBF8-4AB7-8869-9C8D153A12F2}.Release|Any CPU.Build.0 = Release|Any CPU
 		{5E7DEE6C-C81F-475D-85B0-87E61753DD24}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{5E7DEE6C-C81F-475D-85B0-87E61753DD24}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5E7DEE6C-C81F-475D-85B0-87E61753DD24}.Release|Any CPU.ActiveCfg = Release|Any CPU

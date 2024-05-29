@@ -1,8 +1,0 @@
-{
-  "profiles": {
-    "ReceiptAnalyzer.Tool": {
-      "commandName": "Project",
-      "commandLineArgs": "\"C:\\temp\\ReceiptAnalyzer\\input1\" \"C:\\temp\\ReceiptAnalyzer\\output1\" ReceiptRecognition"
-    }
-  }
-}
