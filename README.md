@@ -9,7 +9,7 @@ ReceiptAnalyzer to aplikacja umożliwiająca analizę polskiego paragonu fiskaln
 + Nagłówek paragonu:
 	* nazwa sprzedawcy
 	* adres sprzedawcy
-	* nip sprzedawcy
+	* NIP sprzedawcy
 + Produkty: 
 	* nazwa produktu
 	* ilość
