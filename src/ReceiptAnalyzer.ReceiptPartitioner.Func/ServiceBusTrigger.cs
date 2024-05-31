@@ -1,6 +1,4 @@
-using System;
 using System.Text.Json;
-using System.Threading.Tasks;
 using Azure.Messaging.ServiceBus;
 using BS.ReceiptAnalyzer.Contract.Config;
 using BS.ReceiptAnalyzer.Contract.Requests;
