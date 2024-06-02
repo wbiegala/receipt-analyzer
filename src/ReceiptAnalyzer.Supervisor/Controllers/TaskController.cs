@@ -15,7 +15,8 @@ namespace BS.ReceiptAnalyzer.Supervisor.Controllers
 
         public TaskController(IMediator mediator)
         {
-            _mediator = mediator ?? throw new ArgumentNullException(nameof(mediator));
+            _mediator = mediator
+                ?? throw new ArgumentNullException(nameof(mediator));
         }
 
         [HttpPost("start")]
