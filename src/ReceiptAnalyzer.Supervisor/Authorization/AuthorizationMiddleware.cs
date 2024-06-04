@@ -9,7 +9,8 @@ namespace BS.ReceiptAnalyzer.Supervisor.Authorization
 
         public AuthorizationMiddleware(IApiKeyAuthorizationService authService)
         {
-            _authService = authService ?? throw new ArgumentNullException(nameof(authService));
+            _authService = authService
+                ?? throw new ArgumentNullException(nameof(authService));
         }
 
         public async Task InvokeAsync(HttpContext context, RequestDelegate next)
