@@ -23,6 +23,7 @@ namespace BS.ReceiptAnalyzer.Supervisor.Controllers
         public async Task<IActionResult> CreateTaskAsync([FromQuery] CreateAnalysisTask.Query? query, IFormFile file)
         {
             var validationResult = AnalysisTaskValidator.ValidateCreateAnalysisTaskRequest(file.ContentType, file.Length);
+
             if (!validationResult.IsValid)
                 return UnprocessableEntity(validationResult.ToResponse());
 
