@@ -20,7 +20,9 @@ Niestety wygląda na to, że nie uda się w terminie projektu skończyć, dlateg
 2. Przygotować dobrego zestawu danych uczących do etapu 2 (rozpoznawanie elementów paragonu) - wytrenowany model bardzo słabo rozpoznawał elementy paragonów, popełniał masę błędów i był bardzo nieprecyzyjny. Wynikało to przede wszystkim z braku fachowej wiedzy o sieciach neuronowych i uczeniu ich. Szlak został przetarty i każdny następny model będzie lepszy :)
 
 ### Wnioski
-1. Projekt do dowiezienia poza wydarzeniem 100commitów.
+1. Więcej czasu przeznaczyć na analizę problemu oraz dostępne narzędzia (zwłaszcza, gdy się z nich wcześniej nie korzystało) przed przystąpieniem do implementacji.
+2. W planowaniu projektów uwzględnić pewną "bezwładność" dla sytuacji losowych, które mogą opóźnić realizację.
+3. Warto uczyć się Machine Learning :)
 
 # Czym jest ReceiptAnalyzer?
 
